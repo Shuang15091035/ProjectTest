@@ -5,9 +5,6 @@
       location = "group:DataStruct/DataStruct.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/zdszkj_MacMini02/Desktop/TestProject/works/DataStruct/DataStructfds.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:QrCode/QrCode.xcodeproj">
    </FileRef>
    <FileRef

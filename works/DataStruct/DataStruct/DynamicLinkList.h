@@ -27,5 +27,6 @@ Status insertElem(LinkListNodeRef pHead, ElemTypeI e);
 Status isEmptyLinkList(LinkListNodeRef pHead);
 Status clearLinkList(LinkListNodeRef pHead);
 LinkListNode *creatList(LinkListNode *pHead);
+Status insertElemByPosition(LinkListNodeRef *pHead, ElemTypeI position,ElemTypeI elem);
 
 #endif /* DynamicLinkList_h */

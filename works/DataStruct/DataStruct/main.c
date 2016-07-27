@@ -23,11 +23,9 @@
 Status dynamicLinkListUsage();
 Status staticLinkList();
 
-
 int main(int argc, const char * argv[]) {
     
     dynamicLinkListUsage();
-    
     
     return 0;
 }
@@ -39,33 +37,39 @@ Status dynamicLinkListUsage(){
     LinkListNode *pList=0x00;
     int length = 0;
     
-    initLinkList(&pList);       //链表初始化
+    initLinkList(&pList);
     
     pList = createLinkList();
-    //    pList = createLinkList(); //创建链表
     printLinkList(pList);
     
-    //遍历链表，打印链表
     length = getLengthLinkList(pList);
     
-    isEmptyLinkList(pList);     //判断链表是否为空链表
-    ElemTypeI e;
-    getElement(pList, 3, &e);
+    Status isEmpty = isEmptyLinkList(pList);
+    printf("%d",isEmpty);
     
-    //获取第三个元素，如果元素不足3个，则返回0
-    printf("getElement函数执行，位置 3 中的元素为 %d\n",e);
+    ElemTypeI e = 0;
+    getElement(pList, 3, &e);
     printLinkList(pList);
     
+//    insertElem(pList, 12);
+//    printLinkList(pList);
+//    
+    ElemTypeI inserPosition = 2;
+    if (inserPosition > 0 || inserPosition <= getLengthLinkList(pList)) {
+        insertElemByPosition(&pList, inserPosition, 56);
+        printLinkList(pList);
+    }
+//    ElemTypeI modifyPosition = 2;
+//    if (modifyPosition > 0 || modifyPosition <= getLengthLinkList(pList)) {
+//        modifyElem(pList,modifyPosition,1);
+//        printLinkList(pList);
+//    }
     
-    insertElem(pList, 12);
-    
-    //    modifyElem(pList,4,1);  //将链表中位置4上的元素修改为1
+    //
+    //    insertHeadList(&pList,5);
     //    printLinkList(pList);
     //
-    //    insertHeadList(&pList,5);   //表头插入元素12
-    //    printLinkList(pList);
-    //
-    //    insertLastList(&pList,10);  //表尾插入元素10
+    //    insertLastList(&pList,10);
     //   printLinkList(pList);
     
     clearLinkList(pList);      //清空链表
