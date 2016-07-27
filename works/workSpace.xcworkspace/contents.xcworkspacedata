@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:DataStruct/DataStruct.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/zdszkj_MacMini02/Desktop/TestProject/works/DataStruct/DataStructfds.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:QrCode/QrCode.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TestA/TestA.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Camera/Camera.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:layerUsage/LayerUsage.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:LLKit/LLKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MyPlayground.playground">
+   </FileRef>
+   <FileRef
+      location = "group:MyProject/MyProject.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:OpenGLEShader/OpenGLEShader.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PlayerTest/PlayerTest.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SizeClassAndAutoLayout/SizeClassAndAutoLayout.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/zdszkj_MacMini02/Desktop/TestProject/works/SwiftTest/SwiftProject.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Tool/Tool.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ToolsBundle/ToolsBundle.xcodeproj">
+   </FileRef>
+</Workspace>

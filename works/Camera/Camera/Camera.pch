@@ -1,0 +1,17 @@
+//
+//  Camera.pch
+//  Camera
+//
+//  Created by mac zdszkj on 16/3/24.
+//  Copyright © 2016年 mac zdszkj. All rights reserved.
+//
+
+#ifndef Camera_pch
+#define Camera_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <Tool/Tool.h>
+#import "Masonry.h"
+
+#endif /* Camera_pch */

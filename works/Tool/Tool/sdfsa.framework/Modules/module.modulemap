@@ -1,0 +1,6 @@
+framework module sdfsa {
+  umbrella header "sdfsa.h"
+
+  export *
+  module * { export * }
+}

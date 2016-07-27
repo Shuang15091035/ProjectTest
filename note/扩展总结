@@ -1,0 +1,518 @@
+###团推协作工具
+	1.任务分配 Tower
+	2.代码管理工具，git，git结面板工具，Sourcetree
+*显示文件	
+	defaults write com.apple.Finder AppleShowAllFiles YES	
+	*隐藏文件	
+	defaults write com.apple.Finder AppleShowAllFiles NO
+###git usage
+###git 删除origin 添加为lshuang
+$ git remote remove origin
+$ git remote add lshuang https://github.com/Shuang15091035/TestProject.git
+###撤销对本地git文件的修改
+git reset --hard	
+git clean -xf
+### Mac下隐藏和显示隐藏文件
+####pull 	
+	手动建立追踪关系，git branch --set-upstream master origin/next 命令指定master分支追踪origin/next分支
+	如果当前分支与远程分支存在追踪关系，git pull就可以省略远程分支名。git pull origin
+####git push 
+	删除远程分支，等同于推送一个空的本地分支到远程仓库
+	$git push origin :master
+	#等同于
+	$git push origin --delete master
+	上面命令表示删除origin主机的master分支
+	
+	***如果当前分支与多个主机存在追踪关系，则可以使用-u选项指定一个默认主机，这样后面就可以不加任何参数使用git push。
+	$ git push -u origin master
+	
+	不带任何参数的git push，默认只推送当前分支，这叫做simple方式。此外，还有一种matching方式，会推送所有有对应的远程分支的本地分支。Git 2.0版本之前，默认采用matching方法，现在改为默认采用simple方式。如果要修改这个设置，可以采用git config命令。
+
+$ git config --global push.default matching
+# 或者
+$ git config --global push.default simple
+	
+	还有一种情况，就是不管是否存在对应的远程分支，将本地的所有分支都推送到远程主机，这时需要使用--all选项。
+	$ git push --all origin
+	
+###Core Graphics&UIKit
+
+	我们有了两大绘图框架的支持以及三种获得图形上下文的方法（drawRect:、drawRect: inContext:、UIGraphicsBeginImageContextWithOptions）。那么我们就有6种绘图的形式
+	drawRect: inContext:这种方式需要设置View图层的代理，并调用[myView setNeedsDisplay]方法实现代理方法的绘图（使用UIKit）
+###ios中的区别
+	8.0以下的屏幕由portrait 转换到Landscape frame发生变化, bounds值不会跟着改变，8.o以后，frame和bounds值相同？
+	
+###beyond compare 工具破解 
+	1.将BCompare改名为BCompare.real
+	2.创建一个文件BCompare无后缀名,再文件中写入
+	rm "/Users/ddeyes/Library/Application 
+	Support/Beyond Compare/registry.dat"
+	"`dirname "$0"`"/BCompare.real &
+	3.通过终端修改BCompare的权限为可执行，即搞定
+	
+### git使用
+	1.创建远程连接，git remote add #linkName# #远程仓库路径#
+	2.更新远程代码，git fetch #linkName#
+	3.下载到本地，git pull #linkName# #分支#
+	4.提交代码，git push #linkName# #分支#
+
+5.git版本回退功能
+	1.没有push
+	这种情况发生在你的本地代码仓库,可能你add ,commit 以后发现代码有点问题,准备取消提交,用到下面命令
+	reset
+	git reset [--soft | --mixed | --hard
+	上面常见三种类型
+	--mixed
+	会保留源码,只是将git commit和index 信息回退到了某个版本.
+	git reset 默认是 --mixed 模式 
+	git reset --mixed  等价于  git reset
+	--soft
+	保留源码,只回退到commit 信息到某个版本.不涉及index的回退,	如果还需要提交,直接commit即可.
+	--hard 加git版本号
+	源码也会回退到某个版本,commit和index 都回回退到某个版本.(注意,这种方式是改变本地代码仓库源码)
+
+	当然有人在push代码以后,也使用 reset --hard <commit...> 回退代码到某个版本之前,但是这样会有一个问题,你线上的代码没有变,线上commit,index都没有变,当你把本地代码修改完提交的时候你会发现权是冲突.....
+	2.已经push
+
+	对于已经把代码push到线上仓库,你回退本地代码其实也想同时回退线上代码,回滚到某个指定的版本,线上,线下代码保持一致.你要用到下面的命令
+
+	revert
+
+	git revert用于反转提交,执行evert命令时要求工作树必须是干净的.
+
+	git revert用一个新提交来消除一个历史提交所做的任何修改.
+
+	revert 之后你的本地代码会回滚到指定的历史版本,这时你再 git push 既可以把线上的代码更新.(这里不会像reset造成冲突的问题
+
+	revert 使用,需要先找到你想回滚版本唯一的commit标识代码,可以用 git log 或者在adgit搭建的web环境历史提交记录里查看.
+
+	git revert c011eb3c20ba6fb38cc94fe5a8dda366a3990c61
+	通常,前几位即可
+
+	git revert c011eb3
+	git revert是用一次新的commit来回滚之前的commit，git reset是直接删除指定的commit
+
+	看似达到的效果是一样的,其实完全不同.
+	第一:
+	上面我们说的如果你已经push到线上代码库, reset 删除指定commit以后,你git push可能导致一大堆冲突.但是revert 并不会.
+	第二:
+	如果在日后现有分支和历史分支需要合并的时候,reset 恢复部分的代码依然会出现在历史分支里.但是revert 方向提交的commit 并不会出现在历史分支里.
+	第三:
+	reset 是在正常的commit历史中,删除了指定的commit,这时 HEAD 是向后移动了,而 revert 是在正常的commit历史中再commit一次,只不过是反向提交,他的 HEAD 是一直向前的	
+
+
+###手势使用
+	
+	可以获取到点击的某个View 
+	通过手势的点击可以获取点击到的View的具体的某一个点，
+	locationInView:
+	
+		
+###gridView的使用（collectionView）
+	1.通过具体的某一个点可以获取的collectionView中的某一个
+	cell(NSindexPath)indexPathForItemAtPoint:
+	2.collectionView中的FLowLayout两个方法的使用：
+		2.1-(NSArray*)layoutAttributesForElementsInRect:(CGRect)rect
+	作用：rect:默认是放在collectionView中的所用的View.bounds, 返回的 NSArray* array = [super layoutAttributesForElementsInRect:rect];数组中存放的是每一个View的信息内容（UICollectionViewLayoutAttributes* attributes），
+	2.2 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity：此方法的一个作用可以用来将View居中显示出来
+	2.3- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)oldBounds{
+    return YES;
+}设置为允许修改collectionView中的信息
+	
+	
+###NSInvocation的使用（在iOS中通过直接调用某个对象的消息，1.performSelector，2.NSInvocation）
+1.介绍	
+1.1将对象封装为一个SEL（SEL method = @selector(methodSignature:);）		
+1.2.通过NSInvocations处理是对于两个以上的参数或者有返回值的处理
+1.3.如果此消息有参数需要传入，那么就需要按照如下方法进行参数设置，需要注意的是，atIndex的下标必须从2开始。原因为：0 1 两个参数已经被target 和selector占用）	
+2.NSInvocaton使用		
+2.1.使用SEL包装一个方法，
+2.2.方法的实例对象的签名
+2.3.创建方法签名的Invocation对象
+2.4.设置 Invocation的selector方法
+2.5.设置Invocation的target
+2.6.设置参数，
+2.7.方法调用（1.[invocation invoke];2.[NSTimer timerWithTimeInterval:0.1 invocation:invocation repeats:YES]）
+2.8.取得返回值的结果
+总结：NSInvocation 
+
+####iOS中协议的使用（使用为接口文件,使用温代理）
+
+###制作一个新的target文件，(参考房开商项目打包流程)
+
+
+###导致程序找不到对应的文件的错误或者内容包含多个内容，
+1.target中未包含.m文件，	
+2.文件中包含了.m的头文件
+3.删除一些衍生数据（Xcode ->Preferences->Locations->derived Data->(->)）删除对应的数据，（Product->Clean）->卸载iOS模拟器上的App
+
+
+#pragram 利用runtime实现高效的归档反归档，copy的方法
+
+			//
+	//  WZLSerializeKit.h
+	//
+	//  Created by wengzilin on 15/10/15.
+	//  Copyright (c) 2015年 wengzilin. All rights reserved.
+	//
+	
+	#ifndef WZLSerializeKit_h
+	#define WZLSerializeKit_h
+	
+	#import <objc/runtime.h>
+	
+	/* (EN)Provide Serialization kit for class (in ARC mode). With this serialize kit, there is no need any more
+	 * to implement (encode:) or )decode:) everywhere, like:
+	 *
+	 *      self.name = [coder decodeObjectForKey:@"name"];
+	        self.age = [[coder decodeObjectForKey:@"age"] integerValue];
+	        _father = [coder decodeObjectForKey:@"_father"];
+	 
+	        [coder encodeObject:self.name forKey:@"name"];
+	        [coder encodeObject:@(self.age) forKey:@"age"];
+	        [coder encodeObject:_father forKey:@"_father"];
+	 *  
+	 *  (CN)本文件提供iOS下的序列化与反序列集成方案，几行代码即可轻松实现。
+	 *  在传统方式中当你需要对某个对象进行序列化与反序列化时，往往需要实现<NSCoding>协议以及<NSCopying>协议(非必须)，
+	 *  在协议方法中对需要序列化的变量执行encode&decode操作。当变量较多并且需要序列化的自定义对象较多时容易出现过多冗余代码，稍有不慎容易出错。
+	 *  WZLSerializeKit在运行时对类以及所有层级父类的变量进行遍历，避免遗漏。属性越多，优势越明显。
+	 *
+	 * Usage:
+	 *
+	 * Person.h:
+	 * ========================================
+	 *	#import "WZLSerializeKit.h"
+	 *
+	 *	@interface Person: SomeSuperclass<NSCoding, NSCopying>
+	 *	{
+	 *		...
+	 *	}
+	 *
+	 *	@end
+	 * ========================================
+	 *
+	 *
+	 *	Person.m:
+	 * ========================================
+	 *	#import "Person.h"
+	 *
+	 *	@implementation Person
+	 *
+	 *  WZLSERIALIZE_CODER_DECODER();
+	 *  WZLSERIALIZE_COPY_WITH_ZONE();
+	 *  WZLSERIALIZE_DESCRIPTION();//(NOT NECESSARY)
+	 *
+	 *	@end
+	 * ========================================
+	 *
+	 *
+	 *  at the place where you want to serialize Person instance:
+	 *  eg:
+	 *      //archive object to NSData
+	 *      WZLSERIALIZE_ARCHIVE(person, @"Person", [self filePath]);
+	 *
+	 *      //unarchive NSData to object
+	 *      Person *thePerson = nil;
+	 *      WZLSERIALIZE_UNARCHIVE(thePerson, @"Person", [self filePath]);
+	 */
+	
+	#define WZLSERIALIZE_CODER_DECODER()     \
+	\
+	- (id)initWithCoder:(NSCoder *)coder    \
+	{   \
+	    NSLog(@"%s",__func__);  \
+	    Class cls = [self class];   \
+	    while (cls != [NSObject class]) {   \
+	        /*判断是自身类还是父类*/    \
+	        BOOL bIsSelfClass = (cls == [self class]);  \
+	        unsigned int iVarCount = 0; \
+	        unsigned int propVarCount = 0;  \
+	        unsigned int sharedVarCount = 0;    \
+	        Ivar *ivarList = bIsSelfClass ? class_copyIvarList([cls class], &iVarCount) : NULL;/*变量列表，含属性以及私有变量*/   \
+	        objc_property_t *propList = bIsSelfClass ? NULL : class_copyPropertyList(cls, &propVarCount);/*属性列表*/   \
+	        sharedVarCount = bIsSelfClass ? iVarCount : propVarCount;   \
+	            \
+	        for (int i = 0; i < sharedVarCount; i++) {  \
+	            const char *varName = bIsSelfClass ? ivar_getName(*(ivarList + i)) : property_getName(*(propList + i)); \
+	            NSString *key = [NSString stringWithUTF8String:varName];   \
+	            id varValue = [coder decodeObjectForKey:key];   \
+	            if (varValue) { \
+	                [self setValue:varValue forKey:key];    \
+	            }   \
+	        }   \
+	        free(ivarList); \
+	        free(propList); \
+	        cls = class_getSuperclass(cls); \
+	    }   \
+	    return self;    \
+	}   \
+	\
+	- (void)encodeWithCoder:(NSCoder *)coder    \
+	{   \
+	    NSLog(@"%s",__func__);  \
+	    Class cls = [self class];   \
+	    while (cls != [NSObject class]) {   \
+	        /*判断是自身类还是父类*/    \
+	        BOOL bIsSelfClass = (cls == [self class]);  \
+	        unsigned int iVarCount = 0; \
+	        unsigned int propVarCount = 0;  \
+	        unsigned int sharedVarCount = 0;    \
+	        Ivar *ivarList = bIsSelfClass ? class_copyIvarList([cls class], &iVarCount) : NULL;/*变量列表，含属性以及私有变量*/   \
+	        objc_property_t *propList = bIsSelfClass ? NULL : class_copyPropertyList(cls, &propVarCount);/*属性列表*/ \
+	        sharedVarCount = bIsSelfClass ? iVarCount : propVarCount;   \
+	        \
+	        for (int i = 0; i < sharedVarCount; i++) {  \
+	            const char *varName = bIsSelfClass ? ivar_getName(*(ivarList + i)) : property_getName(*(propList + i)); \
+	            NSString *key = [NSString stringWithUTF8String:varName];    \
+	            /*valueForKey只能获取本类所有变量以及所有层级父类的属性，不包含任何父类的私有变量(会崩溃)*/  \
+	            id varValue = [self valueForKey:key];   \
+	            if (varValue) { \
+	                [coder encodeObject:varValue forKey:key];   \
+	            }   \
+	        }   \
+	        free(ivarList); \
+	        free(propList); \
+	        cls = class_getSuperclass(cls); \
+	    }   \
+	}
+	
+	
+	#define WZLSERIALIZE_COPY_WITH_ZONE()  \
+	\
+	/*如果不实现copyWithZone:方法，则[personObject copy]时会崩溃*/   \
+	- (id)copyWithZone:(NSZone *)zone   \
+	{   \
+	    NSLog(@"%s",__func__);  \
+	    id copy = [[[self class] allocWithZone:zone] init];    \
+	    Class cls = [self class];   \
+	    while (cls != [NSObject class]) {  \
+	        /*判断是自身类还是父类*/    \
+	        BOOL bIsSelfClass = (cls == [self class]);  \
+	        unsigned int iVarCount = 0; \
+	        unsigned int propVarCount = 0;  \
+	        unsigned int sharedVarCount = 0;    \
+	        Ivar *ivarList = bIsSelfClass ? class_copyIvarList([cls class], &iVarCount) : NULL;/*变量列表，含属性以及私有变量*/   \
+	        objc_property_t *propList = bIsSelfClass ? NULL : class_copyPropertyList(cls, &propVarCount);/*属性列表*/   \
+	        sharedVarCount = bIsSelfClass ? iVarCount : propVarCount;   \
+	        \
+	        for (int i = 0; i < sharedVarCount; i++) {  \
+	            const char *varName = bIsSelfClass ? ivar_getName(*(ivarList + i)) : property_getName(*(propList + i)); \
+	            NSString *key = [NSString stringWithUTF8String:varName];    \
+	            /*valueForKey只能获取本类所有变量以及所有层级父类的属性，不包含任何父类的私有变量(会崩溃)*/  \
+	            id varValue = [self valueForKey:key];   \
+	            if (varValue) { \
+	                [copy setValue:varValue forKey:key];    \
+	            }   \
+	        }   \
+	        free(ivarList); \
+	        free(propList); \
+	        cls = class_getSuperclass(cls); \
+	    }   \
+	    return copy;    \
+	}
+	
+	
+	#define WZLSERIALIZE_DESCRIPTION() \
+	\
+	/* 用来打印本类的所有变量(成员变量+属性变量)，所有层级父类的属性变量及其对应的值 */  \
+	- (NSString *)description   \
+	{   \
+	    NSString  *despStr = @"";   \
+	    Class cls = [self class];   \
+	    while (cls != [NSObject class]) {   \
+	        /*判断是自身类还是父类*/  \
+	        BOOL bIsSelfClass = (cls == [self class]);  \
+	        unsigned int iVarCount = 0; \
+	        unsigned int propVarCount = 0;  \
+	        unsigned int sharedVarCount = 0;    \
+	        Ivar *ivarList = bIsSelfClass ? class_copyIvarList([cls class], &iVarCount) : NULL;/*变量列表，含属性以及私有变量*/   \
+	        objc_property_t *propList = bIsSelfClass ? NULL : class_copyPropertyList(cls, &propVarCount);/*属性列表*/   \
+	        sharedVarCount = bIsSelfClass ? iVarCount : propVarCount;   \
+	        \
+	        for (int i = 0; i < sharedVarCount; i++) {  \
+	            const char *varName = bIsSelfClass ? ivar_getName(*(ivarList + i)) : property_getName(*(propList + i)); \
+	            NSString *key = [NSString stringWithUTF8String:varName];    \
+	            /*valueForKey只能获取本类所有变量以及所有层级父类的属性，不包含任何父类的私有变量(会崩溃)*/  \
+	            id varValue = [self valueForKey:key];   \
+	            if (varValue) { \
+	                despStr = [despStr stringByAppendingString:[NSString stringWithFormat:@"%@: %@\n", key, varValue]]; \
+	            }   \
+	        }   \
+	        free(ivarList); \
+	        free(propList); \
+	        cls = class_getSuperclass(cls); \
+	    }   \
+	    return despStr; \
+	}
+	
+	
+	/* 封装归档keyedArchiver操作 */
+	#define WZLSERIALIZE_ARCHIVE(__objToBeArchived__, __key__, __filePath__)    \
+	\
+	NSMutableData *data = [NSMutableData data]; \
+	NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];   \
+	[archiver encodeObject:__objToBeArchived__ forKey:__key__];    \
+	[archiver finishEncoding];  \
+	[data writeToFile:__filePath__ atomically:YES]
+	
+	
+	/* 封装反归档keyedUnarchiver操作 */
+	#define WZLSERIALIZE_UNARCHIVE(__objToStoreData__, __key__, __filePath__)   \
+	NSMutableData *dedata = [NSMutableData dataWithContentsOfFile:__filePath__]; \
+	NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:dedata];  \
+	__objToStoreData__ = [unarchiver decodeObjectForKey:__key__];  \
+	[unarchiver finishDecoding]
+	
+	
+	
+	#endif
+
+
+###（整个CoreFoundation 的源码）
+http://opensource.apple.com/tarballs/CF/CF-855.17.tar.gz
+
+###VA_LIST 是在C语言中解决变参问题的一组宏，所在头文件：#include <stdarg.h>
+			#import "NSInvocation+Improved.h"
+ 
+			@implementation NSInvocation (Improved)
+			 
+			+ (NSInvocation *)invocationWithTarget:(id)_target andSelector:(SEL)_selector
+			{
+			    //方法签名类
+			    //需要给定一个方法，用于必须创建一个NSInvocation对象的情况下，例如在消息的转发。
+			    NSMethodSignature *methodSig = [_target methodSignatureForSelector:_selector];
+			    //根据方法签名类来创建一个NSInvocation
+			    /*
+			     一个NSInvocation是静态的呈现Objective-C的消息，也就是说，它是一个行动变成了一个对象。 NSInvocation对象用于对象之间和在应用程序之间存储和转发消息，主要通过NSTimer对象和分布式对象系统来完成。
+			    */
+			    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
+			    [invocation setTarget:_target];
+			    [invocation setSelector:_selector];
+			    return invocation;
+			}
+			 
+			+ (NSInvocation *)invocationWithTarget:(id)_target andSelector:(SEL)_selector andArguments:(void *)_addressOfFirstArgument, ...
+			{
+			    NSMethodSignature *methodSig = [_target methodSignatureForSelector:_selector];
+			    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:methodSig];
+			    [invocation setTarget:_target];
+			    [invocation setSelector:_selector];
+			    //获得签名类对象的参数个数
+			    unsigned int numArgs = [methodSig numberOfArguments];
+			    //PS:atIndex的下标必须从2开始。原因：0 1 两个参数已经被target 和selector占用
+			    if (2 < numArgs) {
+			        /*
+			         VA_LIST 是在C语言中解决变参问题的一组宏，所在头文件：#include <stdarg.h>
+			         VA_START宏，获取可变参数列表的第一个参数的地址（ap是类型为va_list的指针，v是可变参数最左边的参数）
+			         VA_ARG宏，获取可变参数的当前参数，返回指定类型并将指针指向下一参数（t参数描述了当前参数的类型）
+			         VA_END宏，清空va_list可变参数列表
+			         */
+			         
+			        /*
+			         用法：
+			         （1）首先在函数里定义一具VA_LIST型的变量，这个变量是指向参数的指针；
+			         （2）然后用VA_START宏初始化刚定义的VA_LIST变量；
+			         （3）然后用VA_ARG返回可变的参数，VA_ARG的第二个参数是你要返回的参数的类型（如果函数有多个可变参数的，依次调用VA_ARG获取各个参数）；
+			         （4）最后用VA_END宏结束可变参数的获取。
+			         */
+			        va_list varargs;
+			         
+			        va_start(varargs, _addressOfFirstArgument);
+			        [invocation setArgument:_addressOfFirstArgument atIndex:2];
+			         
+			        for (int argIndex = 3; argIndex < numArgs; argIndex++) {
+			            void *argp = va_arg(varargs, void *);
+			            [invocation setArgument:argp atIndex:argIndex];
+			        }
+			         
+			        va_end(varargs);
+			    }
+			    return invocation;
+			}
+			 
+			- (void)invokeOnMainThreadWaitUntilDone:(BOOL)wait
+			{
+			    [self performSelectorOnMainThread:@selector(invoke) withObject:nil waitUntilDone:wait];
+			}
+			 
+			@end
+			</stdarg.h>
+###NSinvocation
+###考虑相对布局的实现（最基本的VFL语言（visual format language））
+	这里需要注意的问题是，当我们将一个创建好的约束添加到View上时，添加的目标View要遵循以下的规则:
+	对于两个同层级View之间的约束关系，添加到他们的父View上。
+	
+	对于两个不同层级View之间的约束关系，添加到他们最近的共同的父View上
+	
+	对于有层次关系的两个View之间的约束关系，添加到层次较高的父View上
+布局中的一些细节：@表示优先级
+H:|-[button]-|"如果是父视图的话默认的是20个像素
+如果是两个同级别的view，比如@"[button]-[button1]"，那么这里表示的是8px.
+###shader的使用，vertex shader和fragment shader作用
+	一个顶点shader可以编写代码实现如下功能：
+	·使用模型视图矩阵以及投影矩阵进行顶点变换
+	·法线变换及归一化
+	·纹理坐标生成和变换
+	·逐顶点或逐像素光照计算
+	·颜色计算
+	顶点shader至少需要一个变量：gl_Position，通常要用模型视图矩阵以及投影矩阵进行变换。顶点处理器可以访问OpenGL状态，所以可以用来处理材质和光照。最新的设备还可以访问纹理。
+###片断处理器可以运行片断shader，这个单元可以进行如下操作：
+	·逐像素计算颜色和纹理坐标
+	·应用纹理
+	·雾化计算
+	·如果需要逐像素光照，可以用来计算法线
+	片断处理器的输入是顶点坐标、颜色、法线等计算插值得到的结果。
+	需要强调的是片断shader不能访问帧缓存，
+	所以混合（blend）这样的操作只能发生在这之后。
+###shader描边的两种方法
+	1.边缘光法，2.单个物体轮廓渲染方法
+	
+###要用UIImagePickerController来拍照或者录制视频通常可以分为如下步骤：
+
+	创建UIImagePickerController对象。
+	指定拾取源，平时选择照片时使用的拾取源是照片库或者相簿，此刻需要指定为摄像头类型。
+	指定摄像头，前置摄像头或者后置摄像头。
+	设置媒体类型mediaType，注意如果是录像必须设置，如果是拍照此步骤可以省略，因为mediaType默认包含kUTTypeImage（注意媒体类型定义在MobileCoreServices.framework中）
+	指定捕获模式，拍照或者录制视频。（视频录制时必须先设置媒体类型再设置捕获模式
+	）
+	展示UIImagePickerController(通常以模态窗口形式打开）。
+	拍照和录制视频结束后在代理方法中展示/保存照片或视频。
+### pack a Framework.
+	1.new project 
+	2.select platform ->framework
+	3.create project 
+	4.setting per- configuration build products path ($(PROJECT_DIR)/build)
+	5.setting public header file
+	5.complied project ->finished
+### product PVR picture include mipmap
+	The tool is PVRtexTool
+比如MRC下__block不会增加引用计数，但ARC会，ARC下必须用__weak指明不增加引用计数；ARC下block内存分配机制也与MRC不一样，所以文中的一些例子在ARC下测试结果可能与文中描述的不一样
+###十二、Quartz 2D绘图的基本步骤
+	1. 获取与视图相关联的上下文对象
+	UIGraphicsGetCurrentContext
+	2. 创建及设置路径 （path）
+	2.1 创建路径
+	2.2 设置路径起点
+	2.3 增加路径内容……
+	3. 将路径添加到上下文 
+	4. 设置上下文属性 
+	边线颜色、填充颜色、线宽、线段连接样式、线段首尾样式、虚线样式…
+	5. 绘制路径
+	6. 释放路径
+### 类图
+是系统设计分析和设计阶段的重要产物，也是系统设计和测试的重要模型依据。
+类：封装了数据和模型是面向对象的重要组成部分，事实具有相同属性操作和关系的对象的集合的总称，在系统中，每一个类都具有一定的职责，职责指的是类要完成什么样的功能，要承担什么样的义务，一个类可以
+在系统分析和设计阶段，类通常分为三种，分别是实体类，控制类和边界类。
+实体类：对应应用程序的每个实体，它们通常保存在永久的存储体中
+类对外的可见性：共有类型，保护类型，私有类型，分别用+，-，#，表示
+
+###关于不同设备适配的方案：
+	1.(ipad和iPhone同时适配)获取最大ipad屏幕的分辨率的宽高值，版本兼容到7.0 （iOS8.0以下坐标轴不会随设备的旋转而改变，iOS8.0以后坐标轴始终在左上角，）利用屏幕的宽高乘以比例值
+	[[UIScreen mainScreen] widthByScale:(width / 2048.0f)];
+	[[UIScreen mainScreen] heightByScale:(height / 1536.0f)];
+	- (CGFloat)heightByScale:(CGFloat)scale {
+    //return self.bounds.size.height * scale;
+    return self.boundsByOrientation.size.height * scale;
+}
+###git 上删除远程分支
+git push lshuang --delete ref/for/shuang
