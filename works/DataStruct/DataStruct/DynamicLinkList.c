@@ -9,11 +9,13 @@
 #include "DynamicLinkList.h"
 
 Status initLinkList(LinkListNode **node){
-    *node = 0;
+    *node = (LinkListNodeRef)malloc(sizeof(LinkListNode));
+    (*node)->data = 0;
+    (*node)->next = 0x00;
     return OK;
 }
 
-LinkListNode *creatList(LinkListNode *pHead){
+Status createList(LinkListNode *pHead){
     LinkListNode *p1;
     LinkListNode *p2;
     
@@ -50,7 +52,7 @@ LinkListNode *creatList(LinkListNode *pHead){
         p1->next = 0;
     }
     printf("creatList函数执行，链表创建成功\n");
-    return pHead;           //返回链表的头指针
+    return OK;           //返回链表的头指针
 }
 LinkListNodeRef createLinkList(void){
     LinkListNode *p1,*p2,*pHead = 0;
@@ -224,41 +226,33 @@ Status deleteLinkListElemByPositin(LinkListNodeRef *pHead,ElemTypeI position){
     return OK;
 }
 
-
-/* 16.从单链表中删除第pos个结点并返回它的值，若删除失败则停止程序运行 */
-Status deleteElemByPosition(LinkListNodeRef pHead,ElemTypeI position,ElemTypeI value){
-    if (pHead == 0) {
-        return FALSe;
+Status deleteElemByPosition(LinkListNodeRef *pHead,ElemTypeI position,ElemTypeIRef value){
+    LinkListNodeRef p = *pHead;
+    ElemTypeI j = 0;
+    while (p->next && j < position - 1) {
+        p = p->next;j++;
     }
-    if (position < 0 || position > getLengthLinkList(pHead)) {
-        return FALSe;
-    }
-    LinkListNodeRef *changeNode = 0X00;
-    ElemTypeI counter = 0;
-    while (pHead != 0) {
-        if (counter == position) {
-            pHead->next;
-        }
-        counter++;
-        pHead = pHead->next;
-    }
-    
+    if (!(p->next) || j > position - 1) return FALSe;
+    LinkListNodeRef q = 0x00;
+    q = p->next;
+    p->next = q->next;
+    *value = q->data;
+    free(q);
     return OK;
 }
 
 //sysytem implement insertElement
 Status ListInsert_L(LinkListNodeRef *pHead, int i, ElemTypeI e){
 
-	p = *pHead;j = 0;
+    LinkListNodeRef p;
+	p = *pHead; ElemTypeI j = 0;
 	while(p && j < i-1){p = p->next; ++j;}
 	if(!p || j > i)return FALSe;
-	s = (LinkListNodeReef)malloc(sizeof(LinkListNOde));
+	LinkListNodeRef s = (LinkListNodeRef)malloc(sizeof(LinkListNode));
 	s->data = e;s->next = p->next;
 	p->next = s;
 	return OK;
 }
 
-
-/* 17.从单链表中删除值为x的第一个结点，若删除成功则返回1,否则返回0 */
-/* 18.交换2个元素的位置 */
 /* 19.将线性表进行快速排序 */
+#warning sort LinkList (TODO)

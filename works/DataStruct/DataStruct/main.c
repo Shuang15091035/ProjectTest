@@ -15,17 +15,17 @@
 //
 
 #include <stdio.h>
-#import "Common.h"
-#import "DynamicLinkList.h"
-#import "StaticLinkList.h"
-#import "MergeLinkList.h"
+#include "Common.h"
+#include "DynamicLinkList.h"
+#include "StaticLinkList.h"
+#include "MergeLinkList.h"
 
 Status dynamicLinkListUsage();
 Status staticLinkList();
 
 int main(int argc, const char * argv[]) {
     
-    dynamicLinkListUsage();
+//    dynamicLinkListUsage();
     
     return 0;
 }
@@ -33,12 +33,14 @@ Status staticLinkList(){
     
     return OK;
 }
+
 Status dynamicLinkListUsage(){
     LinkListNode *pList=0x00;
     int length = 0;
     
     initLinkList(&pList);
     
+//    createList(pList);
     pList = createLinkList();
     printLinkList(pList);
     
@@ -51,26 +53,21 @@ Status dynamicLinkListUsage(){
     getElement(pList, 3, &e);
     printLinkList(pList);
     
-//    insertElem(pList, 12);
-//    printLinkList(pList);
-//    
+    insertElem(pList, 12);
+    printLinkList(pList);
+    
     ElemTypeI inserPosition = 2;
     if (inserPosition > 0 || inserPosition <= getLengthLinkList(pList)) {
         insertElemByPosition(&pList, inserPosition, 56);
         printLinkList(pList);
     }
-//    ElemTypeI modifyPosition = 2;
-//    if (modifyPosition > 0 || modifyPosition <= getLengthLinkList(pList)) {
-//        modifyElem(pList,modifyPosition,1);
-//        printLinkList(pList);
-//    }
     
-    //
-    //    insertHeadList(&pList,5);
-    //    printLinkList(pList);
-    //
-    //    insertLastList(&pList,10);
-    //   printLinkList(pList);
+    ListInsert_L(&pList, 1, 99);
+    printLinkList(pList);
+
+    ElemTypeI value = 0;
+    deleteElemByPosition(&pList, 1, &value);
+    printLinkList(pList);
     
     clearLinkList(pList);      //清空链表
     //    system("pause");
