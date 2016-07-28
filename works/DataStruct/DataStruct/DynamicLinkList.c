@@ -246,6 +246,17 @@ Status deleteElemByPosition(LinkListNodeRef pHead,ElemTypeI position,ElemTypeI v
     return OK;
 }
 
+//sysytem implement insertElement
+Status ListInsert_L(LinkListNodeRef *pHead, int i, ElemTypeI e){
+
+	p = *pHead;j = 0;
+	while(p && j < i-1){p = p->next; ++j;}
+	if(!p || j > i)return FALSe;
+	s = (LinkListNodeReef)malloc(sizeof(LinkListNOde));
+	s->data = e;s->next = p->next;
+	p->next = s;
+	return OK;
+}
 
 
 /* 17.从单链表中删除值为x的第一个结点，若删除成功则返回1,否则返回0 */
