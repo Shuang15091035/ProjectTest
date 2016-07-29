@@ -9,8 +9,6 @@
 #ifndef StaticLinkList_h
 #define StaticLinkList_h
 
-typedef void StaticListV;
-typedef void StaticListNode;
 #include <stdio.h>
 #include "Common.h"
 
@@ -19,11 +17,7 @@ typedef void StaticListNode;
 typedef struct {
     ElemTypeI data;
     ElemTypeI next;
-}ComponetNode;
-typedef struct {
-    ElemTypeI capacity;
-    ComponetNode header;
-    ComponetNode node[];
-}StaticList,*StaticListRef;
+}StaticListNode[MAXSIZE];
+
 
 #endif /* StaticLinkList_h */
