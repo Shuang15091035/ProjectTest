@@ -23,7 +23,7 @@ Status createList(LinkListNode *pHead){
     if(p1 == 0 || p2 ==0)
     {
         const char *errorInfo = 0X00;
-        printf(errorInfo,"内存分配失败\n");
+     printf((const char *)errorInfo,"内存分配失败\n");
         exit(0);
     }
     memset(p1,0,sizeof(LinkListNode));

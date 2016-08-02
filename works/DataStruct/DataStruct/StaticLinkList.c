@@ -37,7 +37,7 @@ Status Free_SLinkList(StaticListNode array, ElemTypeI pos){
 
 ElemTypeI static_listLength(StaticListNode list){
     ElemTypeI length = 0;
-    int i = list[MAXSIZE-2].next;
+    int i = list[MAXSIZE-1].next;
     while (i)
     {
         ++length;
@@ -46,32 +46,18 @@ ElemTypeI static_listLength(StaticListNode list){
     return length;
 }
 
-Status insertElementByPosition(StaticListNode staticList, ElemTypeI position, ElemTypeI elem){
+Status StaticList_Insert(StaticListNode sList, ElemTypeI element, int pos){
+
+    if (pos < 1 || pos > static_listLength(sList)) return FALSe;
     
-    ElemTypeI k = staticList[MAXSIZE - 2].next;
-    ElemTypeI i = Malloc_SLL(staticList);
+    int k = sList[MAXSIZE - 1].next;
+    int i = Malloc_SLinkList(sList);
     if (i) {
-        for (int l = 0; l < position-1; l++)
-            k = staticList[k].next;
-        staticList[i].next = staticList[k].next;
-        staticList[k].next = i;
+        for (int l = 0; l < pos - 1; l++)
+            k = sList[k].next;
+        sList[i].next = sList[k].next;
+        sList[k].next = i;
+        return OK;
     }
-    return OK;
-}
-
-Status getElementByPosition(StaticListNode staticList,ElemTypeI position, ElemTypeIRef e){
-    int j = 1, k = staticList[MAXSIZE -1].next;
-    if(position < 1 || position > static_listLength(staticList))
-    while (k && j < position) {
-        ++j;
-        k = staticList[k].next;
-    }
-    *e = staticList[k].data;
-    return OK;
-}
-
-
-Status StaticList_Insert(StaticListNode* sList, ElemTypeI element, int pos){
-
-    return OK;
+    return FALSe;
 }

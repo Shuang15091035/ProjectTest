@@ -19,6 +19,9 @@ NSString * const AFNetworkingReachabilityNotificationStatusItem = @"AFNetworking
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
     //左右轨的图片
 //    UIImage *stetchLeftTrack = [UIImage imageNamed:@"m-bg"];
@@ -57,20 +60,20 @@ NSString * const AFNetworkingReachabilityNotificationStatusItem = @"AFNetworking
 ////    view.layer.contentsCenter = CGRectMake(0.25, 0.25, 0.5, 0.5);
 //    view.layer.contentsScale = image.scale;
 //    [self.view addSubview:view];
-#pragma mark - 图层几何学
-//    UIView有三个比较重要的布局属性：frame，bounds和center，CALayer对应地叫做frame，bounds和position.frame并不是一个非常清晰的属性，它其实是一个虚拟属性，是根据bounds，position和transform计算而来，
-    UIImage *image = [UIImage imageNamed:@"mode"];
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
-    view.center = self.view.center;
-    view.backgroundColor = [UIColor orangeColor];
-    view.layer.contents = (__bridge id _Nullable)(image.CGImage);
-    view.layer.anchorPoint = CGPointMake(0.5, 0.9);
-    view.layer.zPosition = 0.1f;//视图在Z轴方向被抬高了0.1个像素。
-    
-//    视图中其实是三维坐标中的一个二维平面，Zposition代表的就是在Z轴上的偏移量
-    [self.view addSubview:view];
-#pragma mark - 仿射变换
-    CALayer *layer = [[CALayer alloc]init];
+//#pragma mark - 图层几何学
+////    UIView有三个比较重要的布局属性：frame，bounds和center，CALayer对应地叫做frame，bounds和position.frame并不是一个非常清晰的属性，它其实是一个虚拟属性，是根据bounds，position和transform计算而来，
+//    UIImage *image = [UIImage imageNamed:@"mode"];
+//    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
+//    view.center = self.view.center;
+//    view.backgroundColor = [UIColor orangeColor];
+//    view.layer.contents = (__bridge id _Nullable)(image.CGImage);
+//    view.layer.anchorPoint = CGPointMake(0.5, 0.9);
+//    view.layer.zPosition = 0.1f;//视图在Z轴方向被抬高了0.1个像素。
+//    
+////    视图中其实是三维坐标中的一个二维平面，Zposition代表的就是在Z轴上的偏移量
+//    [self.view addSubview:view];
+//#pragma mark - 仿射变换
+//    CALayer *layer = [[CALayer alloc]init];
     
 }
 
