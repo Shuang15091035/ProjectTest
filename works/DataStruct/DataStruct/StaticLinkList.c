@@ -61,3 +61,9 @@ Status StaticList_Insert(StaticListNode sList, ElemTypeI element, int pos){
     }
     return FALSe;
 }
+
+Status staticList_delete(StaticListNode slist, ElemTypeI element, int pos){
+    
+    return OK;
+}
+
