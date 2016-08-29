@@ -17,10 +17,13 @@ NSString * const AFNetworkingReachabilityNotificationStatusItem = @"AFNetworking
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    NSString *str = @"10";
+    NSString *str1 = [str mutableCopy];
+    BOOL result = [str isEqual:str1];
     
     // Do any additional setup after loading the view, typically from a nib.
     //左右轨的图片
