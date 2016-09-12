@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+static int b = 10;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

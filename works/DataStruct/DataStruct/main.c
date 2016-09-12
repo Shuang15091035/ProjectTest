@@ -1,4 +1,3 @@
-//
 //  main.c
 //  DataStruct
 //
@@ -19,18 +18,41 @@
 #include "DynamicLinkList.h"
 #include "StaticLinkList.h"
 #include "MergeLinkList.h"
-
-Status dynamicLinkListUsage();
-Status staticLinkList();
+#include "Stack.h"
 
 int main(int argc, const char * argv[]) {
     
 //    dynamicLinkListUsage();
 //    staticLinkList();
+//    CreateLinList(&head);
+//    SeqlistStackUsage();
     
     return 0;
 }
 
+#pragma mark - 数制转换(一种实现方法的原理)N = (N div d)*d + N mod d
+Status SqStackApply(){
+    
+    
+    return OK;
+}
+
+Status SeqlistStackUsage(){
+
+    int a = 10;
+    SqStack *stack;
+    InitStack(&stack);
+    Push(&stack,a);
+    int b = 20;
+    Push(&stack,b);
+    int c = 0;
+    GetTop(stack,&c);
+    int d = 0;
+    Pop(&stack,&d);
+    printf("a:%d,b:%d,c:%d,d:%d\n",a,b,c,d);
+    
+    return OK;
+}
 
 Status staticLinkList(){
     StaticListNode SSL;

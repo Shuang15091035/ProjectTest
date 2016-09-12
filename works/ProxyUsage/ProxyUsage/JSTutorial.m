@@ -18,7 +18,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
+- (void)tutorialOfJavaScript{
+//    下载这篇教程的初始工程并解压。你可以看到下面的目录结构：
+//    
+//    Web：包含将被转换为iOS应用的web页面的HTML和CSS文件。
+//    Native：iOS工程。文章中所有的修改都是在这里。
+//    js：包含用于工程的Javascript代码。
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

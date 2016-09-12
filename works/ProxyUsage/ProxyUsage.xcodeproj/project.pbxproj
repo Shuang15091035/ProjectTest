@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A4FFE071D7674E000422CBE /* Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FFE061D7674E000422CBE /* Runtime.m */; };
+		7A4FFE0C1D76816B00422CBE /* MyQuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FFE0B1D76816B00422CBE /* MyQuartzView.m */; };
 		7A5261BA1D6D6BAF00D98494 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5261B91D6D6BAF00D98494 /* main.m */; };
 		7A5261BD1D6D6BAF00D98494 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5261BC1D6D6BAF00D98494 /* AppDelegate.m */; };
 		7A5261C01D6D6BAF00D98494 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5261BF1D6D6BAF00D98494 /* ViewController.m */; };
@@ -21,6 +22,8 @@
 		7A5261F31D6D6C3500D98494 /* UserHttpHandlerIMP.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5261F21D6D6C3500D98494 /* UserHttpHandlerIMP.m */; };
 		7A5AE4511D756D80006EF9C1 /* SUTRuntimeMethodHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5AE4501D756D80006EF9C1 /* SUTRuntimeMethodHelper.m */; };
 		7A69B86F1D6E9374004014E0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A69B86E1D6E9374004014E0 /* Person.m */; };
+		7A7000921D7D14A60001B810 /* JSTutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7000911D7D14A60001B810 /* JSTutorial.m */; };
+		7A71AD8E1D865F80000E7CB4 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A71AD8D1D865F80000E7CB4 /* CustomView.m */; };
 		7A8727531D742B99002B19BC /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8727521D742B99002B19BC /* MyClass.m */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +47,8 @@
 /* Begin PBXFileReference section */
 		7A4FFE051D7674E000422CBE /* Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Runtime.h; sourceTree = "<group>"; };
 		7A4FFE061D7674E000422CBE /* Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Runtime.m; sourceTree = "<group>"; };
+		7A4FFE0A1D76816B00422CBE /* MyQuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuartzView.h; sourceTree = "<group>"; };
+		7A4FFE0B1D76816B00422CBE /* MyQuartzView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuartzView.m; sourceTree = "<group>"; };
 		7A5261B51D6D6BAF00D98494 /* ProxyUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProxyUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5261B91D6D6BAF00D98494 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A5261BB1D6D6BAF00D98494 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +75,10 @@
 		7A5AE4501D756D80006EF9C1 /* SUTRuntimeMethodHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUTRuntimeMethodHelper.m; sourceTree = "<group>"; };
 		7A69B86D1D6E9374004014E0 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		7A69B86E1D6E9374004014E0 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		7A7000901D7D14A60001B810 /* JSTutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTutorial.h; sourceTree = "<group>"; };
+		7A7000911D7D14A60001B810 /* JSTutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTutorial.m; sourceTree = "<group>"; };
+		7A71AD8C1D865F80000E7CB4 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		7A71AD8D1D865F80000E7CB4 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		7A8727511D742B99002B19BC /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
 		7A8727521D742B99002B19BC /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +108,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A4FFE081D76812A00422CBE /* runtime */ = {
+			isa = PBXGroup;
+			children = (
+				7A4FFE051D7674E000422CBE /* Runtime.h */,
+				7A4FFE061D7674E000422CBE /* Runtime.m */,
+				7A5AE44F1D756D80006EF9C1 /* SUTRuntimeMethodHelper.h */,
+				7A5AE4501D756D80006EF9C1 /* SUTRuntimeMethodHelper.m */,
+				7A8727511D742B99002B19BC /* MyClass.h */,
+				7A8727521D742B99002B19BC /* MyClass.m */,
+				7A69B86D1D6E9374004014E0 /* Person.h */,
+				7A69B86E1D6E9374004014E0 /* Person.m */,
+			);
+			name = runtime;
+			sourceTree = "<group>";
+		};
+		7A4FFE091D76814100422CBE /* Quartz2D */ = {
+			isa = PBXGroup;
+			children = (
+				7A4FFE0A1D76816B00422CBE /* MyQuartzView.h */,
+				7A4FFE0B1D76816B00422CBE /* MyQuartzView.m */,
+			);
+			name = Quartz2D;
+			sourceTree = "<group>";
+		};
 		7A5261AC1D6D6BAF00D98494 = {
 			isa = PBXGroup;
 			children = (
@@ -122,19 +155,16 @@
 		7A5261B71D6D6BAF00D98494 /* ProxyUsage */ = {
 			isa = PBXGroup;
 			children = (
+				7A70008F1D7D14820001B810 /* JavaScript */,
+				7A4FFE091D76814100422CBE /* Quartz2D */,
+				7A4FFE081D76812A00422CBE /* runtime */,
 				7A5261F41D6D7FC400D98494 /* HttpProxy */,
 				7A5261BB1D6D6BAF00D98494 /* AppDelegate.h */,
 				7A5261BC1D6D6BAF00D98494 /* AppDelegate.m */,
 				7A5261BE1D6D6BAF00D98494 /* ViewController.h */,
 				7A5261BF1D6D6BAF00D98494 /* ViewController.m */,
-				7A4FFE051D7674E000422CBE /* Runtime.h */,
-				7A4FFE061D7674E000422CBE /* Runtime.m */,
-				7A5AE44F1D756D80006EF9C1 /* SUTRuntimeMethodHelper.h */,
-				7A5AE4501D756D80006EF9C1 /* SUTRuntimeMethodHelper.m */,
-				7A8727511D742B99002B19BC /* MyClass.h */,
-				7A8727521D742B99002B19BC /* MyClass.m */,
-				7A69B86D1D6E9374004014E0 /* Person.h */,
-				7A69B86E1D6E9374004014E0 /* Person.m */,
+				7A71AD8C1D865F80000E7CB4 /* CustomView.h */,
+				7A71AD8D1D865F80000E7CB4 /* CustomView.m */,
 				7A5261C11D6D6BAF00D98494 /* Main.storyboard */,
 				7A5261C41D6D6BAF00D98494 /* Assets.xcassets */,
 				7A5261C61D6D6BAF00D98494 /* LaunchScreen.storyboard */,
@@ -181,6 +211,15 @@
 				7A5261F21D6D6C3500D98494 /* UserHttpHandlerIMP.m */,
 			);
 			name = HttpProxy;
+			sourceTree = "<group>";
+		};
+		7A70008F1D7D14820001B810 /* JavaScript */ = {
+			isa = PBXGroup;
+			children = (
+				7A7000901D7D14A60001B810 /* JSTutorial.h */,
+				7A7000911D7D14A60001B810 /* JSTutorial.m */,
+			);
+			name = JavaScript;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,13 +352,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A4FFE0C1D76816B00422CBE /* MyQuartzView.m in Sources */,
 				7A8727531D742B99002B19BC /* MyClass.m in Sources */,
+				7A71AD8E1D865F80000E7CB4 /* CustomView.m in Sources */,
 				7A5261ED1D6D6BD800D98494 /* HttpProxy.m in Sources */,
 				7A5261F01D6D6C2600D98494 /* CommentHttpHandlerIMP.m in Sources */,
 				7A69B86F1D6E9374004014E0 /* Person.m in Sources */,
 				7A5261C01D6D6BAF00D98494 /* ViewController.m in Sources */,
 				7A5261F31D6D6C3500D98494 /* UserHttpHandlerIMP.m in Sources */,
 				7A5261BD1D6D6BAF00D98494 /* AppDelegate.m in Sources */,
+				7A7000921D7D14A60001B810 /* JSTutorial.m in Sources */,
 				7A5AE4511D756D80006EF9C1 /* SUTRuntimeMethodHelper.m in Sources */,
 				7A4FFE071D7674E000422CBE /* Runtime.m in Sources */,
 				7A5261BA1D6D6BAF00D98494 /* main.m in Sources */,
