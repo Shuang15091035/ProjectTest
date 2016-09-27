@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MessageTest/MessageTest.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ProxyUsage/ProxyUsage.xcodeproj">
    </FileRef>
    <FileRef
@@ -36,9 +39,6 @@
    </FileRef>
    <FileRef
       location = "group:SizeClassAndAutoLayout/SizeClassAndAutoLayout.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/zdszkj_MacMini02/Desktop/TestProject/works/SwiftTest/SwiftProject.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Tool/Tool.xcodeproj">

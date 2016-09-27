@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-extern int a = 10;
-static int b = 10;
-
 @interface ViewController : UIViewController{
 
     

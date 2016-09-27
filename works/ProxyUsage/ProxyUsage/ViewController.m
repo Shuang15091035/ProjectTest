@@ -12,6 +12,7 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import "CustomView.h"
 
+
 @interface ViewController (){
     
 }
@@ -25,10 +26,10 @@
     self.navigationController.navigationBarHidden = YES;
     CustomView *view = [[CustomView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     [self.view addSubview:view];
+
+    
     
 }
-
-
 - (void)getScreenPoint{
 
     

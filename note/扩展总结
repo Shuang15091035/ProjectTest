@@ -1,3 +1,11 @@
+#pragma mark - dumplic builting
+使用ar命令删除iOS静态库重复编译的.o文件
+1. lipo -info **.a//显示支持的架构
+2. lipo ***.a -thin armv7 -output **.a //提取armv7架构.a
+3. ar -d ***.a ***.o //删除.a中的.o文件
+4. lipo -create ***.a ***.a -output ***.a //合并多平台的.a文件
+5. 
+
 图片： 1@，2@，3@，在图片固有的大小的基础上，比如，图片要求为57*57 一倍图57*57,2@是114*114,3@171*171，(pixel为单位)
 
 设备像素比(devicePixelRatio) = 设备物理像素和设备独立像素的比例;

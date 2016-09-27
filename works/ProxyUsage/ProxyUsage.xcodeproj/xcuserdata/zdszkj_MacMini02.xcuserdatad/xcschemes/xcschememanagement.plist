@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>LSImessage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
 		<key>ProxyUsage.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>7A5261D81D6D6BAF00D98494</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7A8D6A341D98F16500AC3F90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
