@@ -5,39 +5,24 @@
 	<key>files</key>
 	<dict>
 		<key>Base.lproj/MainInterface.storyboardc/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			LphSzypO58Ee41BVLe8F3DJZUps=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
+		<data>
+		LphSzypO58Ee41BVLe8F3DJZUps=
+		</data>
 		<key>Base.lproj/MainInterface.storyboardc/ObA-dk-sSI-view-zMn-AG-sqS.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1mQjMB2gKNtwI7YBoavNF/Z1Xsw=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
+		<data>
+		1mQjMB2gKNtwI7YBoavNF/Z1Xsw=
+		</data>
 		<key>Base.lproj/MainInterface.storyboardc/UIViewController-ObA-dk-sSI.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			kAaxBSoU+VasI6kQSbH4MN3ZMBs=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
+		<data>
+		kAaxBSoU+VasI6kQSbH4MN3ZMBs=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		Zc7lGMO397by2TLDrTNXgRjml7k=
+		3B/ySB6xOk2i00VQjzzKkFQhkDE=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		nSXavce/z6q1Bxwd8kExpHtu61E=
+		6RauOF8V8Z5AfjDamAlAsfeTR6o=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -52,8 +37,6 @@
 			<data>
 			9Zkoj+a7Nv+GT39rrbg05J2Y7OQHhbaZkFLZo44H0so=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Base.lproj/MainInterface.storyboardc/ObA-dk-sSI-view-zMn-AG-sqS.nib</key>
 		<dict>
@@ -65,8 +48,6 @@
 			<data>
 			+JRndfurcUnYy4rWSwoe491/J5n5J5VXR2+QKzWiyIY=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Base.lproj/MainInterface.storyboardc/UIViewController-ObA-dk-sSI.nib</key>
 		<dict>
@@ -78,18 +59,16 @@
 			<data>
 			Ywp9wWUPK62G1ZrwTkFmuBZDOlwtGWK2AS3TOt+Ar4Y=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>embedded.mobileprovision</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nSXavce/z6q1Bxwd8kExpHtu61E=
+			6RauOF8V8Z5AfjDamAlAsfeTR6o=
 			</data>
 			<key>hash2</key>
 			<data>
-			Vsmdd/mOFt7SNOoJNIORw+EIOITpGR2fSTlLNP1QmTg=
+			xAzVWJTgRJc7vJECjdV9bCGCTxWCIkmc9HsmaBDcsB0=
 			</data>
 		</dict>
 	</dict>
@@ -110,6 +89,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^version.plist$</key>
 		<true/>
@@ -155,6 +139,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^Info\.plist$</key>
 		<dict>

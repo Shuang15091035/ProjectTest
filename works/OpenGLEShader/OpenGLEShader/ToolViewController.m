@@ -7,7 +7,10 @@
 //
 
 #import "ToolViewController.h"
+#import "poly2tri.h"
 #include <glob.h>
+using namespace std;
+using namespace p2t;
 
 @interface ToolViewController (){
     GLuint pid;
@@ -38,7 +41,11 @@ GLfloat squareVertexData[48] =
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    创建context
-    [self createContext];
+    //[self createContext];
+    //绘制多边形
+    [self drawTriangle];
+    
+    
 }
 - (void)createContext{
     self.context = [[EAGLContext alloc]initWithAPI:kEAGLRenderingAPIOpenGLES2];
@@ -117,6 +124,7 @@ GLfloat squareVertexData[48] =
     //glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, <#GLsizei width#>, <#GLsizei height#>, <#GLint border#>, <#GLenum format#>, <#GLenum type#>, <#const GLvoid *pixels#>)
 }
 const GLfloat Pi = 3.1415926536f;
+
 - (void)update{
     
 }
@@ -151,7 +159,6 @@ const GLfloat Pi = 3.1415926536f;
     // glActiveTexture(GL_TEXTURE0);
     //    glBindTexture(GL_TEXTURE_2D, texture);
     // glUniform1i(textureLocation, GL_TEXTURE0);
-    
     glDrawArrays(GL_TRIANGLES, 0, 6);
     //glDrawArrays(画的图形, 偏移量 从0开始, 顶点数量) 指定完开始画
 }
@@ -160,4 +167,10 @@ const GLfloat Pi = 3.1415926536f;
     // Dispose of any resources that can be recreated.
 }
 
+- (void)drawTriangle{
+    vector<p2t::Triangle>triangles;
+    list<p2t::Triangle>map;
+    vector<vector<p2t::Point>> polylines;
+    
+}
 @end

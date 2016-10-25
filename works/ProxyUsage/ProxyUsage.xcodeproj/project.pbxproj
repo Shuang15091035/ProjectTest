@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7A257BFA1D913EED0038C0A5 /* DALine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A257BF91D913EED0038C0A5 /* DALine.m */; };
+		7A443A191DB711B3000FAEB0 /* 211500.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A443A181DB711B3000FAEB0 /* 211500.jpg */; };
+		7A485A581DB874F00006F364 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A485A571DB874F00006F364 /* OpenGLES.framework */; };
 		7A4FFE071D7674E000422CBE /* Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FFE061D7674E000422CBE /* Runtime.m */; };
 		7A4FFE0C1D76816B00422CBE /* MyQuartzView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FFE0B1D76816B00422CBE /* MyQuartzView.m */; };
 		7A5261BA1D6D6BAF00D98494 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5261B91D6D6BAF00D98494 /* main.m */; };
@@ -74,6 +76,8 @@
 /* Begin PBXFileReference section */
 		7A257BF81D913EED0038C0A5 /* DALine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DALine.h; sourceTree = "<group>"; };
 		7A257BF91D913EED0038C0A5 /* DALine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALine.m; sourceTree = "<group>"; };
+		7A443A181DB711B3000FAEB0 /* 211500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 211500.jpg; sourceTree = "<group>"; };
+		7A485A571DB874F00006F364 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		7A4FFE051D7674E000422CBE /* Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Runtime.h; sourceTree = "<group>"; };
 		7A4FFE061D7674E000422CBE /* Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Runtime.m; sourceTree = "<group>"; };
 		7A4FFE0A1D76816B00422CBE /* MyQuartzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuartzView.h; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A485A581DB874F00006F364 /* OpenGLES.framework in Frameworks */,
 				7A8D6A381D98F16500AC3F90 /* Messages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +220,7 @@
 				7A71AD8C1D865F80000E7CB4 /* CustomView.h */,
 				7A71AD8D1D865F80000E7CB4 /* CustomView.m */,
 				7A5261C11D6D6BAF00D98494 /* Main.storyboard */,
+				7A443A181DB711B3000FAEB0 /* 211500.jpg */,
 				7A5261C41D6D6BAF00D98494 /* Assets.xcassets */,
 				7A5261C61D6D6BAF00D98494 /* LaunchScreen.storyboard */,
 				7A5261C91D6D6BAF00D98494 /* Info.plist */,
@@ -274,6 +280,7 @@
 		7A8D6A361D98F16500AC3F90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A485A571DB874F00006F364 /* OpenGLES.framework */,
 				7A8D6A371D98F16500AC3F90 /* Messages.framework */,
 			);
 			name = Frameworks;
@@ -422,6 +429,7 @@
 			files = (
 				7A5261C81D6D6BAF00D98494 /* LaunchScreen.storyboard in Resources */,
 				7A5261C51D6D6BAF00D98494 /* Assets.xcassets in Resources */,
+				7A443A191DB711B3000FAEB0 /* 211500.jpg in Resources */,
 				7A5261C31D6D6BAF00D98494 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -781,6 +789,7 @@
 				7A8D6A471D98F16500AC3F90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

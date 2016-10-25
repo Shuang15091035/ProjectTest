@@ -24,9 +24,13 @@
 		7A71677D1C7FE6D8000F1714 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A71677C1C7FE6D8000F1714 /* OpenGLES.framework */; };
 		7A71677F1C7FEF5C000F1714 /* Shader.vert in Resources */ = {isa = PBXBuildFile; fileRef = 7A71677E1C7FEF5C000F1714 /* Shader.vert */; };
 		7A7167811C7FEF71000F1714 /* Shader.frag in Resources */ = {isa = PBXBuildFile; fileRef = 7A7167801C7FEF71000F1714 /* Shader.frag */; };
-		7A7B0A8E1D2619110034F4FA /* OpenGLearn.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B0A8D1D2619110034F4FA /* OpenGLearn.m */; };
 		7A7B0A901D261C8F0034F4FA /* simpleVetex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 7A7B0A8F1D261C8F0034F4FA /* simpleVetex.glsl */; };
 		7A7B0A921D2620F90034F4FA /* simpleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 7A7B0A911D2620F90034F4FA /* simpleFragment.glsl */; };
+		7AD680E61DBE066C00F880CB /* shapes.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7AD680D91DBE066C00F880CB /* shapes.cc */; };
+		7AD680E71DBE066C00F880CB /* advancing_front.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7AD680DE1DBE066C00F880CB /* advancing_front.cc */; };
+		7AD680E81DBE066C00F880CB /* cdt.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7AD680E01DBE066C00F880CB /* cdt.cc */; };
+		7AD680E91DBE066C00F880CB /* sweep.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7AD680E21DBE066C00F880CB /* sweep.cc */; };
+		7AD680EA1DBE066C00F880CB /* sweep_context.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7AD680E41DBE066C00F880CB /* sweep_context.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +78,20 @@
 		7A71677C1C7FE6D8000F1714 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		7A71677E1C7FEF5C000F1714 /* Shader.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vert; sourceTree = "<group>"; };
 		7A7167801C7FEF71000F1714 /* Shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.frag; sourceTree = "<group>"; };
-		7A7B0A8C1D2619110034F4FA /* OpenGLearn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLearn.h; sourceTree = "<group>"; };
-		7A7B0A8D1D2619110034F4FA /* OpenGLearn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLearn.m; sourceTree = "<group>"; };
 		7A7B0A8F1D261C8F0034F4FA /* simpleVetex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simpleVetex.glsl; sourceTree = "<group>"; };
 		7A7B0A911D2620F90034F4FA /* simpleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simpleFragment.glsl; sourceTree = "<group>"; };
+		7AD680D91DBE066C00F880CB /* shapes.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shapes.cc; sourceTree = "<group>"; };
+		7AD680DA1DBE066C00F880CB /* shapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shapes.h; sourceTree = "<group>"; };
+		7AD680DB1DBE066C00F880CB /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		7AD680DC1DBE066C00F880CB /* poly2tri.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poly2tri.h; sourceTree = "<group>"; };
+		7AD680DE1DBE066C00F880CB /* advancing_front.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = advancing_front.cc; sourceTree = "<group>"; };
+		7AD680DF1DBE066C00F880CB /* advancing_front.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = advancing_front.h; sourceTree = "<group>"; };
+		7AD680E01DBE066C00F880CB /* cdt.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cdt.cc; sourceTree = "<group>"; };
+		7AD680E11DBE066C00F880CB /* cdt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cdt.h; sourceTree = "<group>"; };
+		7AD680E21DBE066C00F880CB /* sweep.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sweep.cc; sourceTree = "<group>"; };
+		7AD680E31DBE066C00F880CB /* sweep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweep.h; sourceTree = "<group>"; };
+		7AD680E41DBE066C00F880CB /* sweep_context.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sweep_context.cc; sourceTree = "<group>"; };
+		7AD680E51DBE066C00F880CB /* sweep_context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sweep_context.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +135,7 @@
 		7A7167381C7FE66D000F1714 = {
 			isa = PBXGroup;
 			children = (
+				7AD680D71DBE066C00F880CB /* poly2tri */,
 				7A5547A31D3C5F1E0096662C /* CustomOpenGLES */,
 				7A7167431C7FE66D000F1714 /* OpenGLEShader */,
 				7A7167771C7FE67D000F1714 /* Frameworks */,
@@ -147,8 +162,6 @@
 				7A7167481C7FE66D000F1714 /* AppDelegate.m */,
 				7A71674A1C7FE66D000F1714 /* ToolViewController.h */,
 				7A71674B1C7FE66D000F1714 /* ToolViewController.m */,
-				7A7B0A8C1D2619110034F4FA /* OpenGLearn.h */,
-				7A7B0A8D1D2619110034F4FA /* OpenGLearn.m */,
 				7A5AB09F1D2509BB0089F498 /* OpenGLView.h */,
 				7A5AB0A01D2509BB0089F498 /* OpenGLView.m */,
 				7A7B0A8F1D261C8F0034F4FA /* simpleVetex.glsl */,
@@ -200,6 +213,42 @@
 				7A7167781C7FE6C0000F1714 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AD680D71DBE066C00F880CB /* poly2tri */ = {
+			isa = PBXGroup;
+			children = (
+				7AD680D81DBE066C00F880CB /* common */,
+				7AD680DC1DBE066C00F880CB /* poly2tri.h */,
+				7AD680DD1DBE066C00F880CB /* sweep */,
+			);
+			name = poly2tri;
+			path = OpenGLEShader/poly2tri;
+			sourceTree = "<group>";
+		};
+		7AD680D81DBE066C00F880CB /* common */ = {
+			isa = PBXGroup;
+			children = (
+				7AD680D91DBE066C00F880CB /* shapes.cc */,
+				7AD680DA1DBE066C00F880CB /* shapes.h */,
+				7AD680DB1DBE066C00F880CB /* utils.h */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		7AD680DD1DBE066C00F880CB /* sweep */ = {
+			isa = PBXGroup;
+			children = (
+				7AD680DE1DBE066C00F880CB /* advancing_front.cc */,
+				7AD680DF1DBE066C00F880CB /* advancing_front.h */,
+				7AD680E01DBE066C00F880CB /* cdt.cc */,
+				7AD680E11DBE066C00F880CB /* cdt.h */,
+				7AD680E21DBE066C00F880CB /* sweep.cc */,
+				7AD680E31DBE066C00F880CB /* sweep.h */,
+				7AD680E41DBE066C00F880CB /* sweep_context.cc */,
+				7AD680E51DBE066C00F880CB /* sweep_context.h */,
+			);
+			path = sweep;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +318,7 @@
 				TargetAttributes = {
 					7A7167401C7FE66D000F1714 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = D3T9A9MJ6F;
 					};
 					7A7167591C7FE66D000F1714 = {
 						CreatedOnToolsVersion = 7.2;
@@ -337,12 +387,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A7B0A8E1D2619110034F4FA /* OpenGLearn.m in Sources */,
+				7AD680E71DBE066C00F880CB /* advancing_front.cc in Sources */,
+				7AD680E91DBE066C00F880CB /* sweep.cc in Sources */,
+				7AD680E61DBE066C00F880CB /* shapes.cc in Sources */,
 				7A5547A61D3C5F370096662C /* GLViewController.m in Sources */,
 				7A71674C1C7FE66D000F1714 /* ToolViewController.m in Sources */,
 				7A7167491C7FE66D000F1714 /* AppDelegate.m in Sources */,
+				7AD680E81DBE066C00F880CB /* cdt.cc in Sources */,
 				7A7167461C7FE66D000F1714 /* main.m in Sources */,
 				7A5AB0A11D2509BB0089F498 /* OpenGLView.m in Sources */,
+				7AD680EA1DBE066C00F880CB /* sweep_context.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +537,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D3T9A9MJ6F;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				INFOPLIST_FILE = OpenGLEShader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctrlcv.lib.OpenGLEShader;
@@ -494,6 +550,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D3T9A9MJ6F;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				INFOPLIST_FILE = OpenGLEShader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctrlcv.lib.OpenGLEShader;
