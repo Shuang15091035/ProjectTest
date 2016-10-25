@@ -4,63 +4,37 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>211500.jpg</key>
+		<data>
+		KbaE1GaMJXHNi5bq60fVlDDQtQQ=
+		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ZXGLsk0A/hsQ6Q76FCArjTYIe0E=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
+		<data>
+		ZXGLsk0A/hsQ6Q76FCArjTYIe0E=
+		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			n2t8gsDpfE6XkhG31p7IQJRxTxU=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
+		<data>
+		n2t8gsDpfE6XkhG31p7IQJRxTxU=
+		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			KlHV86ggxcSWxCwJQ2KJqHLISs0=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
+		<data>
+		KlHV86ggxcSWxCwJQ2KJqHLISs0=
+		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			B7/5McPI5iePMyZZU22jgWhBPxc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
+		<data>
+		B7/5McPI5iePMyZZU22jgWhBPxc=
+		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Lr1MfV97CyTpVcxZiUcrXDx59kY=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
+		<data>
+		Lr1MfV97CyTpVcxZiUcrXDx59kY=
+		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-3GV-bO-nEj.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			5EI0p4gC9ZP7GJvhHJ4wgC2Oolc=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
+		<data>
+		5EI0p4gC9ZP7GJvhHJ4wgC2Oolc=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		MRode9M2QDTlq8ViETHNfihhbSg=
+		XA8YkJ6ihSlJTdx9K/wvtpHgdQc=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -95,27 +69,38 @@
 		</dict>
 		<key>PlugIns/LSImessage.appex/Info.plist</key>
 		<data>
-		Zc7lGMO397by2TLDrTNXgRjml7k=
+		3B/ySB6xOk2i00VQjzzKkFQhkDE=
 		</data>
 		<key>PlugIns/LSImessage.appex/LSImessage</key>
 		<data>
-		QEJHVD23Uj/JFdJ3ziQ3s0vKFjY=
+		D5E1bbYS+9qADtlyfx8dq/SLZAY=
 		</data>
 		<key>PlugIns/LSImessage.appex/_CodeSignature/CodeResources</key>
 		<data>
-		ZHv5YJpthN3Kda/K+eKzLb5GNb8=
+		A0T179kUaZfZqyBiOmwnnnhMI64=
 		</data>
 		<key>PlugIns/LSImessage.appex/embedded.mobileprovision</key>
 		<data>
-		nSXavce/z6q1Bxwd8kExpHtu61E=
+		6RauOF8V8Z5AfjDamAlAsfeTR6o=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		nSXavce/z6q1Bxwd8kExpHtu61E=
+		6RauOF8V8Z5AfjDamAlAsfeTR6o=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>211500.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KbaE1GaMJXHNi5bq60fVlDDQtQQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			uN/iVRMFxfpODn5qxnBURBUZimEM1oj/ehy/iK8cBMs=
+			</data>
+		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
@@ -126,8 +111,6 @@
 			<data>
 			zyv0C2ddA3jiEI4sp2r8LawgYMVbcGbE3RArnBGrZqU=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<dict>
@@ -139,8 +122,6 @@
 			<data>
 			HyVdXMU7Ux4/KalAao30mpWOK/lEPT4gvYN09wf31cg=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<dict>
@@ -152,8 +133,6 @@
 			<data>
 			vdtbb/oXNUfrlEuy0644iWVbalCRvVlN7h2pBdhLHM8=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
@@ -165,8 +144,6 @@
 			<data>
 			ELMgWQvAMQNRULMlBMUZZsvCNYx5qd20p2kWXq+W8yg=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
@@ -178,8 +155,6 @@
 			<data>
 			fddHAG7sE9VjiPMu/oOlvvJFSZZFK1NzsNTshRTsw5I=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-3GV-bO-nEj.nib</key>
 		<dict>
@@ -191,8 +166,6 @@
 			<data>
 			5fXUWz3k6txzrZlcip5eOxm3rdXIs5LHgKDCb0cS6m4=
 			</data>
-			<key>optional</key>
-			<true/>
 		</dict>
 		<key>PlugIns/LSImessage.appex/Base.lproj/MainInterface.storyboardc/Info.plist</key>
 		<dict>
@@ -237,55 +210,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Zc7lGMO397by2TLDrTNXgRjml7k=
+			3B/ySB6xOk2i00VQjzzKkFQhkDE=
 			</data>
 			<key>hash2</key>
 			<data>
-			e4lMPJBen4GF5pD7Fs/rwQNh7oynTmy1lxAX88WU5cg=
+			PQj3qickY0c2B4YhY9GLvzsImHzDfmjQpzGeMyetcGw=
 			</data>
 		</dict>
 		<key>PlugIns/LSImessage.appex/LSImessage</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QEJHVD23Uj/JFdJ3ziQ3s0vKFjY=
+			D5E1bbYS+9qADtlyfx8dq/SLZAY=
 			</data>
 			<key>hash2</key>
 			<data>
-			INmmiNVbmK1lzSUW69JNe1GZcJQpj28FHFEh0h/Ji+E=
+			0sUiLjPntqRoydHBrVRYCRzMgVPwjDUOD4T85wnKQ7o=
 			</data>
 		</dict>
 		<key>PlugIns/LSImessage.appex/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZHv5YJpthN3Kda/K+eKzLb5GNb8=
+			A0T179kUaZfZqyBiOmwnnnhMI64=
 			</data>
 			<key>hash2</key>
 			<data>
-			ftrui90BMLevTBD+Tw5A0Uw0Vc8wfj43+88uZoDi3tA=
+			kOFJB9YJaIX0e9hs4Z2JM+pCvWVhH7MVQ5IupR/7Q+A=
 			</data>
 		</dict>
 		<key>PlugIns/LSImessage.appex/embedded.mobileprovision</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nSXavce/z6q1Bxwd8kExpHtu61E=
+			6RauOF8V8Z5AfjDamAlAsfeTR6o=
 			</data>
 			<key>hash2</key>
 			<data>
-			Vsmdd/mOFt7SNOoJNIORw+EIOITpGR2fSTlLNP1QmTg=
+			xAzVWJTgRJc7vJECjdV9bCGCTxWCIkmc9HsmaBDcsB0=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nSXavce/z6q1Bxwd8kExpHtu61E=
+			6RauOF8V8Z5AfjDamAlAsfeTR6o=
 			</data>
 			<key>hash2</key>
 			<data>
-			Vsmdd/mOFt7SNOoJNIORw+EIOITpGR2fSTlLNP1QmTg=
+			xAzVWJTgRJc7vJECjdV9bCGCTxWCIkmc9HsmaBDcsB0=
 			</data>
 		</dict>
 	</dict>
@@ -306,6 +279,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^version.plist$</key>
 		<true/>
@@ -351,6 +329,11 @@
 			<true/>
 			<key>weight</key>
 			<real>1100</real>
+		</dict>
+		<key>^Base\.lproj/</key>
+		<dict>
+			<key>weight</key>
+			<real>1010</real>
 		</dict>
 		<key>^Info\.plist$</key>
 		<dict>
