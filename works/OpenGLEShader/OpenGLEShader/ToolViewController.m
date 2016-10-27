@@ -7,10 +7,7 @@
 //
 
 #import "ToolViewController.h"
-#import "poly2tri.h"
 #include <glob.h>
-using namespace std;
-using namespace p2t;
 
 @interface ToolViewController (){
     GLuint pid;
@@ -41,10 +38,8 @@ GLfloat squareVertexData[48] =
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    创建context
-    //[self createContext];
+    [self createContext];
     //绘制多边形
-    [self drawTriangle];
-    
     
 }
 - (void)createContext{
@@ -60,12 +55,7 @@ GLfloat squareVertexData[48] =
     //    创建shader
     [self createShader];
     
-    glGenBuffers(1, &buffer);
-    //       生成的数量  返回id
-    glBindBuffer(GL_ARRAY_BUFFER, buffer);// 设置当前操作的buffer
-    glBufferData(GL_ARRAY_BUFFER, sizeof(squareVertexData), squareVertexData, GL_STATIC_DRAW);
-    //glBufferData(buffer用途, 数据大小, 数据, 缓冲区用途)
-}
+    }
 - (void)createShader{
     GLuint vid = glCreateShader(GL_VERTEX_SHADER);
     NSString *vPath = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vert"];
@@ -131,17 +121,21 @@ const GLfloat Pi = 3.1415926536f;
 -(void)glkView:(GLKView *)view drawInRect:(CGRect)rect{
     glClearColor(0.3f, 0.6f, 1.0f, 1.0f);//设置清屏的颜色
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    //[self.effect prepareToDraw];
+    [self.effect prepareToDraw];
     
     glUseProgram(pid); // 使用自定义的shader
-    glBindBuffer(GL_ARRAY_BUFFER, buffer); // 每帧滴啊用
+    glGenBuffers(1, &buffer);
+    //       生成的数量  返回id
+    glBindBuffer(GL_ARRAY_BUFFER, buffer);// 设置当前操作的buffer
+    glBufferData(GL_ARRAY_BUFFER, sizeof(squareVertexData), squareVertexData, GL_STATIC_DRAW);
+    //glBufferData(buffer用途, 数据大小, 数据, 缓冲区用途)
     glEnableVertexAttribArray(positionLocation);//shader的位置
     glVertexAttribPointer(positionLocation, 3, GL_FLOAT, GL_FALSE, 4*8, (char*)NULL + 0);//传入顶点
     //glVertexAttribPointer(shader的attribute, 数据个数, 类型, 是否规划处理, 两个数据的间隔(字节), 指针类型的偏移量 从第N个开始读取)
     
     
     //    glEnableVertexAttribArray(GLKVertexAttribNormal); // 法线的设置
-    //    glVertexAttribPointer(GLKVertexAttribNormal, 3, GL_FLOAT, GL_FALSE, 4*8, (char*)NULL + 12 );
+        glVertexAttribPointer(GLKVertexAttribNormal, 3, GL_FLOAT, GL_FALSE, 4*8, (char*)NULL + 12 );
     //
     //
     //    glEnableVertexAttribArray(uvLocation); // 纹理的设置
@@ -167,10 +161,4 @@ const GLfloat Pi = 3.1415926536f;
     // Dispose of any resources that can be recreated.
 }
 
-- (void)drawTriangle{
-    vector<p2t::Triangle>triangles;
-    list<p2t::Triangle>map;
-    vector<vector<p2t::Point>> polylines;
-    
-}
 @end

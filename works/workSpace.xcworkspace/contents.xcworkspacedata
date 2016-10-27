@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PolyTri/PolyTri.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ProxyUsage/ProxyUsage.xcodeproj">
    </FileRef>
    <FileRef
