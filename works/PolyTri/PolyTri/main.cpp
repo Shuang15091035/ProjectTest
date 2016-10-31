@@ -449,3 +449,40 @@ double Random(double (*fun)(double), double xmin = 0, double xmax = 1)
     // Returns if valid and try again if not valid
     return Y < fun(X) ? X : Random(Fun, xmin, xmax);
 }
+
+//二维和三维坐标空间点的转换
+
+//三维空间中的同一个面上的点
+//    JCVector3 point1 = JCVector3Make(3, 0, 3);
+//    JCVector3 point2 = JCVector3Make(5, 0, 3);
+//    JCVector3 point3 = JCVector3Make(5, 3, 3);
+//    JCVector3 point4 = JCVector3Make(3, 3, 3);
+
+//    JCVector3 point1 = JCVector3Make(3, 0, 3);
+//    JCVector3 point2 = JCVector3Make(3, 0, 5);
+//    JCVector3 point3 = JCVector3Make(3, 3, 5);
+//    JCVector3 point4 = JCVector3Make(3, 3, 3);
+
+//JCVector3 point1 = JCVector3Make(3, 0, 5);
+//JCVector3 point2 = JCVector3Make(5, 0, 3);
+//JCVector3 point3 = JCVector3Make(5, 3, 3);
+//JCVector3 point4 = JCVector3Make(3, 3, 5);
+//
+//JCVector3 vectorXZ = JCVector3Subv(&point2,&point1);
+//JCVector3 normalXZ = JCVector3Normalize(&vectorXZ);
+//JCVector3 vectorXY = JCVector3Subv(&point4,&point1);
+//JCVector3 normalXY = JCVector3Normalize(&vectorXY);
+//
+////三维空间中的同一个面上的点以左下角为原点的平面坐标系的表示
+//float wallWidth = JCVector3Distance(&point2,&point1);
+//float wallHeight = JCVector3Distance(&point4,&point1);
+//JCVector2 point2D[4] = {{0,0},{static_cast<JCFloat>(wallWidth),0},{static_cast<JCFloat>(wallWidth),static_cast<JCFloat>(wallHeight)},{0,static_cast<JCFloat>(wallHeight)}};
+//
+//
+////将这些点转换到三维空间中对应的点
+//for (int i = 0; i < 4; i++) {
+//    JCVector3 maX = JCVector3Muls(&normalXZ, point2D[i].x);
+//    JCVector3 maY = JCVector3Muls(&normalXY, point2D[i].y);
+//    JCVector3 result = JCVector3Make(point1.x + maX.x + maY.x, point1.y + maX.y + maY.y, point1.z + maX.z + maY.z );
+//    //        printf("x = %f, y = %f,z = %f\n",result.x, result.y, result.z);
+//}
