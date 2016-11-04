@@ -22,6 +22,8 @@
 		7A78D6961DCC79C000C11D44 /* RoomPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D68C1DCC79C000C11D44 /* RoomPlane.m */; };
 		7A78D6971DCC79C000C11D44 /* WallLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D68E1DCC79C000C11D44 /* WallLine.m */; };
 		7A78D6981DCC79C000C11D44 /* WallPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D6901DCC79C000C11D44 /* WallPoint.m */; };
+		7A78D69B1DCC7BA800C11D44 /* PublicData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D69A1DCC7BA800C11D44 /* PublicData.m */; };
+		7A78D69E1DCC7CBE00C11D44 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D69D1DCC7CBE00C11D44 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,10 @@
 		7A78D68E1DCC79C000C11D44 /* WallLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallLine.m; sourceTree = "<group>"; };
 		7A78D68F1DCC79C000C11D44 /* WallPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallPoint.h; sourceTree = "<group>"; };
 		7A78D6901DCC79C000C11D44 /* WallPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallPoint.m; sourceTree = "<group>"; };
+		7A78D6991DCC7BA800C11D44 /* PublicData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicData.h; sourceTree = "<group>"; };
+		7A78D69A1DCC7BA800C11D44 /* PublicData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicData.m; sourceTree = "<group>"; };
+		7A78D69C1DCC7CBE00C11D44 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7A78D69D1DCC7CBE00C11D44 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,10 @@
 			children = (
 				7A22C89C1DC32D35002F0D00 /* AppDelegate.h */,
 				7A22C89D1DC32D35002F0D00 /* AppDelegate.m */,
+				7A78D69C1DCC7CBE00C11D44 /* ViewController.h */,
+				7A78D69D1DCC7CBE00C11D44 /* ViewController.m */,
+				7A78D6991DCC7BA800C11D44 /* PublicData.h */,
+				7A78D69A1DCC7BA800C11D44 /* PublicData.m */,
 				7A78D6811DCC79C000C11D44 /* ArchPlane.h */,
 				7A78D6821DCC79C000C11D44 /* ArchPlane.m */,
 				7A78D6831DCC79C000C11D44 /* ArchWallComponent.h */,
@@ -333,8 +343,10 @@
 				7A78D6961DCC79C000C11D44 /* RoomPlane.m in Sources */,
 				7A22C89E1DC32D35002F0D00 /* AppDelegate.m in Sources */,
 				7A22C89B1DC32D35002F0D00 /* main.m in Sources */,
+				7A78D69E1DCC7CBE00C11D44 /* ViewController.m in Sources */,
 				7A78D6921DCC79C000C11D44 /* ArchWallComponent.m in Sources */,
 				7A78D6951DCC79C000C11D44 /* PlaneDrawGraphic.m in Sources */,
+				7A78D69B1DCC7BA800C11D44 /* PublicData.m in Sources */,
 				7A78D6981DCC79C000C11D44 /* WallPoint.m in Sources */,
 				7A78D6971DCC79C000C11D44 /* WallLine.m in Sources */,
 			);

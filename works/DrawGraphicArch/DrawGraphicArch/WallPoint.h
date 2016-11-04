@@ -6,7 +6,8 @@
 //  Copyright © 2016年 mac zdszkj. All rights reserved.
 //
 
-#import "Common.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface WallPoint : NSObject
 

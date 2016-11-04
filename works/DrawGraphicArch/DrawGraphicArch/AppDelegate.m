@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "DrawPlaneArch.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,10 +20,13 @@
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [[DrawPlaneArch alloc]init];
+    self.window.rootViewController = [[ViewController alloc]init];
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    return UIInterfaceOrientationMaskLandscapeRight;
 }
 
 

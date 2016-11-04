@@ -16,9 +16,6 @@
 
 #define UNSELECTROOM -1
 
-typedef NS_ENUM(NSInteger, ViewState){
-    
-};
 
 #define SCREENSIZE [[UIScreen mainScreen]bounds].size
 
