@@ -29,6 +29,11 @@
     }
     return self;
 }
+
+- (float) distanceOfAnotherPoint:(CGPoint)anPoint{
+    return sqrtf(powf((anPoint.y - mWallPoint.y), 2) + powf((anPoint.x - mWallPoint.x), 2));
+}
+
 - (UIImageView *)mImageView{
     if (_mImageView == nil) {
         _mImageView = [[UIImageView alloc]init];

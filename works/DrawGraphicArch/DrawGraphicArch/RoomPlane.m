@@ -184,8 +184,38 @@
             wallComponent.wallIndex = [self.wallLines indexOfObject:singleWall];
             return true;
         }else{
-            for (ArchWallComponent *component in singleWall.wallComponentArr) {
-            
+            NSInteger sWCount = singleWall.wallComponentArr.count;
+            for (int i = 0; i < sWCount + 1; i++) {
+                CGPoint component1Point = CGPointZero;
+                CGPoint component2Point = CGPointZero;
+                if (i == 0) {
+                    component1Point = singleWall.wPoint1.wallPoint;
+                    component2Point = singleWall.wallComponentArr[i].componentPosition;
+                    CGFloat deltaX = component2Point.x - component1Point.x;
+                    CGFloat deltaY = component2Point.y - component1Point.y;
+                    CGFloat pointDis = sqrtf(deltaY * deltaY + deltaX * deltaX);
+                    if (pointDis - singleWall.wallComponentArr[i].componentWidth/2 > wallComponent.componentWidth ) {
+                        [self lineInterCircle:singleWall centerPoint:component1Point radius:wallComponent.componentWidth/2 wallComponent: wallComponent];
+                    }
+                }else if(i == sWCount + 1){
+                    component1Point = singleWall.wallComponentArr[i].componentPosition;
+                    component2Point = singleWall.wPoint2.wallPoint;
+                    CGFloat deltaX = component2Point.x - component1Point.x;
+                    CGFloat deltaY = component2Point.y - component1Point.y;
+                    CGFloat pointDis = sqrtf(deltaY * deltaY + deltaX * deltaX);
+                    if (pointDis - singleWall.wallComponentArr[i].componentWidth/2 > wallComponent.componentWidth ) {
+                        [self lineInterCircle:singleWall centerPoint:component1Point radius:wallComponent.componentWidth/2 wallComponent: wallComponent];
+                    }
+                }else{
+                    component1Point = singleWall.wallComponentArr[i].componentPosition;
+                    component2Point = singleWall.wallComponentArr[i+1].componentPosition;
+                    CGFloat deltaX = component2Point.x - component1Point.x;
+                    CGFloat deltaY = component2Point.y - component1Point.y;
+                    CGFloat pointDis = sqrtf(deltaY * deltaY + deltaX * deltaX);
+                    if (pointDis - singleWall.wallComponentArr[i].componentWidth/2 > wallComponent.componentWidth ) {
+                        [self lineInterCircle:singleWall centerPoint:component1Point radius:wallComponent.componentWidth/2 wallComponent: wallComponent];
+                    }
+                }
             }
         }
     }

@@ -34,7 +34,7 @@
     deleteBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     deleteBtn.backgroundColor = [UIColor redColor];
     
-    UIButton *componentBtn = [[UIButton alloc]initWithFrame:CGRectMake(140, 10, 60, 60)];
+    UIButton *componentBtn = [[UIButton alloc]initWithFrame:CGRectMake(200, 10, 60, 60)];
     componentBtn.hidden = YES;
     [componentBtn setTitle:@" 🚪 " forState:UIControlStateNormal];
     componentBtn.titleLabel.font = [UIFont systemFontOfSize:15];

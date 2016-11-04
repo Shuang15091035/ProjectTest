@@ -15,4 +15,6 @@
 @property (nonatomic, readwrite) UIImageView *pointImageView;
 
 - initWithPoint:(CGPoint)touchP currentPointView:(UIView *)currentView;
+
+- (float) distanceOfAnotherPoint:(CGPoint)anPoint;
 @end
