@@ -14,13 +14,14 @@
 		7A22C8A91DC32D35002F0D00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A22C8A71DC32D35002F0D00 /* LaunchScreen.storyboard */; };
 		7A22C8B41DC32D35002F0D00 /* DrawGraphicArchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A22C8B31DC32D35002F0D00 /* DrawGraphicArchTests.m */; };
 		7A22C8BF1DC32D35002F0D00 /* DrawGraphicArchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A22C8BE1DC32D35002F0D00 /* DrawGraphicArchUITests.m */; };
-		7A22C8DA1DC32E0D002F0D00 /* ArchPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A22C8CD1DC32E0D002F0D00 /* ArchPlane.m */; };
-		7A22C8DB1DC32E0D002F0D00 /* DrawPlaneArch.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A22C8CF1DC32E0D002F0D00 /* DrawPlaneArch.m */; };
-		7A22C8DC1DC32E0D002F0D00 /* PublicData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A22C8D11DC32E0D002F0D00 /* PublicData.m */; };
-		7A22C8DD1DC32E0D002F0D00 /* RoomPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A22C8D31DC32E0D002F0D00 /* RoomPlane.m */; };
-		7A22C8DE1DC32E0D002F0D00 /* ToolLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A22C8D51DC32E0D002F0D00 /* ToolLine.m */; };
-		7A22C8DF1DC32E0D002F0D00 /* WallLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A22C8D71DC32E0D002F0D00 /* WallLine.m */; };
-		7A22C8E01DC32E0D002F0D00 /* WallPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A22C8D91DC32E0D002F0D00 /* WallPoint.m */; };
+		7A78D6911DCC79C000C11D44 /* ArchPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D6821DCC79C000C11D44 /* ArchPlane.m */; };
+		7A78D6921DCC79C000C11D44 /* ArchWallComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D6841DCC79C000C11D44 /* ArchWallComponent.m */; };
+		7A78D6931DCC79C000C11D44 /* ComponentDoor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D6861DCC79C000C11D44 /* ComponentDoor.m */; };
+		7A78D6941DCC79C000C11D44 /* ComponentWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D6881DCC79C000C11D44 /* ComponentWindow.m */; };
+		7A78D6951DCC79C000C11D44 /* PlaneDrawGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D68A1DCC79C000C11D44 /* PlaneDrawGraphic.m */; };
+		7A78D6961DCC79C000C11D44 /* RoomPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D68C1DCC79C000C11D44 /* RoomPlane.m */; };
+		7A78D6971DCC79C000C11D44 /* WallLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D68E1DCC79C000C11D44 /* WallLine.m */; };
+		7A78D6981DCC79C000C11D44 /* WallPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D6901DCC79C000C11D44 /* WallPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,20 +56,22 @@
 		7A22C8BA1DC32D35002F0D00 /* DrawGraphicArchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawGraphicArchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A22C8BE1DC32D35002F0D00 /* DrawGraphicArchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawGraphicArchUITests.m; sourceTree = "<group>"; };
 		7A22C8C01DC32D35002F0D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A22C8CC1DC32E0D002F0D00 /* ArchPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchPlane.h; sourceTree = "<group>"; };
-		7A22C8CD1DC32E0D002F0D00 /* ArchPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchPlane.m; sourceTree = "<group>"; };
-		7A22C8CE1DC32E0D002F0D00 /* DrawPlaneArch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawPlaneArch.h; sourceTree = "<group>"; };
-		7A22C8CF1DC32E0D002F0D00 /* DrawPlaneArch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawPlaneArch.m; sourceTree = "<group>"; };
-		7A22C8D01DC32E0D002F0D00 /* PublicData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicData.h; sourceTree = "<group>"; };
-		7A22C8D11DC32E0D002F0D00 /* PublicData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicData.m; sourceTree = "<group>"; };
-		7A22C8D21DC32E0D002F0D00 /* RoomPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomPlane.h; sourceTree = "<group>"; };
-		7A22C8D31DC32E0D002F0D00 /* RoomPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomPlane.m; sourceTree = "<group>"; };
-		7A22C8D41DC32E0D002F0D00 /* ToolLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolLine.h; sourceTree = "<group>"; };
-		7A22C8D51DC32E0D002F0D00 /* ToolLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolLine.m; sourceTree = "<group>"; };
-		7A22C8D61DC32E0D002F0D00 /* WallLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallLine.h; sourceTree = "<group>"; };
-		7A22C8D71DC32E0D002F0D00 /* WallLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallLine.m; sourceTree = "<group>"; };
-		7A22C8D81DC32E0D002F0D00 /* WallPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallPoint.h; sourceTree = "<group>"; };
-		7A22C8D91DC32E0D002F0D00 /* WallPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallPoint.m; sourceTree = "<group>"; };
+		7A78D6811DCC79C000C11D44 /* ArchPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchPlane.h; sourceTree = "<group>"; };
+		7A78D6821DCC79C000C11D44 /* ArchPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchPlane.m; sourceTree = "<group>"; };
+		7A78D6831DCC79C000C11D44 /* ArchWallComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchWallComponent.h; sourceTree = "<group>"; };
+		7A78D6841DCC79C000C11D44 /* ArchWallComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchWallComponent.m; sourceTree = "<group>"; };
+		7A78D6851DCC79C000C11D44 /* ComponentDoor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentDoor.h; sourceTree = "<group>"; };
+		7A78D6861DCC79C000C11D44 /* ComponentDoor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentDoor.m; sourceTree = "<group>"; };
+		7A78D6871DCC79C000C11D44 /* ComponentWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentWindow.h; sourceTree = "<group>"; };
+		7A78D6881DCC79C000C11D44 /* ComponentWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentWindow.m; sourceTree = "<group>"; };
+		7A78D6891DCC79C000C11D44 /* PlaneDrawGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneDrawGraphic.h; sourceTree = "<group>"; };
+		7A78D68A1DCC79C000C11D44 /* PlaneDrawGraphic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneDrawGraphic.m; sourceTree = "<group>"; };
+		7A78D68B1DCC79C000C11D44 /* RoomPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomPlane.h; sourceTree = "<group>"; };
+		7A78D68C1DCC79C000C11D44 /* RoomPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomPlane.m; sourceTree = "<group>"; };
+		7A78D68D1DCC79C000C11D44 /* WallLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallLine.h; sourceTree = "<group>"; };
+		7A78D68E1DCC79C000C11D44 /* WallLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallLine.m; sourceTree = "<group>"; };
+		7A78D68F1DCC79C000C11D44 /* WallPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallPoint.h; sourceTree = "<group>"; };
+		7A78D6901DCC79C000C11D44 /* WallPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,12 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				7A22C8E51DC32EC1002F0D00 /* App */,
-				7A22C8E41DC32E5D002F0D00 /* common */,
-				7A22C8E21DC32E21002F0D00 /* data */,
-				7A22C8E31DC32E2B002F0D00 /* logic */,
 				7A22C8E61DC32EE2002F0D00 /* res */,
 				7A22C8991DC32D35002F0D00 /* Supporting Files */,
-				7A22C8E11DC32E12002F0D00 /* view */,
 			);
 			path = DrawGraphicArch;
 			sourceTree = "<group>";
@@ -156,53 +155,27 @@
 			path = DrawGraphicArchUITests;
 			sourceTree = "<group>";
 		};
-		7A22C8E11DC32E12002F0D00 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				7A22C8CE1DC32E0D002F0D00 /* DrawPlaneArch.h */,
-				7A22C8CF1DC32E0D002F0D00 /* DrawPlaneArch.m */,
-			);
-			name = view;
-			sourceTree = "<group>";
-		};
-		7A22C8E21DC32E21002F0D00 /* data */ = {
-			isa = PBXGroup;
-			children = (
-				7A22C8CC1DC32E0D002F0D00 /* ArchPlane.h */,
-				7A22C8CD1DC32E0D002F0D00 /* ArchPlane.m */,
-				7A22C8D21DC32E0D002F0D00 /* RoomPlane.h */,
-				7A22C8D31DC32E0D002F0D00 /* RoomPlane.m */,
-				7A22C8D61DC32E0D002F0D00 /* WallLine.h */,
-				7A22C8D71DC32E0D002F0D00 /* WallLine.m */,
-				7A22C8D81DC32E0D002F0D00 /* WallPoint.h */,
-				7A22C8D91DC32E0D002F0D00 /* WallPoint.m */,
-			);
-			name = data;
-			sourceTree = "<group>";
-		};
-		7A22C8E31DC32E2B002F0D00 /* logic */ = {
-			isa = PBXGroup;
-			children = (
-				7A22C8D41DC32E0D002F0D00 /* ToolLine.h */,
-				7A22C8D51DC32E0D002F0D00 /* ToolLine.m */,
-			);
-			name = logic;
-			sourceTree = "<group>";
-		};
-		7A22C8E41DC32E5D002F0D00 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				7A22C8D01DC32E0D002F0D00 /* PublicData.h */,
-				7A22C8D11DC32E0D002F0D00 /* PublicData.m */,
-			);
-			name = common;
-			sourceTree = "<group>";
-		};
 		7A22C8E51DC32EC1002F0D00 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				7A22C89C1DC32D35002F0D00 /* AppDelegate.h */,
 				7A22C89D1DC32D35002F0D00 /* AppDelegate.m */,
+				7A78D6811DCC79C000C11D44 /* ArchPlane.h */,
+				7A78D6821DCC79C000C11D44 /* ArchPlane.m */,
+				7A78D6831DCC79C000C11D44 /* ArchWallComponent.h */,
+				7A78D6841DCC79C000C11D44 /* ArchWallComponent.m */,
+				7A78D6851DCC79C000C11D44 /* ComponentDoor.h */,
+				7A78D6861DCC79C000C11D44 /* ComponentDoor.m */,
+				7A78D6871DCC79C000C11D44 /* ComponentWindow.h */,
+				7A78D6881DCC79C000C11D44 /* ComponentWindow.m */,
+				7A78D6891DCC79C000C11D44 /* PlaneDrawGraphic.h */,
+				7A78D68A1DCC79C000C11D44 /* PlaneDrawGraphic.m */,
+				7A78D68B1DCC79C000C11D44 /* RoomPlane.h */,
+				7A78D68C1DCC79C000C11D44 /* RoomPlane.m */,
+				7A78D68D1DCC79C000C11D44 /* WallLine.h */,
+				7A78D68E1DCC79C000C11D44 /* WallLine.m */,
+				7A78D68F1DCC79C000C11D44 /* WallPoint.h */,
+				7A78D6901DCC79C000C11D44 /* WallPoint.m */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -354,15 +327,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A22C8DA1DC32E0D002F0D00 /* ArchPlane.m in Sources */,
+				7A78D6911DCC79C000C11D44 /* ArchPlane.m in Sources */,
+				7A78D6941DCC79C000C11D44 /* ComponentWindow.m in Sources */,
+				7A78D6931DCC79C000C11D44 /* ComponentDoor.m in Sources */,
+				7A78D6961DCC79C000C11D44 /* RoomPlane.m in Sources */,
 				7A22C89E1DC32D35002F0D00 /* AppDelegate.m in Sources */,
-				7A22C8DC1DC32E0D002F0D00 /* PublicData.m in Sources */,
-				7A22C8DE1DC32E0D002F0D00 /* ToolLine.m in Sources */,
-				7A22C8DD1DC32E0D002F0D00 /* RoomPlane.m in Sources */,
-				7A22C8E01DC32E0D002F0D00 /* WallPoint.m in Sources */,
-				7A22C8DF1DC32E0D002F0D00 /* WallLine.m in Sources */,
-				7A22C8DB1DC32E0D002F0D00 /* DrawPlaneArch.m in Sources */,
 				7A22C89B1DC32D35002F0D00 /* main.m in Sources */,
+				7A78D6921DCC79C000C11D44 /* ArchWallComponent.m in Sources */,
+				7A78D6951DCC79C000C11D44 /* PlaneDrawGraphic.m in Sources */,
+				7A78D6981DCC79C000C11D44 /* WallPoint.m in Sources */,
+				7A78D6971DCC79C000C11D44 /* WallLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +574,7 @@
 				7A22C8C51DC32D35002F0D00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A22C8C61DC32D35002F0D00 /* Build configuration list for PBXNativeTarget "DrawGraphicArchTests" */ = {
 			isa = XCConfigurationList;
@@ -608,6 +583,7 @@
 				7A22C8C81DC32D35002F0D00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A22C8C91DC32D35002F0D00 /* Build configuration list for PBXNativeTarget "DrawGraphicArchUITests" */ = {
 			isa = XCConfigurationList;
@@ -616,6 +592,7 @@
 				7A22C8CB1DC32D35002F0D00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

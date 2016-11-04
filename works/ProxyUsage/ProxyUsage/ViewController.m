@@ -43,24 +43,6 @@
 {
     [super viewDidLoad];
     
-    NSMutableArray *p = [NSMutableArray array];
-    
-    Ap *a = [Ap new];
-    a.name = @"123";
-    Bp *b = [Bp new];
-    b.n = 2;
-    [p addObject:a];
-    [p addObject:b];
-    
-    [p enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        
-    }];
-    for (Ap *t in p) {
-        NSLog(@"%@",t.name);
-        
-    }
-    
-    
     
     _containerView = [[UIView alloc]initWithFrame:CGRectMake(300, 300, 300, 300)];
     _containerView.backgroundColor = [UIColor blueColor];

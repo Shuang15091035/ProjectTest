@@ -1,14 +1,15 @@
 //
-//  PublicData.h
+//  ComponentDoor.h
 //  project_mesher(refactor)
 //
-//  Created by mac zdszkj on 2016/10/27.
+//  Created by mac zdszkj on 2016/11/3.
 //  Copyright © 2016年 mac zdszkj. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import "ArchWallComponent.h"
 
-@interface PublicData : NSObject
+
+@interface ComponentDoor : ArchWallComponent
 
 @end
