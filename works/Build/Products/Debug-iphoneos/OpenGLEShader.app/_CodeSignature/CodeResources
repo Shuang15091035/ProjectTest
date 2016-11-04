@@ -10,7 +10,7 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		ollK92S8+YIcZBdNBOFTvS3WR8s=
+		aLMXrDRIFCLo9F8qaPX6cFnmsqg=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		o6A3CZUSsjkkWBg+khkCroBzlGQ=
+		GX2CGKigo/FGu7WaoyROfTZDslk=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		OHFwXpws06MkJmmaKO7JDfe+Z/0=
+		akSbItSg8g0BeskLF3x0j/bMGZ4=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
 		<data>
-		EfSyC1D5CPnmM92ZtnCQjHONkfI=
+		U1BczISlRM8/jfBgD/IItdHRN8k=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -47,6 +47,10 @@
 		<key>Shader.vert</key>
 		<data>
 		5uUHU/JD21zcZHZNPczgcwowpBg=
+		</data>
+		<key>dude.txt</key>
+		<data>
+		J7X4nBBw0ie/YNYjSD1v7KHAMbI=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -78,11 +82,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ollK92S8+YIcZBdNBOFTvS3WR8s=
+			aLMXrDRIFCLo9F8qaPX6cFnmsqg=
 			</data>
 			<key>hash2</key>
 			<data>
-			95XoWELTBSYaWuGxWfYDN++8EKepkGWKP9egLClx7B4=
+			Gqp9oiQshvPC+DxHRlXdsgem0Nm4tcwWeSWmT1xb5HM=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -100,22 +104,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			o6A3CZUSsjkkWBg+khkCroBzlGQ=
+			GX2CGKigo/FGu7WaoyROfTZDslk=
 			</data>
 			<key>hash2</key>
 			<data>
-			bsYJu1o6t1aDLGFkA4nLP2A8gtSlvidyrT3pRD6qDL4=
+			Zw643VHU6GQhG1S23VWmmikcSzJDI8y6aRkps5A+WCI=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OHFwXpws06MkJmmaKO7JDfe+Z/0=
+			akSbItSg8g0BeskLF3x0j/bMGZ4=
 			</data>
 			<key>hash2</key>
 			<data>
-			s2kawGNk/+Q4WG6H4VR3CyPvG/mi9KI7at4KrgKF60k=
+			BTLtqglMJ7VwInKih51AsROFAMd52ndiE0CTzi/ly9Y=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -133,11 +137,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EfSyC1D5CPnmM92ZtnCQjHONkfI=
+			U1BczISlRM8/jfBgD/IItdHRN8k=
 			</data>
 			<key>hash2</key>
 			<data>
-			LbliJ8ktvhWeizoJCX4eR5U7JJgCA6JZIZnUeUayz60=
+			w6SX5ONTwjrbWcNC83Tmxar08r6NxEg2FpXJPd7wbgs=
 			</data>
 		</dict>
 		<key>Shader.frag</key>
@@ -160,6 +164,17 @@
 			<key>hash2</key>
 			<data>
 			sz5EAq2HoNHYu3fLKaijBVNLlaBkw9gYMDzAmfVPxOI=
+			</data>
+		</dict>
+		<key>dude.txt</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			J7X4nBBw0ie/YNYjSD1v7KHAMbI=
+			</data>
+			<key>hash2</key>
+			<data>
+			JLYGs/7Q24B229SgoM07ujT0+r6L3Jp70qZjqbavVyQ=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
