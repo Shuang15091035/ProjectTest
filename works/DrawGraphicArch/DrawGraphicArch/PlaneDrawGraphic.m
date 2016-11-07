@@ -56,6 +56,7 @@
     CGFloat lastScale;
     WallLine *minDisLine;
     WallLine *imageViewOfOrigLine;
+    ArchWallComponent *selectedArch;
     
 }
 
@@ -382,6 +383,7 @@
                     for (ArchWallComponent *component in wallLine.wallComponentArr) {
                         if (component.componentView == selectedComphonent) {
                             imageViewOfOrigLine = wallLine;
+                            selectedArch = component;
                         }
                     }
                 }
@@ -396,9 +398,11 @@
     if (isNormalState) {
         if (isCornerImage) {
             CGPoint touchP = [[touches anyObject] locationInView:self];
+            CGPoint lastP = [[touches anyObject] previousLocationInView:self];
             changedPoint.wallPoint = CGPointMake(touchP.x, touchP.y);
             [self pointOfSelectedLineVerticalAndHoriztonal:touchP];
             [self onLineMoveOfTouchPoint:touchP];
+            [self updateComponenetPositionAccordingToNowPoint:touchP lastPoint:lastP];
             [self setNeedsDisplay];
         }else if (isArchComponent) {
             CGPoint touchP = [[touches anyObject] locationInView:self];
@@ -536,6 +540,36 @@
     }
    
 }
+- (void)updateComponenetPositionAccordingToNowPoint:(CGPoint)newPoint lastPoint:(CGPoint)lastPoint{
+    RoomPlane *selecedRoom = [archPlane.roomPlanes objectAtIndex:selectedRoomIndex];
+    NSInteger index = [selecedRoom.roomPoints indexOfObject:changedPoint];
+    WallLine *line1 = nil;
+    WallLine *line2 = nil;
+    if (index == 0) {
+        line1 = selecedRoom.wallLines[index + 1];
+        line2 = [selecedRoom.wallLines lastObject];
+    } else if(index == selecedRoom.wallLines.count - 1) {
+        line1 = selecedRoom.wallLines[index - 1];
+        line2 = selecedRoom.wallLines[0];
+    }else{
+        line1 = selecedRoom.wallLines[index - 1];
+        line2 = selecedRoom.wallLines[index +1];
+    }
+    CGFloat deltaX = newPoint.x - lastPoint.x;
+    CGFloat deltaY = newPoint.y - lastPoint.y;
+    for (ArchWallComponent *component in line1.wallComponentArr) {
+        CGPoint tempPoint = component.componentView.center;
+        tempPoint.x += deltaX;
+        tempPoint.y += deltaY;
+        component.componentView.center = tempPoint;
+    }
+    for (ArchWallComponent *component in line2.wallComponentArr) {
+        CGPoint tempPoint = component.componentView.center;
+        tempPoint.x += deltaX;
+        tempPoint.y += deltaY;
+        component.componentView.center = tempPoint;
+    }
+}
 
 - (void)touchViewOnLineMove:(CGPoint)touchP selectedView:(UIImageView *)imageView{
     
@@ -548,14 +582,31 @@
             minDistant = tempDis;
             if (minDistant < 20){
                 CGPoint footPoint = [wallLine pedalOfLineAndVerticalAccordingToLineOutPoint:touchP];
-                if (footPoint.x <= wallLine.maxX && footPoint.x >= wallLine.minX && footPoint.y <= wallLine.maxY && footPoint.y >= wallLine.minY) {
-                    imageView.center = footPoint;
+                if( [self isIntersectionOfComponent:selectedRoomLines pedal:footPoint]){
+                    if (footPoint.x <= wallLine.maxX && footPoint.x >= wallLine.minX && footPoint.y <= wallLine.maxY && footPoint.y >= wallLine.minY) {
+                        imageView.center = footPoint;
+                    }
                 }
             }
         }
     }
 }
-
+-(bool)isIntersectionOfComponent:(NSArray *)roomLines pedal:(CGPoint)pedal{
+    for (WallLine *wallLine in roomLines) {
+        if (wallLine.wallComponentArr.count == 1) {
+            return true;
+        }
+        for (ArchWallComponent *component in wallLine.wallComponentArr) {
+            if(component.componentView.hash == selectedComphonent.hash) continue;
+            CGFloat disOfPoints = sqrtf(powf((pedal.y - component.componentView.center.y), 2) + powf((pedal.x - component.componentView.center.x), 2));
+            CGFloat comRadiuDis = selectedArch.componentWidth/2 +  component.componentWidth/2;
+            if (disOfPoints + 0.1f <= comRadiuDis) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
 /**
  点移动自动垂直和水平
  */

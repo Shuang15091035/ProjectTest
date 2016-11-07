@@ -31,7 +31,8 @@
 @synthesize wallIndex = mWallIndex;
 
 - (CGPoint)componentPosition{
-    return mComponentView.center;
+    CGPoint centerPoint = mComponentView.center;
+    return centerPoint;
 }
 
 - (instancetype)initWithDoorType:(ComponentType)componentType doorWidth:(CGFloat)componentWidth componentHeight:(CGFloat)componentHeight {

@@ -14,8 +14,8 @@
 
 @interface RoomPlane : NSObject
 
-@property (nonatomic, readonly) NSMutableArray<WallLine *>* wallLines;
-@property (nonatomic, readonly) NSMutableArray<WallLine *>* outWallLines;
+@property (nonatomic, readwrite) NSMutableArray<WallLine *>* wallLines;
+@property (nonatomic, readwrite) NSMutableArray<WallLine *>* outWallLines;
 @property (nonatomic, readwrite) NSMutableArray<WallPoint *>* roomPoints;
 @property (nonatomic, readwrite) NSMutableArray<WallPoint *>* outRoomPoints;
 @property (nonatomic, readonly) NSMutableArray<ArchWallComponent *>*currentRoomComponents;
