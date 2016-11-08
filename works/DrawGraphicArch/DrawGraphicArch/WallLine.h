@@ -46,6 +46,8 @@
  */
 - (CGPoint) pedalOfLineAndVerticalAccordingToLineOutPoint:(CGPoint)outPoint;
 
+- (CGFloat) CurrentLineAngle;
 
+- (CGFloat) getYValueArccordingToTouchPoint:(CGPoint)TouchPoint;
 
 @end

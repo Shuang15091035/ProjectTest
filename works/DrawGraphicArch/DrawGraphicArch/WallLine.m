@@ -30,6 +30,7 @@
 @synthesize wPoint2 = mWallPoint2;
 @synthesize wallComponentArr = mWallComponentArr;
 
+
 - initWithWallPoint1:(WallPoint *)wallPoint1 wallPoint2:(WallPoint *)wallPoint2{
     self = [super init];
     if (self) {
@@ -81,5 +82,17 @@
     return isOnLine;
 }
 
-
+- (CGFloat) CurrentLineAngle{
+    if (mWallPoint1.wallPoint.x == mWallPoint2.wallPoint.x) {
+        return M_PI_2;
+    }
+    CGFloat LineK = - mLineA / mLineB;
+    return atan(LineK);
+}
+- (CGFloat) getYValueArccordingToTouchPoint:(CGPoint)TouchPoint{
+    if (mLineB == 0) {
+        return TouchPoint.y;
+    }
+    return (-mLineA * TouchPoint.x - mLineC)/mLineB;
+}
 @end

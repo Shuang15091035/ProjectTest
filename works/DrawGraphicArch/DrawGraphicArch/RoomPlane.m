@@ -49,7 +49,6 @@
                 [mWallLines addObject:wl];
             }
         }
-
     }
     return mWallLines;
 }
@@ -89,11 +88,7 @@
     return crossP;
 }
 /**
- 
- @param ptStart  线段起点
- @param ptEnd    线段终点
- @param ptCenter 圆心坐标
- @param Radius   半径
+ 线段起点,线段终点,圆心坐标,半径
  * @note 与圆可能存在两个交点，如果存在两个交点在ptInter1和ptInter2都为有效值，如果有一个交点，则ptInter2的值为
  *       无效值，此处为65536.0
  */
@@ -182,9 +177,19 @@
             [self lineInterCircle:singleWall centerPoint:singleWall.wPoint1.wallPoint radius:wallComponent.componentWidth/2 wallComponent: wallComponent];
             [singleWall.wallComponentArr addObject: wallComponent];
             wallComponent.wallIndex = [self.wallLines indexOfObject:singleWall];
-            return true;
+             wallComponent.componentView.transform = CGAffineTransformMakeRotation(singleWall.CurrentLineAngle);
+            break;
         }else{
             NSInteger sWCount = singleWall.wallComponentArr.count;
+            for (int i = 0; i < sWCount ; i++) { //墙上的组件由近到远重新排列
+                for (int j = 0; j < sWCount - 1 - i; j++) {
+                    CGFloat dis1 = [singleWall.wPoint1 distanceOfAnotherPoint: singleWall.wallComponentArr[i].componentPosition];
+                    CGFloat dis2 = [singleWall.wPoint1 distanceOfAnotherPoint: singleWall.wallComponentArr[i].componentPosition];
+                    if (dis1 < dis2) {
+                        [singleWall.wallComponentArr exchangeObjectAtIndex:i withObjectAtIndex:i+1];
+                    }
+                }
+            }
             for (int i = 0; i < sWCount + 1; i++) {
                 CGPoint component1Point = CGPointZero;
                 CGPoint component2Point = CGPointZero;
@@ -196,30 +201,104 @@
                     CGFloat pointDis = sqrtf(deltaY * deltaY + deltaX * deltaX);
                     if (pointDis - singleWall.wallComponentArr[i].componentWidth/2 > wallComponent.componentWidth ) {
                         [self lineInterCircle:singleWall centerPoint:component1Point radius:wallComponent.componentWidth/2 wallComponent: wallComponent];
+                        [singleWall.wallComponentArr addObject: wallComponent];
+                        wallComponent.wallIndex = [self.wallLines indexOfObject:singleWall];
+                        break;
                     }
-                }else if(i == sWCount + 1){
-                    component1Point = singleWall.wallComponentArr[i].componentPosition;
+                }else if(i == sWCount){
+                    component1Point = singleWall.wallComponentArr[i-1].componentPosition;
                     component2Point = singleWall.wPoint2.wallPoint;
                     CGFloat deltaX = component2Point.x - component1Point.x;
                     CGFloat deltaY = component2Point.y - component1Point.y;
                     CGFloat pointDis = sqrtf(deltaY * deltaY + deltaX * deltaX);
-                    if (pointDis - singleWall.wallComponentArr[i].componentWidth/2 > wallComponent.componentWidth ) {
+                    if (pointDis - singleWall.wallComponentArr[i-1].componentWidth/2 > wallComponent.componentWidth ) {
                         [self lineInterCircle:singleWall centerPoint:component1Point radius:wallComponent.componentWidth/2 wallComponent: wallComponent];
+                        [singleWall.wallComponentArr addObject: wallComponent];
+                        wallComponent.wallIndex = [self.wallLines indexOfObject:singleWall];
+                        break;
                     }
                 }else{
-                    component1Point = singleWall.wallComponentArr[i].componentPosition;
-                    component2Point = singleWall.wallComponentArr[i+1].componentPosition;
+                    ArchWallComponent *center =singleWall.wallComponentArr[i-1];
+                    
+                    component1Point = center.componentPosition;
+                    component2Point = singleWall.wallComponentArr[i].componentPosition;
                     CGFloat deltaX = component2Point.x - component1Point.x;
                     CGFloat deltaY = component2Point.y - component1Point.y;
                     CGFloat pointDis = sqrtf(deltaY * deltaY + deltaX * deltaX);
-                    if (pointDis - singleWall.wallComponentArr[i].componentWidth/2 > wallComponent.componentWidth ) {
-                        [self lineInterCircle:singleWall centerPoint:component1Point radius:wallComponent.componentWidth/2 wallComponent: wallComponent];
+                    if (pointDis - singleWall.wallComponentArr[i-1].componentWidth/2 - singleWall.wallComponentArr[i].componentWidth/2 > wallComponent.componentWidth ) {
+                        CGPoint fWEndP = singleWall.wallComponentArr[i].componentStartP;
+                        [self getComCenterlineInterCircle:singleWall centerPoint:fWEndP radius:wallComponent.componentWidth/2 wallComponent:wallComponent];
+                        CGPoint componentCenter = wallComponent.componentEndP;
+                        [self lineInterCircle:singleWall centerPoint:componentCenter radius:wallComponent.componentWidth/2 wallComponent: wallComponent];
+                        [singleWall.wallComponentArr addObject: wallComponent];
+                        wallComponent.wallIndex = [self.wallLines indexOfObject:singleWall];
+                        NSLog(@"%@",NSStringFromCGPoint(wallComponent.componentPosition));
+                        break;
                     }
                 }
             }
+             wallComponent.componentView.transform = CGAffineTransformMakeRotation(singleWall.CurrentLineAngle);
+             break;
         }
+       
     }
+   
     return YES;
+}
+
+//判断线段上一点为圆心画圆和直线相交的距离
+- (bool) getComCenterlineInterCircle:(WallLine *)wallLine centerPoint:(const CGPoint)ptCenter radius:(const float)radius wallComponent:(ArchWallComponent*)wallComp{
+    CGPoint interPoint1 = wallComp.componentStartP;
+    CGPoint interPoint2 = wallComp.componentEndP;
+    interPoint1.x = interPoint1.y = 65536.0f;
+    interPoint2.x = interPoint2.y = 65536.0f;
+    CGPoint ptStart = wallLine.wPoint1.wallPoint;
+    CGPoint ptEnd = wallLine.wPoint2.wallPoint;
+    
+    float deltaX = ptEnd.x - ptStart.x;
+    float deltaY = ptEnd.y - ptStart.y;
+    float fDis = sqrt(powf(deltaX, 2) + powf(deltaY, 2));
+    
+    CGPoint d;
+    d.x = deltaX / fDis;
+    d.y = deltaY / fDis;
+    
+    CGPoint E;
+    E.x = ptCenter.x - ptStart.x;
+    E.y = ptCenter.y - ptStart.y;
+    
+    float a = E.x * d.x + E.y * d.y;
+    float a2 = a * a;
+    
+    float e2 = E.x * E.x + E.y * E.y;
+    
+    float r2 = radius * radius;
+    
+    if ((r2 - e2 + a2) < 0)
+    {
+        return false;
+    }
+    else
+    {
+        float f = sqrt(r2 - e2 + a2);
+        
+        float t = a - f;
+        
+        if( ((t - 0.0) > - EPS) && (t - fDis) < EPS)
+        {
+            interPoint1.x = ptStart.x + t * d.x;
+            interPoint1.y = ptStart.y + t * d.y;
+        }
+        
+        t = a + f;
+        
+        if( ((t - 0.0) > - EPS) && (t - fDis) < EPS)
+        {
+            interPoint2.x = ptStart.x + t * d.x;
+            interPoint2.y = ptStart.y + t * d.y;
+        }
+        return true;
+    }
 }
 
 @end
