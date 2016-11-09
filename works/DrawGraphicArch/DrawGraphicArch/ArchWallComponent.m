@@ -42,17 +42,17 @@
         mComponentType = componentType;
         mComponentWidth = componentWidth;
         mComponentHeight = componentHeight;
-        mComponentView = [self getComponent];
+        mComponentView = [self getComponentWidth:componentWidth];
     }
     return self;
 }
 
-- (UIImageView *)getComponent{
+- (UIImageView *)getComponentWidth:(float)compWidth{
     UIImageView *imageView = [[UIImageView alloc]init];
     imageView.userInteractionEnabled = YES;
     imageView.tag = 300;//默认给定标示
     [imageView setBackgroundColor:[UIColor grayColor]];
-    imageView.frame = CGRectMake(0, 0, 40, 40);
+    imageView.frame = CGRectMake(0, 0, compWidth, compWidth);
     return imageView;
 }
 

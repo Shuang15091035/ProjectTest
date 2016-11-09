@@ -391,7 +391,6 @@
             }
         }
     }
-    
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -410,6 +409,7 @@
         }
     }
 }
+
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
     if (isAddArchState) {
@@ -424,29 +424,7 @@
             [self addGestureRecognizer:panGesture];
         }else if (isArchComponent) {
             isArchComponent = NO;
-            NSArray *selectedRoomLines = archPlane.roomPlanes[selectedRoomIndex].wallLines;
-            WallLine *desWallLine = nil;
-            ArchWallComponent *changeArch = nil;
-            NSInteger lineCount = selectedRoomLines.count;
-            CGFloat imaDisLine = CGFLOAT_MAX;
-            for (WallLine *wallLine in selectedRoomLines) {
-                imaDisLine = [wallLine distanceOfLineFromPoint: selectedComphonent.center];
-                if(imaDisLine < 1.0f){
-                    desWallLine = wallLine;
-                }
-            }
-            for (int i = 0; i < lineCount; i++) {
-                WallLine *wallLine = selectedRoomLines[i];
-                for (ArchWallComponent *wallImageArch in wallLine.wallComponentArr) {
-                    if (wallImageArch.componentView == selectedComphonent) {
-                        changeArch = wallImageArch;
-                    }
-                }
-            }
-            if (desWallLine.hash != imageViewOfOrigLine.hash) {
-                [desWallLine.wallComponentArr addObject:changeArch];
-                [imageViewOfOrigLine.wallComponentArr removeObject:changeArch];
-            }
+            [self changeIndexOfWallComponentInSelectedRoomPlanes];
             [self addGestureRecognizer:panGesture];
         }else{
             CGPoint touchPoint = [[touches anyObject] locationInView:self];
@@ -497,9 +475,8 @@
     return [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
 }
 
-/**
- 点在线上移动
- */
+
+ //多个room时，墙体点在线上移动
 - (void)onLineMoveOfTouchPoint:(CGPoint)touchP{
     if (!isOnLine) {
         CGFloat minDistant = CGFLOAT_MAX;
@@ -540,6 +517,7 @@
     }
    
 }
+//更改墙体点时，组件的位置变化（待完善）
 - (void)updateComponenetPositionAccordingToNowPoint:(CGPoint)newPoint lastPoint:(CGPoint)lastPoint{
     RoomPlane *selecedRoom = [archPlane.roomPlanes objectAtIndex:selectedRoomIndex];
     NSInteger index = [selecedRoom.roomPoints indexOfObject:changedPoint];
@@ -570,7 +548,7 @@
         component.componentView.center = tempPoint;
     }
 }
-
+//墙体组件的移动
 - (void)touchViewOnLineMove:(CGPoint)touchP selectedView:(UIImageView *)imageView{
     
     CGFloat tempDis = 0.0f;
@@ -582,34 +560,33 @@
             minDistant = tempDis;
             if (minDistant < 20){
                 CGPoint footPoint = [wallLine pedalOfLineAndVerticalAccordingToLineOutPoint:touchP];
-                if( [self isIntersectionOfComponent:selectedRoomLines pedal:footPoint]){
+                if( [self isIntersectionOfCurrentLine:wallLine pedal:footPoint]){
                     if (footPoint.x <= wallLine.maxX && footPoint.x >= wallLine.minX && footPoint.y <= wallLine.maxY && footPoint.y >= wallLine.minY) {
                         imageView.center = footPoint;
+                        imageView.transform = CGAffineTransformMakeRotation([wallLine CurrentLineAngle]);
                     }
                 }
             }
         }
     }
 }
--(bool)isIntersectionOfComponent:(NSArray *)roomLines pedal:(CGPoint)pedal{
-    for (WallLine *wallLine in roomLines) {
-        if (wallLine.wallComponentArr.count == 1) {
-            return true;
-        }
-        for (ArchWallComponent *component in wallLine.wallComponentArr) {
-            if(component.componentView.hash == selectedComphonent.hash) continue;
-            CGFloat disOfPoints = sqrtf(powf((pedal.y - component.componentView.center.y), 2) + powf((pedal.x - component.componentView.center.x), 2));
-            CGFloat comRadiuDis = selectedArch.componentWidth/2 +  component.componentWidth/2;
-            if (disOfPoints + 0.1f <= comRadiuDis) {
-                return false;
-            }
+
+//判断组件的不相交
+-(bool)isIntersectionOfCurrentLine:(WallLine *)currentLine pedal:(CGPoint)pedal {
+    if (currentLine.wallComponentArr.count == 1) {
+        return true;
+    }
+    for (ArchWallComponent *component in currentLine.wallComponentArr) {
+        if(component.componentView.hash == selectedComphonent.hash) continue;
+        CGFloat disOfPoints = sqrtf(powf((pedal.y - component.componentView.center.y), 2) + powf((pedal.x - component.componentView.center.x), 2));
+        CGFloat comRadiuDis = selectedArch.componentWidth/2 +  component.componentWidth/2;
+        if (disOfPoints + 0.1f <= comRadiuDis) {
+            return false;
         }
     }
     return true;
 }
-/**
- 点移动自动垂直和水平
- */
+// 墙体点移动自动垂直和水平
 - (void)pointOfSelectedLineVerticalAndHoriztonal:(CGPoint)touchP{
     RoomPlane *selecedArch = [archPlane.roomPlanes objectAtIndex:selectedRoomIndex];
     NSInteger index = [selecedArch.roomPoints indexOfObject:changedPoint];
@@ -638,6 +615,33 @@
     changedPoint.wallPoint = tempPoint;
 }
 
-
+//墙体组件移动后，更改组件在墙体的位置
+- (void)changeIndexOfWallComponentInSelectedRoomPlanes{
+    NSArray *selectedRoomLines = archPlane.roomPlanes[selectedRoomIndex].wallLines;
+    WallLine *desWallLine = nil;
+    ArchWallComponent *changeArch = nil;
+    NSInteger lineCount = selectedRoomLines.count;
+    CGFloat imaDisLine = CGFLOAT_MAX;
+    for (WallLine *wallLine in selectedRoomLines) {
+        imaDisLine = [wallLine distanceOfLineFromPoint: selectedComphonent.center];
+        if(imaDisLine < 2.0f){
+            desWallLine = wallLine;
+        }
+    }
+    /*
+    for (int i = 0; i < lineCount; i++) {
+        WallLine *wallLine = selectedRoomLines[i];
+        for (ArchWallComponent *wallImageArch in wallLine.wallComponentArr) {
+            if (wallImageArch.componentView == selectedComphonent) {
+                changeArch = wallImageArch;
+            }
+        }
+    }*/
+    changeArch = selectedArch;
+    if (desWallLine.hash != imageViewOfOrigLine.hash) {
+        [desWallLine.wallComponentArr addObject:changeArch];
+        [imageViewOfOrigLine.wallComponentArr removeObject:changeArch];
+    }
+}
 
 @end
