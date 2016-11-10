@@ -23,22 +23,28 @@
 @implementation WallLine
 
 @synthesize wallHeight = mWallHeight;
-@synthesize lineA = mLineA;
-@synthesize lineB = mLineB;
-@synthesize lineC = mLineC;
 @synthesize wPoint1 = mWallPoint1;
 @synthesize wPoint2 = mWallPoint2;
 @synthesize wallComponentArr = mWallComponentArr;
 
+- (float)lineA{
+    mLineA = mWallPoint2.wallPoint.y - mWallPoint1.wallPoint.y;
+    return mLineA;
+}
+- (float)lineB{
+    mLineB = mWallPoint1.wallPoint.x - mWallPoint2.wallPoint.x;
+    return mLineB;
+}
+-(float)lineC{
+    mLineC = mWallPoint2.wallPoint.x*mWallPoint1.wallPoint.y-mWallPoint1.wallPoint.x*mWallPoint2.wallPoint.y;
+    return mLineC;
+}
 
 - initWithWallPoint1:(WallPoint *)wallPoint1 wallPoint2:(WallPoint *)wallPoint2{
     self = [super init];
     if (self) {
         mWallPoint1 = wallPoint1;
         mWallPoint2 = wallPoint2;
-        mLineA = mWallPoint2.wallPoint.y - mWallPoint1.wallPoint.y;
-        mLineB = mWallPoint1.wallPoint.x - mWallPoint2.wallPoint.x;
-        mLineC = mWallPoint2.wallPoint.x*mWallPoint1.wallPoint.y-mWallPoint1.wallPoint.x*mWallPoint2.wallPoint.y;
         mWallComponentArr = [NSMutableArray array];
         mWallHeight = 10.0f;
     }
@@ -60,15 +66,15 @@
 - (CGPoint) pedalOfLineAndVerticalAccordingToLineOutPoint:(CGPoint)outPoint{
     CGPoint footPoint = CGPointZero;
     
-    footPoint.x=(mLineB * mLineB * outPoint.x - mLineA * mLineB * outPoint.y - mLineA * mLineC)/(mLineA * mLineA + mLineB * mLineB);
-    footPoint.y=(-mLineA * mLineB * outPoint.x + mLineA * mLineA * outPoint.y - mLineB * mLineC)/(mLineA * mLineA + mLineB * mLineB);
+    footPoint.x=(self.lineB * self.lineB * outPoint.x - self.lineA * self.lineB * outPoint.y - self.lineA * self.lineC)/(self.lineA * self.lineA + self.lineB * self.lineB);
+    footPoint.y=(-self.lineA * self.lineB * outPoint.x + self.lineA * self.lineA * outPoint.y - self.lineB * self.lineC)/(self.lineA * self.lineA + self.lineB * self.lineB);
     
     return footPoint;
 }
 
 - (float) distanceOfLineFromPoint:(CGPoint)outPoint{
     
-    float distance=fabs((mLineA * outPoint.x + mLineB * outPoint.y + mLineC))/sqrt(mLineA * mLineA + mLineB * mLineB);
+    float distance=fabs((self.lineA * outPoint.x + self.lineB * outPoint.y + self.lineC))/sqrt(self.lineA * self.lineA + self.lineB * self.lineB);
     
     return distance;
 }
@@ -76,7 +82,7 @@
 - (bool) isOnLineOfPoint:(CGPoint) outPoint{
     
     bool isOnLine = false;
-    if (mLineA * outPoint.x + mLineB * outPoint.y + mLineC == 0) {
+    if (self.lineA * outPoint.x + self.lineB * outPoint.y + self.lineC == 0) {
         isOnLine = true;
     }
     return isOnLine;
@@ -86,13 +92,27 @@
     if (mWallPoint1.wallPoint.x == mWallPoint2.wallPoint.x) {
         return M_PI_2;
     }
-    CGFloat LineK = - mLineA / mLineB;
+    CGFloat LineK = - self.lineA / self.lineB;
     return atan(LineK);
 }
 - (CGFloat) getYValueArccordingToTouchPoint:(CGPoint)TouchPoint{
-    if (mLineB == 0) {
+    if (self.lineB == 0) {
         return TouchPoint.y;
     }
-    return (-mLineA * TouchPoint.x - mLineC)/mLineB;
+    return (-self.lineA * TouchPoint.x - self.lineC)/self.lineB;
 }
+
+- (void)updateComponentPercentOfWallLine{
+    CGFloat wallWidth = [self getWallLineWidth];
+    for (ArchWallComponent *wallComponent in mWallComponentArr) {
+     wallComponent.percent = [self distantof:wallComponent.componentPosition point2:mWallPoint2.wallPoint]/wallWidth;
+    }
+}
+- (CGFloat)getWallLineWidth{
+    return sqrtf(powf((mWallPoint2.wallPoint.x - mWallPoint1.wallPoint.x), 2) + powf((mWallPoint2.wallPoint.y - mWallPoint1.wallPoint.y), 2));
+}
+- (CGFloat)distantof:(CGPoint)point1 point2:(CGPoint)point2{
+    return sqrtf(powf((point2.x - point1.x), 2) + powf((point2.y - point1.y), 2));
+}
+
 @end

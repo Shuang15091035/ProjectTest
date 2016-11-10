@@ -50,4 +50,10 @@
 
 - (CGFloat) getYValueArccordingToTouchPoint:(CGPoint)TouchPoint;
 
+- (CGFloat)getWallLineWidth;
+
+- (CGFloat)distantof:(CGPoint)point1 point2:(CGPoint)point2;
+
+- (void)updateComponentPercentOfWallLine;
+
 @end

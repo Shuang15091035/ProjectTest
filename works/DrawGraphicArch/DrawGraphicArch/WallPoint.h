@@ -17,4 +17,5 @@
 - initWithPoint:(CGPoint)touchP currentPointView:(UIView *)currentView;
 
 - (float) distanceOfAnotherPoint:(CGPoint)anPoint;
+
 @end

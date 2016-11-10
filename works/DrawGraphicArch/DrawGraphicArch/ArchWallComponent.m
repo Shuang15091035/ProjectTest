@@ -17,6 +17,7 @@
     CGPoint mComponentStartP;
     CGPoint mComponentEndP;
     NSInteger mWallIndex;
+    CGFloat mPercent;
 }
 @end
 
@@ -29,6 +30,7 @@
 @synthesize componentStartP = mComponentStartP;
 @synthesize componentEndP = mComponentEndP;
 @synthesize wallIndex = mWallIndex;
+@synthesize percent = mPercent;
 
 - (CGPoint)componentPosition{
     CGPoint centerPoint = mComponentView.center;

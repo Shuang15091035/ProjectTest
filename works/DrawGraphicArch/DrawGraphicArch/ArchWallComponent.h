@@ -21,6 +21,7 @@
 @property (nonatomic, readwrite) CGPoint componentStartP;
 @property (nonatomic, readwrite) CGPoint componentEndP;
 @property (nonatomic, readwrite) NSInteger wallIndex;
+@property (nonatomic, readwrite) CGFloat percent;
 
 - (instancetype)initWithDoorType:(ComponentType)componentType doorWidth:(CGFloat)componentWidth componentHeight:(CGFloat)componentHeight;
 

@@ -164,28 +164,8 @@
 		7A22C8E51DC32EC1002F0D00 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				7A22C89C1DC32D35002F0D00 /* AppDelegate.h */,
-				7A22C89D1DC32D35002F0D00 /* AppDelegate.m */,
-				7A78D69C1DCC7CBE00C11D44 /* ViewController.h */,
-				7A78D69D1DCC7CBE00C11D44 /* ViewController.m */,
-				7A78D6991DCC7BA800C11D44 /* PublicData.h */,
-				7A78D69A1DCC7BA800C11D44 /* PublicData.m */,
-				7A78D6811DCC79C000C11D44 /* ArchPlane.h */,
-				7A78D6821DCC79C000C11D44 /* ArchPlane.m */,
-				7A78D6831DCC79C000C11D44 /* ArchWallComponent.h */,
-				7A78D6841DCC79C000C11D44 /* ArchWallComponent.m */,
-				7A78D6851DCC79C000C11D44 /* ComponentDoor.h */,
-				7A78D6861DCC79C000C11D44 /* ComponentDoor.m */,
-				7A78D6871DCC79C000C11D44 /* ComponentWindow.h */,
-				7A78D6881DCC79C000C11D44 /* ComponentWindow.m */,
-				7A78D6891DCC79C000C11D44 /* PlaneDrawGraphic.h */,
-				7A78D68A1DCC79C000C11D44 /* PlaneDrawGraphic.m */,
-				7A78D68B1DCC79C000C11D44 /* RoomPlane.h */,
-				7A78D68C1DCC79C000C11D44 /* RoomPlane.m */,
-				7A78D68D1DCC79C000C11D44 /* WallLine.h */,
-				7A78D68E1DCC79C000C11D44 /* WallLine.m */,
-				7A78D68F1DCC79C000C11D44 /* WallPoint.h */,
-				7A78D6901DCC79C000C11D44 /* WallPoint.m */,
+				7A653FB01DD31ADE00511ADC /* Data */,
+				7A653FAF1DD31AC900511ADC /* View */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -199,6 +179,50 @@
 				7A22C8AA1DC32D35002F0D00 /* Info.plist */,
 			);
 			name = res;
+			sourceTree = "<group>";
+		};
+		7A5309841DD45C5100E8B3CE /* archItem */ = {
+			isa = PBXGroup;
+			children = (
+				7A78D6831DCC79C000C11D44 /* ArchWallComponent.h */,
+				7A78D6841DCC79C000C11D44 /* ArchWallComponent.m */,
+				7A78D6851DCC79C000C11D44 /* ComponentDoor.h */,
+				7A78D6861DCC79C000C11D44 /* ComponentDoor.m */,
+				7A78D6871DCC79C000C11D44 /* ComponentWindow.h */,
+				7A78D6881DCC79C000C11D44 /* ComponentWindow.m */,
+			);
+			name = archItem;
+			sourceTree = "<group>";
+		};
+		7A653FAF1DD31AC900511ADC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A22C89C1DC32D35002F0D00 /* AppDelegate.h */,
+				7A22C89D1DC32D35002F0D00 /* AppDelegate.m */,
+				7A78D69C1DCC7CBE00C11D44 /* ViewController.h */,
+				7A78D69D1DCC7CBE00C11D44 /* ViewController.m */,
+				7A78D6891DCC79C000C11D44 /* PlaneDrawGraphic.h */,
+				7A78D68A1DCC79C000C11D44 /* PlaneDrawGraphic.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7A653FB01DD31ADE00511ADC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7A78D6991DCC7BA800C11D44 /* PublicData.h */,
+				7A78D69A1DCC7BA800C11D44 /* PublicData.m */,
+				7A5309841DD45C5100E8B3CE /* archItem */,
+				7A78D6811DCC79C000C11D44 /* ArchPlane.h */,
+				7A78D6821DCC79C000C11D44 /* ArchPlane.m */,
+				7A78D68B1DCC79C000C11D44 /* RoomPlane.h */,
+				7A78D68C1DCC79C000C11D44 /* RoomPlane.m */,
+				7A78D68D1DCC79C000C11D44 /* WallLine.h */,
+				7A78D68E1DCC79C000C11D44 /* WallLine.m */,
+				7A78D68F1DCC79C000C11D44 /* WallPoint.h */,
+				7A78D6901DCC79C000C11D44 /* WallPoint.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

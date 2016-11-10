@@ -34,7 +34,7 @@
  @param ptInter2 交点坐标
  @return 是否有交点
  */
-//- (bool) LineInterCircle:(WallLine *)wallLine centerPoint:(const CGPoint)ptCenter radius:(const float)radius interPoint1:(CGPoint&)interPoint1 interPoint2:(CGPoint&)interPoint2;
+bool getComCenterlineInterCircle(WallLine * wallLine, const CGPoint ptCenter, const float radius,  CGPoint *interPoint1, CGPoint *interPoint2);
 
 - (bool) addAvailableComponentView:(ArchWallComponent *)wallComponent;
 

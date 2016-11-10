@@ -22,7 +22,6 @@
 - (id)initWithPoint:(CGPoint)touchP currentPointView:(UIView *)currentView{
     self = [super init];
     if (self) {
-
         mWallPoint = touchP;
         self.mImageView.center = mWallPoint;
         [currentView addSubview:self.mImageView];
