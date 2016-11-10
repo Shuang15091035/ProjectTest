@@ -39,7 +39,7 @@
         _mImageView = [[UIImageView alloc]init];
         _mImageView.userInteractionEnabled = YES;
         _mImageView.backgroundColor = [self randomColor];
-        _mImageView.frame = CGRectMake(0, 0, 40, 40);
+        _mImageView.frame = CGRectMake(0, 0, 50, 50);
     }
     return _mImageView;
 }
