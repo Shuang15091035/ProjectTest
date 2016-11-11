@@ -21,6 +21,7 @@
  
  @return room索引
  */
+
 - (NSInteger)roomIndexOfRoomPlaneInsideRayCastingPoint:(CGPoint)RayCastPoint;
 
 @end

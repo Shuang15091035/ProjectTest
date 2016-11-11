@@ -13,6 +13,8 @@
 #import "WallPoint.h"
 #import "ComponentDoor.h"
 #import "ComponentWindow.h"
+#import <Home.h>
+#import <>
 
 #define UNSELECTROOM -1
 
@@ -509,6 +511,7 @@
         archComp.componentView.transform = CGAffineTransformMakeRotation([associatedWL2 CurrentLineAngle]);
     }
 }
+
 //墙体组件的移动
 - (void)touchViewOnLineMove:(CGPoint)touchP selectedView:(UIImageView *)imageView{
     if (selectedRoomIndex == UNSELECTROOM)return;
@@ -529,7 +532,6 @@
             if (footPoint.x <= minLine.maxX && footPoint.x >= minLine.minX && footPoint.y <= minLine.maxY && footPoint.y >= minLine.minY) {
                 imageView.center = footPoint;
                 imageView.transform = CGAffineTransformMakeRotation([minLine CurrentLineAngle]);
-                NSLog(@"-------------------moving");
             }
         }
     }
@@ -550,6 +552,7 @@
     }
     return false;
 }
+
 // 墙体点移动自动垂直和水平
 - (void)pointOfSelectedLineVerticalAndHoriztonal:(CGPoint)touchP{
     if (selectedRoomIndex == UNSELECTROOM) return;
@@ -600,6 +603,7 @@
         [imageViewOfOrigLine.wallComponentArr removeObject:changeArch];
     }
 }
+
 - (void)getPercentOfBeforeMoving{
     RoomPlane *selecedRoom = [archPlane.roomPlanes objectAtIndex:selectedRoomIndex];
     NSInteger index = [selecedRoom.roomPoints indexOfObject:selectedPoint];
@@ -615,4 +619,5 @@
     [associatedWL1 updateComponentPercentOfWallLine];
     [associatedWL2 updateComponentPercentOfWallLine];
 }
+
 @end

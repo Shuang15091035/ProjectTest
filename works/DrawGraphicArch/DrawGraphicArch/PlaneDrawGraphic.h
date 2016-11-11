@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+@class WallPoint;
+@class WallLine;
+@class RoomPlane;
+@class ArchPlane;
 
 @interface PlaneDrawGraphic : UIView
 - (instancetype)initWithBtn:(UIButton *)btn finishBtn:(UIButton *)finishBtn deleteBtn:(UIButton *)deleteBtn componentBtn:(UIButton *)componentBtn;
+
 
 @end
