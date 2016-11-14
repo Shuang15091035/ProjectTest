@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-//#import "PlaneDrawGraphic.h"
 #import "DrawPlane.h"
 
 @interface ViewController ()
@@ -41,16 +40,6 @@
     componentBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     componentBtn.backgroundColor = [UIColor redColor];
     
-    /*
-    PlaneDrawGraphic *planDrawGraphic = [[PlaneDrawGraphic alloc]initWithBtn:addBtn finishBtn:finishBtn deleteBtn:deleteBtn componentBtn:componentBtn];
-    CGSize screenSize = [[UIScreen mainScreen]bounds].size;
-    CGFloat screenWidth = screenSize.width;
-    CGFloat screenHeight = screenSize.height;
-    planDrawGraphic.frame = CGRectMake(-screenWidth, -screenHeight, screenWidth * 3, screenHeight * 3);
-    [self.view addSubview:planDrawGraphic];
-    
-    
-     */
     DrawPlane *planDrawGraphic = [[DrawPlane alloc]initWithBtn:addBtn finishBtn:finishBtn deleteBtn:deleteBtn componentBtn:componentBtn];
     CGSize screenSize = [[UIScreen mainScreen]bounds].size;
     CGFloat screenWidth = screenSize.width;
@@ -64,20 +53,5 @@
     [self.view addSubview:componentBtn];
     
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

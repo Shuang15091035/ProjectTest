@@ -13,7 +13,7 @@
 #define SCREENSIZE [[UIScreen mainScreen]bounds].size
 
 @interface DrawPlane(){
-    HomeArchPlane *archPlane;
+    HomeArchPlane *mArchPlane;
     bool isNormalState;
     bool isAddArchState;
     bool isSelectedRoom;
@@ -46,12 +46,13 @@
 
 @implementation DrawPlane
 
+@synthesize homeArchPlane = mArchPlane;
 - (instancetype)initWithBtn:(UIButton *)btn finishBtn:(UIButton *)finishBtn deleteBtn:(UIButton *)deleteBtn componentBtn:(UIButton *)componentBtn{
     self = [super init];
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         selectedRoomIndex = UNSELECTROOM;
-        archPlane = [[HomeArchPlane alloc]init];
+        mArchPlane = [[HomeArchPlane alloc]init];
         _currentViewPoint = [NSMutableArray array];
         _reusableImageAry = [NSMutableArray array];
         _tempTestAry = [NSMutableArray array];
@@ -95,8 +96,8 @@
     if (_currentViewPoint.count != 0 && _currentViewPoint.count >= 3) {
         HomeRoomPlane *roomPlane = [[HomeRoomPlane alloc]init];
         [roomPlane.roomPoints addObjectsFromArray:_currentViewPoint];
-        [archPlane.roomPlanes addObject:roomPlane];
-        selectedRoomIndex = archPlane.roomPlanes.count - 1;
+        [mArchPlane.roomPlanes addObject:roomPlane];
+        selectedRoomIndex = mArchPlane.roomPlanes.count - 1;
         [self setNeedsDisplay];
     }else{
         for (HomeWallPoint *gp in _currentViewPoint) {
@@ -104,20 +105,18 @@
             [_reusableImageAry addObject:gp.pointImageView];
         }
     }
-    
     [self addGestureRecognizer:panGesture];
     [self addGestureRecognizer:pinchGesture];
-    
 }
 
 - (void) btnDeleteAction:(UIButton *)btn{
     if (isSelectedRoom) {
-        HomeRoomPlane *deleteArch = [archPlane.roomPlanes objectAtIndex:selectedRoomIndex];
+        HomeRoomPlane *deleteArch = [mArchPlane.roomPlanes objectAtIndex:selectedRoomIndex];
         for (HomeWallPoint *point in deleteArch.roomPoints) {
             point.pointImageView.hidden = YES;
             [_reusableImageAry addObject:point.pointImageView];
         }
-        [archPlane.roomPlanes removeObjectAtIndex:selectedRoomIndex];
+        [mArchPlane.roomPlanes removeObjectAtIndex:selectedRoomIndex];
         mDeleteBtn.hidden = YES;
         isSelectedRoom = NO;
         [self setNeedsDisplay];
@@ -126,7 +125,7 @@
 - (void)componentAction:(UIButton *)btn{
     if (selectedRoomIndex == UNSELECTROOM) return;
     HomeArchDoor *componentDoor = [[HomeArchDoor alloc]initWithDoorType:HomeComponentTypeSingleDoorInside doorWidth:50 componentHeight:5];
-    HomeRoomPlane *singleRoom = [archPlane.roomPlanes objectAtIndex:selectedRoomIndex];
+    HomeRoomPlane *singleRoom = [mArchPlane.roomPlanes objectAtIndex:selectedRoomIndex];
     [singleRoom addAvailableComponentView:componentDoor];
     [self addSubview:componentDoor.componentView];
 }
@@ -186,7 +185,7 @@
     
     if (selectedRoomIndex >= 0 ) {
         CGPoint moveP = [gesturePan translationInView:self];
-        HomeRoomPlane *selectedRoom = [archPlane.roomPlanes objectAtIndex:selectedRoomIndex];
+        HomeRoomPlane *selectedRoom = [mArchPlane.roomPlanes objectAtIndex:selectedRoomIndex];
         switch (gesturePan.state) {
             case UIGestureRecognizerStateBegan:{
                 break;
@@ -223,7 +222,7 @@
                 break;
             }
             case UIGestureRecognizerStateChanged:{
-                for (HomeRoomPlane *singleRoom in archPlane.roomPlanes) {
+                for (HomeRoomPlane *singleRoom in mArchPlane.roomPlanes) {
                     for (HomeWallPoint *gp in singleRoom.roomPoints) {
                         CGPoint tempP = gp.wallPoint;
                         gp.wallPoint = CGPointMake(tempP.x += moveP.x, tempP.y += moveP.y);
@@ -248,7 +247,7 @@
 - (void)drawRect:(CGRect)rect {
     CGContextRef currentContextRef = UIGraphicsGetCurrentContext();
     int counter = 0;
-    for (HomeRoomPlane *singleRoom in archPlane.roomPlanes) {
+    for (HomeRoomPlane *singleRoom in mArchPlane.roomPlanes) {
         if (counter++ == selectedRoomIndex) {
             continue;
         }else{
@@ -256,13 +255,15 @@
         }
     }
     if (selectedRoomIndex != UNSELECTROOM) {
-        [self drawArchByNsarrayOfPoints:archPlane.roomPlanes[selectedRoomIndex].roomPoints isSeledtRoom:true currentContext:currentContextRef]; //写在这里是为了让选中的图形显示在最上层（后绘制的在上面）
+        [self drawArchByNsarrayOfPoints:mArchPlane.roomPlanes[selectedRoomIndex].roomPoints isSeledtRoom:true currentContext:currentContextRef]; //写在这里是为了让选中的图形显示在最上层（后绘制的在上面）
     }
     
     if (isAddArchState) {
         [self drawArchByNsarrayOfPoints:_currentViewPoint isSeledtRoom:true currentContext:currentContextRef];
     }else if(isNormalState){
-        
+        if (_isGenerateHome) {
+            [self drawArchByNsarrayOfPoints:[mArchPlane.roomPlanes lastObject].roomPoints isSeledtRoom:false currentContext:currentContextRef];
+        }
     }
     
     
@@ -328,11 +329,11 @@
                 isCornerImage = YES;
                 [self removeGestureRecognizer:panGesture];
                 CGPoint viewCenter = [touches anyObject].view.center;
-                for (HomeRoomPlane *singleRoom in archPlane.roomPlanes) {
+                for (HomeRoomPlane *singleRoom in mArchPlane.roomPlanes) {
                     for (HomeWallPoint *point in singleRoom.roomPoints) {
                         if (point.wallPoint.x == viewCenter.x && point.wallPoint.y == viewCenter.y) {
                             selectedPoint = point;
-                            selectedRoomIndex = [archPlane.roomPlanes indexOfObject:singleRoom];
+                            selectedRoomIndex = [mArchPlane.roomPlanes indexOfObject:singleRoom];
                             isSelectedRoom = YES;
                         }
                     }
@@ -343,7 +344,7 @@
             }else if ([touches anyObject].view.tag == 300) {
                 selectedComphonent = (UIImageView *)[touches anyObject].view;
                 isArchComponent = YES;
-                NSArray *selectedRoomLines = archPlane.roomPlanes[selectedRoomIndex].wallLines;
+                NSArray *selectedRoomLines = mArchPlane.roomPlanes[selectedRoomIndex].wallLines;
                 for (HomeWallLine *wallLine in selectedRoomLines) {
                     for (HomeArchItem *component in wallLine.wallComponentArr) {
                         if (component.componentView == selectedComphonent) {
@@ -392,7 +393,7 @@
             [self addGestureRecognizer:panGesture];
         }else{
             CGPoint touchPoint = [[touches anyObject] locationInView:self];
-            selectedRoomIndex = [archPlane roomIndexOfRoomPlaneInsideRayCastingPoint:touchPoint];
+            selectedRoomIndex = [mArchPlane roomIndexOfRoomPlaneInsideRayCastingPoint:touchPoint];
             if (selectedRoomIndex != UNSELECTROOM) {
                 mDeleteBtn.hidden = NO;
                 mCommponentBtn.hidden = NO;
@@ -446,9 +447,9 @@
     if (!isOnLine) {
         CGFloat minDistant = CGFLOAT_MAX;
         CGFloat tempDis = 0.0f;
-        for (int i = 0; i < archPlane.roomPlanes.count; i++) {
+        for (int i = 0; i < mArchPlane.roomPlanes.count; i++) {
             if (i == selectedRoomIndex)  continue;
-            HomeRoomPlane  *roomPlane = archPlane.roomPlanes[i];
+            HomeRoomPlane  *roomPlane = mArchPlane.roomPlanes[i];
             for (HomeWallLine *gl in roomPlane.wallLines) {
                 tempDis = [gl distanceOfLineFromPoint:touchP];
                 if (tempDis < minDistant) {
@@ -509,7 +510,7 @@
     CGFloat tempDis = 0.0f;
     CGFloat minDistant = CGFLOAT_MAX;
     HomeWallLine *minLine = nil;
-    NSArray *selectedRoomLines = archPlane.roomPlanes[selectedRoomIndex].wallLines;
+    NSArray *selectedRoomLines = mArchPlane.roomPlanes[selectedRoomIndex].wallLines;
     for (HomeWallLine *wallLine in selectedRoomLines) {
         tempDis = [wallLine distanceOfLineFromPoint:touchP];
         if (tempDis < minDistant) {
@@ -547,7 +548,7 @@
 // 墙体点移动自动垂直和水平
 - (void)pointOfSelectedLineVerticalAndHoriztonal:(CGPoint)touchP{
     if (selectedRoomIndex == UNSELECTROOM) return;
-    HomeRoomPlane *selecedArch = [archPlane.roomPlanes objectAtIndex:selectedRoomIndex];
+    HomeRoomPlane *selecedArch = [mArchPlane.roomPlanes objectAtIndex:selectedRoomIndex];
     NSInteger index = [selecedArch.roomPoints indexOfObject:selectedPoint];
     HomeWallPoint *point1 = nil;
     HomeWallPoint *point2 = nil;
@@ -577,7 +578,7 @@
 //墙体组件移动后，更改组件在墙体的位置
 - (void)changeIndexOfWallComponentInSelectedRoomPlanes{
     if (selectedRoomIndex == UNSELECTROOM) return;
-    NSArray *selectedRoomLines = archPlane.roomPlanes[selectedRoomIndex].wallLines;
+    NSArray *selectedRoomLines = mArchPlane.roomPlanes[selectedRoomIndex].wallLines;
     HomeWallLine *desWallLine = nil;
     HomeArchItem *changeArch = nil;
     CGFloat imaDisLine = CGFLOAT_MAX;
@@ -596,7 +597,7 @@
 }
 
 - (void)getPercentOfBeforeMoving{
-    HomeRoomPlane *selecedRoom = [archPlane.roomPlanes objectAtIndex:selectedRoomIndex];
+    HomeRoomPlane *selecedRoom = [mArchPlane.roomPlanes objectAtIndex:selectedRoomIndex];
     NSInteger index = [selecedRoom.roomPoints indexOfObject:selectedPoint];
     associatedWL1 = nil;
     associatedWL2 = nil;

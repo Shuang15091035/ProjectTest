@@ -19,6 +19,7 @@
 		7A78D69E1DCC7CBE00C11D44 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D69D1DCC7CBE00C11D44 /* ViewController.m */; };
 		7A8377241DD5714A00AF8F64 /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8377231DD5714A00AF8F64 /* Plan.m */; };
 		7AA5710F1DD98D6500C36352 /* libHome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA5710E1DD98D6500C36352 /* libHome.a */; };
+		7AAF54BA1DD98FE100231FD8 /* GenerateHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF54B91DD98FE100231FD8 /* GenerateHomeVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		7A8377221DD5714A00AF8F64 /* Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plan.h; sourceTree = "<group>"; };
 		7A8377231DD5714A00AF8F64 /* Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plan.m; sourceTree = "<group>"; };
 		7AA5710E1DD98D6500C36352 /* libHome.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHome.a; path = "../Build/Products/Debug-iphoneos/libHome.a"; sourceTree = "<group>"; };
+		7AAF54B81DD98FE100231FD8 /* GenerateHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateHomeVC.h; sourceTree = "<group>"; };
+		7AAF54B91DD98FE100231FD8 /* GenerateHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateHomeVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,8 @@
 				7A22C89D1DC32D35002F0D00 /* AppDelegate.m */,
 				7A78D69C1DCC7CBE00C11D44 /* ViewController.h */,
 				7A78D69D1DCC7CBE00C11D44 /* ViewController.m */,
+				7AAF54B81DD98FE100231FD8 /* GenerateHomeVC.h */,
+				7AAF54B91DD98FE100231FD8 /* GenerateHomeVC.m */,
 				7A58CEDD1DD95FB400598E0B /* DrawPlane.h */,
 				7A58CEDE1DD95FB400598E0B /* DrawPlane.m */,
 			);
@@ -340,6 +345,7 @@
 				7A58CEDF1DD95FB400598E0B /* DrawPlane.m in Sources */,
 				7A22C89B1DC32D35002F0D00 /* main.m in Sources */,
 				7A78D69E1DCC7CBE00C11D44 /* ViewController.m in Sources */,
+				7AAF54BA1DD98FE100231FD8 /* GenerateHomeVC.m in Sources */,
 				7A78D69B1DCC7BA800C11D44 /* PublicData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -42,7 +42,9 @@ bool getComCenterlineInterCircle(HomeWallLine * wallLine, const CGPoint ptCenter
     return self;
 }
 - (NSMutableArray<HomeWallLine *> *)wallLines{
-
+    if (mWallLines == nil) {
+        mWallLines = [NSMutableArray array];
+    }
     if (mWallLines.count == 0) {
         NSUInteger pointCount = mRoomPoints.count;
         for (NSUInteger i = 0,j = pointCount - 1; i < pointCount; i++) {
@@ -59,7 +61,9 @@ bool getComCenterlineInterCircle(HomeWallLine * wallLine, const CGPoint ptCenter
 }
 
 -(NSMutableArray<HomeWallLine *> *)outWallLines{
-    
+    if (mOutWallLines == nil) {
+        mOutWallLines = [NSMutableArray array];
+    }
     if (mOutWallLines.count == 0) {
         NSUInteger pointCount = mOutRoomPoints.count;
         for (NSUInteger i = 0,j = pointCount - 1; i < pointCount; i++) {
