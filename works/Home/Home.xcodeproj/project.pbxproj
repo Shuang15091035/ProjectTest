@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A8377541DD5B4E600AF8F64 /* ArchPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A83774B1DD5B4E600AF8F64 /* ArchPlane.m */; };
-		7A8377551DD5B4E600AF8F64 /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A83774D1DD5B4E600AF8F64 /* Home.m */; };
-		7A8377561DD5B4E600AF8F64 /* RoomPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A83774F1DD5B4E600AF8F64 /* RoomPlane.m */; };
-		7A8377571DD5B4E600AF8F64 /* WallLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8377511DD5B4E600AF8F64 /* WallLine.m */; };
-		7A8377581DD5B4E600AF8F64 /* WallPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8377531DD5B4E600AF8F64 /* WallPoint.m */; };
-		7A83775F1DD5B55000AF8F64 /* ArchWallComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A83775A1DD5B55000AF8F64 /* ArchWallComponent.m */; };
-		7A8377601DD5B55000AF8F64 /* ComponentDoor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A83775C1DD5B55000AF8F64 /* ComponentDoor.m */; };
-		7A8377611DD5B55000AF8F64 /* ComponentWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A83775E1DD5B55000AF8F64 /* ComponentWindow.m */; };
+		7A58CEE21DD9642D00598E0B /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A58CEE11DD9642D00598E0B /* Home.m */; };
+		7A8377561DD5B4E600AF8F64 /* HomeRoomPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A83774F1DD5B4E600AF8F64 /* HomeRoomPlane.m */; };
+		7A8377571DD5B4E600AF8F64 /* HomeWallLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8377511DD5B4E600AF8F64 /* HomeWallLine.m */; };
+		7A8377581DD5B4E600AF8F64 /* HomeWallPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8377531DD5B4E600AF8F64 /* HomeWallPoint.m */; };
+		7A83775F1DD5B55000AF8F64 /* HomeArchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A83775A1DD5B55000AF8F64 /* HomeArchItem.m */; };
+		7A8377601DD5B55000AF8F64 /* HomeArchDoor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A83775C1DD5B55000AF8F64 /* HomeArchDoor.m */; };
+		7A8377611DD5B55000AF8F64 /* HomeArchWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A83775E1DD5B55000AF8F64 /* HomeArchWindow.m */; };
+		7AAF54B21DD96A5D00231FD8 /* HomeArchPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF54B11DD96A5D00231FD8 /* HomeArchPlane.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,23 +30,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7A58CEE01DD9642D00598E0B /* Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
+		7A58CEE11DD9642D00598E0B /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 		7A83772E1DD578AF00AF8F64 /* libHome.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHome.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A83774A1DD5B4E600AF8F64 /* ArchPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchPlane.h; sourceTree = "<group>"; };
-		7A83774B1DD5B4E600AF8F64 /* ArchPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchPlane.m; sourceTree = "<group>"; };
-		7A83774C1DD5B4E600AF8F64 /* Home.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
-		7A83774D1DD5B4E600AF8F64 /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
-		7A83774E1DD5B4E600AF8F64 /* RoomPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomPlane.h; sourceTree = "<group>"; };
-		7A83774F1DD5B4E600AF8F64 /* RoomPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomPlane.m; sourceTree = "<group>"; };
-		7A8377501DD5B4E600AF8F64 /* WallLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallLine.h; sourceTree = "<group>"; };
-		7A8377511DD5B4E600AF8F64 /* WallLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallLine.m; sourceTree = "<group>"; };
-		7A8377521DD5B4E600AF8F64 /* WallPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallPoint.h; sourceTree = "<group>"; };
-		7A8377531DD5B4E600AF8F64 /* WallPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallPoint.m; sourceTree = "<group>"; };
-		7A8377591DD5B55000AF8F64 /* ArchWallComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchWallComponent.h; sourceTree = "<group>"; };
-		7A83775A1DD5B55000AF8F64 /* ArchWallComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchWallComponent.m; sourceTree = "<group>"; };
-		7A83775B1DD5B55000AF8F64 /* ComponentDoor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentDoor.h; sourceTree = "<group>"; };
-		7A83775C1DD5B55000AF8F64 /* ComponentDoor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentDoor.m; sourceTree = "<group>"; };
-		7A83775D1DD5B55000AF8F64 /* ComponentWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentWindow.h; sourceTree = "<group>"; };
-		7A83775E1DD5B55000AF8F64 /* ComponentWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentWindow.m; sourceTree = "<group>"; };
+		7A83774E1DD5B4E600AF8F64 /* HomeRoomPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeRoomPlane.h; sourceTree = "<group>"; };
+		7A83774F1DD5B4E600AF8F64 /* HomeRoomPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeRoomPlane.m; sourceTree = "<group>"; };
+		7A8377501DD5B4E600AF8F64 /* HomeWallLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeWallLine.h; sourceTree = "<group>"; };
+		7A8377511DD5B4E600AF8F64 /* HomeWallLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeWallLine.m; sourceTree = "<group>"; };
+		7A8377521DD5B4E600AF8F64 /* HomeWallPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeWallPoint.h; sourceTree = "<group>"; };
+		7A8377531DD5B4E600AF8F64 /* HomeWallPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeWallPoint.m; sourceTree = "<group>"; };
+		7A8377591DD5B55000AF8F64 /* HomeArchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeArchItem.h; sourceTree = "<group>"; };
+		7A83775A1DD5B55000AF8F64 /* HomeArchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeArchItem.m; sourceTree = "<group>"; };
+		7A83775B1DD5B55000AF8F64 /* HomeArchDoor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeArchDoor.h; sourceTree = "<group>"; };
+		7A83775C1DD5B55000AF8F64 /* HomeArchDoor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeArchDoor.m; sourceTree = "<group>"; };
+		7A83775D1DD5B55000AF8F64 /* HomeArchWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeArchWindow.h; sourceTree = "<group>"; };
+		7A83775E1DD5B55000AF8F64 /* HomeArchWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeArchWindow.m; sourceTree = "<group>"; };
+		7AAF54B01DD96A5D00231FD8 /* HomeArchPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeArchPlane.h; sourceTree = "<group>"; };
+		7AAF54B11DD96A5D00231FD8 /* HomeArchPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeArchPlane.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,32 +79,24 @@
 		7A8377301DD578AF00AF8F64 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				7A8377651DD5C09500AF8F64 /* comStruct */,
+				7AAF54B01DD96A5D00231FD8 /* HomeArchPlane.h */,
+				7AAF54B11DD96A5D00231FD8 /* HomeArchPlane.m */,
+				7A83774E1DD5B4E600AF8F64 /* HomeRoomPlane.h */,
+				7A83774F1DD5B4E600AF8F64 /* HomeRoomPlane.m */,
+				7A8377501DD5B4E600AF8F64 /* HomeWallLine.h */,
+				7A8377511DD5B4E600AF8F64 /* HomeWallLine.m */,
+				7A8377521DD5B4E600AF8F64 /* HomeWallPoint.h */,
+				7A8377531DD5B4E600AF8F64 /* HomeWallPoint.m */,
+				7A8377591DD5B55000AF8F64 /* HomeArchItem.h */,
+				7A83775A1DD5B55000AF8F64 /* HomeArchItem.m */,
+				7A83775B1DD5B55000AF8F64 /* HomeArchDoor.h */,
+				7A83775C1DD5B55000AF8F64 /* HomeArchDoor.m */,
+				7A83775D1DD5B55000AF8F64 /* HomeArchWindow.h */,
+				7A83775E1DD5B55000AF8F64 /* HomeArchWindow.m */,
+				7A58CEE01DD9642D00598E0B /* Home.h */,
+				7A58CEE11DD9642D00598E0B /* Home.m */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		7A8377651DD5C09500AF8F64 /* comStruct */ = {
-			isa = PBXGroup;
-			children = (
-				7A83774A1DD5B4E600AF8F64 /* ArchPlane.h */,
-				7A83774B1DD5B4E600AF8F64 /* ArchPlane.m */,
-				7A83774C1DD5B4E600AF8F64 /* Home.h */,
-				7A83774D1DD5B4E600AF8F64 /* Home.m */,
-				7A83774E1DD5B4E600AF8F64 /* RoomPlane.h */,
-				7A83774F1DD5B4E600AF8F64 /* RoomPlane.m */,
-				7A8377501DD5B4E600AF8F64 /* WallLine.h */,
-				7A8377511DD5B4E600AF8F64 /* WallLine.m */,
-				7A8377521DD5B4E600AF8F64 /* WallPoint.h */,
-				7A8377531DD5B4E600AF8F64 /* WallPoint.m */,
-				7A8377591DD5B55000AF8F64 /* ArchWallComponent.h */,
-				7A83775A1DD5B55000AF8F64 /* ArchWallComponent.m */,
-				7A83775B1DD5B55000AF8F64 /* ComponentDoor.h */,
-				7A83775C1DD5B55000AF8F64 /* ComponentDoor.m */,
-				7A83775D1DD5B55000AF8F64 /* ComponentWindow.h */,
-				7A83775E1DD5B55000AF8F64 /* ComponentWindow.m */,
-			);
-			name = comStruct;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,14 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A8377541DD5B4E600AF8F64 /* ArchPlane.m in Sources */,
-				7A8377601DD5B55000AF8F64 /* ComponentDoor.m in Sources */,
-				7A8377581DD5B4E600AF8F64 /* WallPoint.m in Sources */,
-				7A8377611DD5B55000AF8F64 /* ComponentWindow.m in Sources */,
-				7A8377571DD5B4E600AF8F64 /* WallLine.m in Sources */,
-				7A83775F1DD5B55000AF8F64 /* ArchWallComponent.m in Sources */,
-				7A8377551DD5B4E600AF8F64 /* Home.m in Sources */,
-				7A8377561DD5B4E600AF8F64 /* RoomPlane.m in Sources */,
+				7A8377601DD5B55000AF8F64 /* HomeArchDoor.m in Sources */,
+				7AAF54B21DD96A5D00231FD8 /* HomeArchPlane.m in Sources */,
+				7A58CEE21DD9642D00598E0B /* Home.m in Sources */,
+				7A8377581DD5B4E600AF8F64 /* HomeWallPoint.m in Sources */,
+				7A8377611DD5B55000AF8F64 /* HomeArchWindow.m in Sources */,
+				7A8377571DD5B4E600AF8F64 /* HomeWallLine.m in Sources */,
+				7A83775F1DD5B55000AF8F64 /* HomeArchItem.m in Sources */,
+				7A8377561DD5B4E600AF8F64 /* HomeRoomPlane.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,11 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = D3T9A9MJ6F;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/../jc_core/jw",
-				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -286,11 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = D3T9A9MJ6F;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/../jc_core/jw",
-				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -316,6 +300,7 @@
 				7A8377391DD578AF00AF8F64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

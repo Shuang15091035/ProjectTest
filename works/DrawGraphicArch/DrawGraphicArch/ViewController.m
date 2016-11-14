@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "PlaneDrawGraphic.h"
+//#import "PlaneDrawGraphic.h"
+#import "DrawPlane.h"
 
 @interface ViewController ()
 
@@ -40,13 +41,23 @@
     componentBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     componentBtn.backgroundColor = [UIColor redColor];
     
+    /*
     PlaneDrawGraphic *planDrawGraphic = [[PlaneDrawGraphic alloc]initWithBtn:addBtn finishBtn:finishBtn deleteBtn:deleteBtn componentBtn:componentBtn];
     CGSize screenSize = [[UIScreen mainScreen]bounds].size;
     CGFloat screenWidth = screenSize.width;
     CGFloat screenHeight = screenSize.height;
     planDrawGraphic.frame = CGRectMake(-screenWidth, -screenHeight, screenWidth * 3, screenHeight * 3);
-    
     [self.view addSubview:planDrawGraphic];
+    
+    
+     */
+    DrawPlane *planDrawGraphic = [[DrawPlane alloc]initWithBtn:addBtn finishBtn:finishBtn deleteBtn:deleteBtn componentBtn:componentBtn];
+    CGSize screenSize = [[UIScreen mainScreen]bounds].size;
+    CGFloat screenWidth = screenSize.width;
+    CGFloat screenHeight = screenSize.height;
+    planDrawGraphic.frame = CGRectMake(-screenWidth, -screenHeight, screenWidth * 3, screenHeight * 3);
+    [self.view addSubview:planDrawGraphic];
+
     [self.view addSubview:addBtn];
     [self.view addSubview:finishBtn];
     [self.view addSubview:deleteBtn];

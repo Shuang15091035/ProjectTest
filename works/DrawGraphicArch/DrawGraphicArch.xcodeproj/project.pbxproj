@@ -14,17 +14,11 @@
 		7A22C8A91DC32D35002F0D00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A22C8A71DC32D35002F0D00 /* LaunchScreen.storyboard */; };
 		7A22C8B41DC32D35002F0D00 /* DrawGraphicArchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A22C8B31DC32D35002F0D00 /* DrawGraphicArchTests.m */; };
 		7A22C8BF1DC32D35002F0D00 /* DrawGraphicArchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A22C8BE1DC32D35002F0D00 /* DrawGraphicArchUITests.m */; };
-		7A78D6911DCC79C000C11D44 /* ArchPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D6821DCC79C000C11D44 /* ArchPlane.m */; };
-		7A78D6921DCC79C000C11D44 /* ArchWallComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D6841DCC79C000C11D44 /* ArchWallComponent.m */; };
-		7A78D6931DCC79C000C11D44 /* ComponentDoor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D6861DCC79C000C11D44 /* ComponentDoor.m */; };
-		7A78D6941DCC79C000C11D44 /* ComponentWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D6881DCC79C000C11D44 /* ComponentWindow.m */; };
-		7A78D6951DCC79C000C11D44 /* PlaneDrawGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D68A1DCC79C000C11D44 /* PlaneDrawGraphic.m */; };
-		7A78D6961DCC79C000C11D44 /* RoomPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D68C1DCC79C000C11D44 /* RoomPlane.m */; };
-		7A78D6971DCC79C000C11D44 /* WallLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D68E1DCC79C000C11D44 /* WallLine.m */; };
-		7A78D6981DCC79C000C11D44 /* WallPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D6901DCC79C000C11D44 /* WallPoint.m */; };
+		7A58CEDF1DD95FB400598E0B /* DrawPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A58CEDE1DD95FB400598E0B /* DrawPlane.m */; };
 		7A78D69B1DCC7BA800C11D44 /* PublicData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D69A1DCC7BA800C11D44 /* PublicData.m */; };
 		7A78D69E1DCC7CBE00C11D44 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78D69D1DCC7CBE00C11D44 /* ViewController.m */; };
 		7A8377241DD5714A00AF8F64 /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A8377231DD5714A00AF8F64 /* Plan.m */; };
+		7AA5710F1DD98D6500C36352 /* libHome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA5710E1DD98D6500C36352 /* libHome.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,28 +53,15 @@
 		7A22C8BA1DC32D35002F0D00 /* DrawGraphicArchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawGraphicArchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A22C8BE1DC32D35002F0D00 /* DrawGraphicArchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawGraphicArchUITests.m; sourceTree = "<group>"; };
 		7A22C8C01DC32D35002F0D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A78D6811DCC79C000C11D44 /* ArchPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchPlane.h; sourceTree = "<group>"; };
-		7A78D6821DCC79C000C11D44 /* ArchPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchPlane.m; sourceTree = "<group>"; };
-		7A78D6831DCC79C000C11D44 /* ArchWallComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchWallComponent.h; sourceTree = "<group>"; };
-		7A78D6841DCC79C000C11D44 /* ArchWallComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchWallComponent.m; sourceTree = "<group>"; };
-		7A78D6851DCC79C000C11D44 /* ComponentDoor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentDoor.h; sourceTree = "<group>"; };
-		7A78D6861DCC79C000C11D44 /* ComponentDoor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentDoor.m; sourceTree = "<group>"; };
-		7A78D6871DCC79C000C11D44 /* ComponentWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentWindow.h; sourceTree = "<group>"; };
-		7A78D6881DCC79C000C11D44 /* ComponentWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentWindow.m; sourceTree = "<group>"; };
-		7A78D6891DCC79C000C11D44 /* PlaneDrawGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneDrawGraphic.h; sourceTree = "<group>"; };
-		7A78D68A1DCC79C000C11D44 /* PlaneDrawGraphic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneDrawGraphic.m; sourceTree = "<group>"; };
-		7A78D68B1DCC79C000C11D44 /* RoomPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomPlane.h; sourceTree = "<group>"; };
-		7A78D68C1DCC79C000C11D44 /* RoomPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomPlane.m; sourceTree = "<group>"; };
-		7A78D68D1DCC79C000C11D44 /* WallLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallLine.h; sourceTree = "<group>"; };
-		7A78D68E1DCC79C000C11D44 /* WallLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallLine.m; sourceTree = "<group>"; };
-		7A78D68F1DCC79C000C11D44 /* WallPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallPoint.h; sourceTree = "<group>"; };
-		7A78D6901DCC79C000C11D44 /* WallPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallPoint.m; sourceTree = "<group>"; };
+		7A58CEDD1DD95FB400598E0B /* DrawPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawPlane.h; sourceTree = "<group>"; };
+		7A58CEDE1DD95FB400598E0B /* DrawPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawPlane.m; sourceTree = "<group>"; };
 		7A78D6991DCC7BA800C11D44 /* PublicData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicData.h; sourceTree = "<group>"; };
 		7A78D69A1DCC7BA800C11D44 /* PublicData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicData.m; sourceTree = "<group>"; };
 		7A78D69C1DCC7CBE00C11D44 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7A78D69D1DCC7CBE00C11D44 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7A8377221DD5714A00AF8F64 /* Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plan.h; sourceTree = "<group>"; };
 		7A8377231DD5714A00AF8F64 /* Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plan.m; sourceTree = "<group>"; };
+		7AA5710E1DD98D6500C36352 /* libHome.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libHome.a; path = "../Build/Products/Debug-iphoneos/libHome.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AA5710F1DD98D6500C36352 /* libHome.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +97,7 @@
 				7A22C8B21DC32D35002F0D00 /* DrawGraphicArchTests */,
 				7A22C8BD1DC32D35002F0D00 /* DrawGraphicArchUITests */,
 				7A22C8971DC32D35002F0D00 /* Products */,
+				7AA5710D1DD98D6500C36352 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,19 +167,6 @@
 			name = res;
 			sourceTree = "<group>";
 		};
-		7A5309841DD45C5100E8B3CE /* archItem */ = {
-			isa = PBXGroup;
-			children = (
-				7A78D6831DCC79C000C11D44 /* ArchWallComponent.h */,
-				7A78D6841DCC79C000C11D44 /* ArchWallComponent.m */,
-				7A78D6851DCC79C000C11D44 /* ComponentDoor.h */,
-				7A78D6861DCC79C000C11D44 /* ComponentDoor.m */,
-				7A78D6871DCC79C000C11D44 /* ComponentWindow.h */,
-				7A78D6881DCC79C000C11D44 /* ComponentWindow.m */,
-			);
-			name = archItem;
-			sourceTree = "<group>";
-		};
 		7A653FAF1DD31AC900511ADC /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,8 +174,8 @@
 				7A22C89D1DC32D35002F0D00 /* AppDelegate.m */,
 				7A78D69C1DCC7CBE00C11D44 /* ViewController.h */,
 				7A78D69D1DCC7CBE00C11D44 /* ViewController.m */,
-				7A78D6891DCC79C000C11D44 /* PlaneDrawGraphic.h */,
-				7A78D68A1DCC79C000C11D44 /* PlaneDrawGraphic.m */,
+				7A58CEDD1DD95FB400598E0B /* DrawPlane.h */,
+				7A58CEDE1DD95FB400598E0B /* DrawPlane.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -217,17 +187,16 @@
 				7A78D69A1DCC7BA800C11D44 /* PublicData.m */,
 				7A8377221DD5714A00AF8F64 /* Plan.h */,
 				7A8377231DD5714A00AF8F64 /* Plan.m */,
-				7A5309841DD45C5100E8B3CE /* archItem */,
-				7A78D6811DCC79C000C11D44 /* ArchPlane.h */,
-				7A78D6821DCC79C000C11D44 /* ArchPlane.m */,
-				7A78D68B1DCC79C000C11D44 /* RoomPlane.h */,
-				7A78D68C1DCC79C000C11D44 /* RoomPlane.m */,
-				7A78D68D1DCC79C000C11D44 /* WallLine.h */,
-				7A78D68E1DCC79C000C11D44 /* WallLine.m */,
-				7A78D68F1DCC79C000C11D44 /* WallPoint.h */,
-				7A78D6901DCC79C000C11D44 /* WallPoint.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		7AA5710D1DD98D6500C36352 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AA5710E1DD98D6500C36352 /* libHome.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,18 +336,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A8377241DD5714A00AF8F64 /* Plan.m in Sources */,
-				7A78D6911DCC79C000C11D44 /* ArchPlane.m in Sources */,
-				7A78D6941DCC79C000C11D44 /* ComponentWindow.m in Sources */,
-				7A78D6931DCC79C000C11D44 /* ComponentDoor.m in Sources */,
-				7A78D6961DCC79C000C11D44 /* RoomPlane.m in Sources */,
 				7A22C89E1DC32D35002F0D00 /* AppDelegate.m in Sources */,
+				7A58CEDF1DD95FB400598E0B /* DrawPlane.m in Sources */,
 				7A22C89B1DC32D35002F0D00 /* main.m in Sources */,
 				7A78D69E1DCC7CBE00C11D44 /* ViewController.m in Sources */,
-				7A78D6921DCC79C000C11D44 /* ArchWallComponent.m in Sources */,
-				7A78D6951DCC79C000C11D44 /* PlaneDrawGraphic.m in Sources */,
 				7A78D69B1DCC7BA800C11D44 /* PublicData.m in Sources */,
-				7A78D6981DCC79C000C11D44 /* WallPoint.m in Sources */,
-				7A78D6971DCC79C000C11D44 /* WallLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,9 +490,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D3T9A9MJ6F;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Home/Home/";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Home/";
 				INFOPLIST_FILE = DrawGraphicArch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DrawGraphicArch",
+					"$(PROJECT_DIR)/../Home",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctrlcv.lib.DrawGraphicArch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -541,9 +508,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D3T9A9MJ6F;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Home/Home/";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Home/";
 				INFOPLIST_FILE = DrawGraphicArch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DrawGraphicArch",
+					"$(PROJECT_DIR)/../Home",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctrlcv.lib.DrawGraphicArch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

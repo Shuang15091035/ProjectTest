@@ -7,11 +7,6 @@
 //
 
 #import "PublicData.h"
-#import "ArchWallComponent.h"
-#import "ComponentWindow.h"
-#import "ComponentDoor.h"
-
-
 
 @interface PublicData(){
     
@@ -21,46 +16,46 @@
 
 @implementation PublicData
 
-- (ArchWallComponent*) parseArchComponentType:(ComponentType)componentType {
-    ArchWallComponent *archComponent = nil;
-    switch (componentType) {
-        case ComponentTypeSingleDoorInside:{
-            
-            break;
-        }
-        case ComponentTypeSingleDoorOutside:{
-            
-            break;
-        }
-        case ComponentTypeDoubleDoorInside:{
-            
-            break;
-        }
-        case ComponentTypeDoubleDoorOutside:{
-            
-            break;
-        }
-        case ComponentTypeSingleWindowInside:{
-            
-            break;
-        }
-        case ComponentTypeSingleWindowOutside:{
-            
-            break;
-        }
-        case ComponentTypeDoubleWindowInside:{
-            
-            break;
-        }
-        case ComponentTypeDoubleWindowOutside:{
-            
-            break;
-        }
-            
-        default:
-            break;
-    }
-    return archComponent;
-}
+//- (ArchWallComponent*) parseArchComponentType:(ComponentType)componentType {
+//    ArchWallComponent *archComponent = nil;
+//    switch (componentType) {
+//        case ComponentTypeSingleDoorInside:{
+//            
+//            break;
+//        }
+//        case ComponentTypeSingleDoorOutside:{
+//            
+//            break;
+//        }
+//        case ComponentTypeDoubleDoorInside:{
+//            
+//            break;
+//        }
+//        case ComponentTypeDoubleDoorOutside:{
+//            
+//            break;
+//        }
+//        case ComponentTypeSingleWindowInside:{
+//            
+//            break;
+//        }
+//        case ComponentTypeSingleWindowOutside:{
+//            
+//            break;
+//        }
+//        case ComponentTypeDoubleWindowInside:{
+//            
+//            break;
+//        }
+//        case ComponentTypeDoubleWindowOutside:{
+//            
+//            break;
+//        }
+//            
+//        default:
+//            break;
+//    }
+//    return archComponent;
+//}
 
 @end
