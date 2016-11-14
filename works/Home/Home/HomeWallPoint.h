@@ -9,10 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface HomeWallPoint : NSObject
+@protocol HIWallPoint <NSObject>
 
 @property (nonatomic, readwrite) CGPoint wallPoint;
 @property (nonatomic, readwrite) UIImageView *pointImageView;
+
+@end
+
+@interface HomeWallPoint : NSObject<HIWallPoint>
 
 - initWithPoint:(CGPoint)touchP currentPointView:(UIView *)currentView;
 

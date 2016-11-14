@@ -12,13 +12,19 @@
 #import <Home/HomeArchDoor.h>
 #import <Home/HomeArchWindow.h>
 
-@interface HomeRoomPlane : NSObject
+@protocol HIRoomPlane <NSObject>
 
 @property (nonatomic, readwrite) NSMutableArray<HomeWallLine *>* wallLines;
 @property (nonatomic, readonly) NSMutableArray<HomeWallLine *>* outWallLines;
 @property (nonatomic, readwrite) NSMutableArray<HomeWallPoint *>* roomPoints;
 @property (nonatomic, readonly) NSMutableArray<HomeWallPoint *>* outRoomPoints;
 @property (nonatomic, readonly)  NSMutableArray<HomeArchItem *>*currentRoomComponents;
+
+@end
+
+@interface HomeRoomPlane : NSObject<HIRoomPlane>
+
+
 /**
  不适用于重合的两条线
  */

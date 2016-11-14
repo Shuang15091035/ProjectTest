@@ -10,13 +10,17 @@
 #import <Home/HomeWallPoint.h>
 #import <Home/HomeArchItem.h>
 
-@interface HomeWallLine : NSObject
+@protocol HIWallLine <NSObject>
 
 @property (nonatomic, readwrite) HomeWallPoint *wPoint1;
 @property (nonatomic, readwrite) HomeWallPoint *wPoint2;
 
 @property (nonatomic, readwrite) float wallHeight;
 @property (nonatomic, readwrite) NSMutableArray<HomeArchItem*> *wallComponentArr;
+
+@end
+
+@interface HomeWallLine : NSObject<HIWallLine>
 
 @property (nonatomic, readonly) float lineA;
 @property (nonatomic, readonly) float lineB;
