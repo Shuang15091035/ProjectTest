@@ -23,7 +23,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[GenerateHomeVC alloc]init];
     [self.window makeKeyAndVisible];
-    
+    ViewController *vc = [[ViewController alloc]init];
     return YES;
 }
 - (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {

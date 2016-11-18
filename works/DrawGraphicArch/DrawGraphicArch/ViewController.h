@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^ViewControlBlock)(UIColor *color);
+
 @interface ViewController : UIViewController
 
-
+@property (nonatomic, readwrite) ViewControlBlock block;
 
 @end
