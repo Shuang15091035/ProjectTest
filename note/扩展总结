@@ -1,3 +1,5 @@
+同一操作作用于不同的对象，可以有不同的解释，产生不同的执行结果。多态
+
 #pragma mark - dumplic builting
 使用ar命令删除iOS静态库重复编译的.o文件
 1. lipo -info **.a//显示支持的架构
