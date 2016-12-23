@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import "DrawPlane.h"
 
-@interface ViewController ()
+@interface ViewController (){
+    UIButton *mBtn;
+}
 
 @end
 
@@ -53,5 +55,4 @@
     [self.view addSubview:componentBtn];
     
 }
-
 @end
