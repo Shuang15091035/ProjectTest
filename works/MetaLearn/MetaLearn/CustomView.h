@@ -7,7 +7,34 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Metal/Metal.h>
+
+@protocol CustomViewDelegate;
 
 @interface CustomView : UIView
 
+//@property (nonatomic, weak) id <CustomViewDelegate> deleg;
+
+@property (nonatomic, weak) id <CustomViewDelegate> delegate;
+
+@property (nonatomic, readonly) id<MTLDevice> device;
+
+@property (nonatomic, readonly) id<CAMetalDrawable> currentDrawable;
+
+@property (nonatomic, readonly) MTLRenderPassDescriptor* renderPassDescriptor;
+
+@property (nonatomic) MTLPixelFormat depthPixelFormat;
+@property (nonatomic) MTLPixelFormat stencilPixelFormat;
+@property (nonatomic) NSUInteger sampleCount;
+
+- (void)display;
+
+- (void)releaseTextures;
+@end
+
+@protocol CustomViewDelegate <NSObject>
+@required
+- (void)reshape:(CustomView *)view;
+
+- (void)render:(CustomView *)view;
 @end

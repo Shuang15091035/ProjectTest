@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CustomView.h"
+#import "ViewController.h"
 
-@interface Render : NSObject
+@interface Render : NSObject<ViewControllerDelegate,CustomViewDelegate>
+
+- (void)configure:(CustomView *)view;
 
 @end

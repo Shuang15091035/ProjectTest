@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A508FD31E5FFF6200603672 /* Sharder.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7A508FD21E5FFF6200603672 /* Sharder.metal */; };
 		7A78E2081E5AC07900CC6E65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E2071E5AC07900CC6E65 /* main.m */; };
 		7A78E20B1E5AC07900CC6E65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E20A1E5AC07900CC6E65 /* AppDelegate.m */; };
-		7A78E20E1E5AC07900CC6E65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E20D1E5AC07900CC6E65 /* ViewController.m */; };
+		7A78E20E1E5AC07900CC6E65 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E20D1E5AC07900CC6E65 /* ViewController.mm */; };
 		7A78E2111E5AC07900CC6E65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A78E20F1E5AC07900CC6E65 /* Main.storyboard */; };
 		7A78E2131E5AC07900CC6E65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A78E2121E5AC07900CC6E65 /* Assets.xcassets */; };
 		7A78E2161E5AC07900CC6E65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A78E2141E5AC07900CC6E65 /* LaunchScreen.storyboard */; };
 		7A78E2211E5AC07900CC6E65 /* MetaLearnTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E2201E5AC07900CC6E65 /* MetaLearnTests.m */; };
 		7A78E22C1E5AC07900CC6E65 /* MetaLearnUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E22B1E5AC07900CC6E65 /* MetaLearnUITests.m */; };
 		7A78E23E1E5AC0DD00CC6E65 /* Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E23D1E5AC0DD00CC6E65 /* Render.mm */; };
-		7A78E2421E5AC12F00CC6E65 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E2411E5AC12F00CC6E65 /* CustomView.m */; };
-		7A78E2441E5AC16600CC6E65 /* plasma.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E2431E5AC16600CC6E65 /* plasma.metal */; };
+		7A78E2421E5AC12F00CC6E65 /* CustomView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E2411E5AC12F00CC6E65 /* CustomView.mm */; };
 		7A78E2471E5AC25B00CC6E65 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A78E2461E5AC25B00CC6E65 /* Metal.framework */; };
 		7A78E2491E5AC26500CC6E65 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A78E2481E5AC26500CC6E65 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -40,12 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A508FD21E5FFF6200603672 /* Sharder.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Sharder.metal; sourceTree = "<group>"; };
 		7A78E2031E5AC07900CC6E65 /* MetaLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A78E2071E5AC07900CC6E65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A78E2091E5AC07900CC6E65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7A78E20A1E5AC07900CC6E65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7A78E20C1E5AC07900CC6E65 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7A78E20D1E5AC07900CC6E65 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7A78E20D1E5AC07900CC6E65 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		7A78E2101E5AC07900CC6E65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A78E2121E5AC07900CC6E65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A78E2151E5AC07900CC6E65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +61,7 @@
 		7A78E23D1E5AC0DD00CC6E65 /* Render.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Render.mm; sourceTree = "<group>"; };
 		7A78E23F1E5AC0F400CC6E65 /* AAPLType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLType.h; sourceTree = "<group>"; };
 		7A78E2401E5AC12F00CC6E65 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
-		7A78E2411E5AC12F00CC6E65 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
-		7A78E2431E5AC16600CC6E65 /* plasma.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = plasma.metal; sourceTree = "<group>"; };
+		7A78E2411E5AC12F00CC6E65 /* CustomView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CustomView.mm; sourceTree = "<group>"; };
 		7A78E2461E5AC25B00CC6E65 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		7A78E2481E5AC26500CC6E65 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -160,7 +160,7 @@
 				7A78E23F1E5AC0F400CC6E65 /* AAPLType.h */,
 				7A78E23C1E5AC0DD00CC6E65 /* Render.h */,
 				7A78E23D1E5AC0DD00CC6E65 /* Render.mm */,
-				7A78E2431E5AC16600CC6E65 /* plasma.metal */,
+				7A508FD21E5FFF6200603672 /* Sharder.metal */,
 			);
 			name = Render;
 			sourceTree = "<group>";
@@ -179,9 +179,9 @@
 				7A78E2091E5AC07900CC6E65 /* AppDelegate.h */,
 				7A78E20A1E5AC07900CC6E65 /* AppDelegate.m */,
 				7A78E20C1E5AC07900CC6E65 /* ViewController.h */,
-				7A78E20D1E5AC07900CC6E65 /* ViewController.m */,
+				7A78E20D1E5AC07900CC6E65 /* ViewController.mm */,
 				7A78E2401E5AC12F00CC6E65 /* CustomView.h */,
-				7A78E2411E5AC12F00CC6E65 /* CustomView.m */,
+				7A78E2411E5AC12F00CC6E65 /* CustomView.mm */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -331,9 +331,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A78E2421E5AC12F00CC6E65 /* CustomView.m in Sources */,
-				7A78E2441E5AC16600CC6E65 /* plasma.metal in Sources */,
-				7A78E20E1E5AC07900CC6E65 /* ViewController.m in Sources */,
+				7A508FD31E5FFF6200603672 /* Sharder.metal in Sources */,
+				7A78E2421E5AC12F00CC6E65 /* CustomView.mm in Sources */,
+				7A78E20E1E5AC07900CC6E65 /* ViewController.mm in Sources */,
 				7A78E20B1E5AC07900CC6E65 /* AppDelegate.m in Sources */,
 				7A78E2081E5AC07900CC6E65 /* main.m in Sources */,
 				7A78E23E1E5AC0DD00CC6E65 /* Render.mm in Sources */,
@@ -486,6 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D3T9A9MJ6F;
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = MetaLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctrlcv.lib.MetaLearn;
@@ -498,6 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D3T9A9MJ6F;
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = MetaLearn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctrlcv.lib.MetaLearn;
@@ -574,6 +576,7 @@
 				7A78E2321E5AC07900CC6E65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A78E2331E5AC07900CC6E65 /* Build configuration list for PBXNativeTarget "MetaLearnTests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +585,7 @@
 				7A78E2351E5AC07900CC6E65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A78E2361E5AC07900CC6E65 /* Build configuration list for PBXNativeTarget "MetaLearnUITests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +594,7 @@
 				7A78E2381E5AC07900CC6E65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
