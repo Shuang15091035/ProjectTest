@@ -47,7 +47,7 @@
     _renderer = [[Render alloc]init];
     
     // While this is standard across all the metal samples, this renderer doesn't use the view controller delegate.
-//    self.delegate = _renderer;
+    self.delegate = _renderer;
     
     //  Register notifications to start/stop drawing as this app moves into the background
     [[NSNotificationCenter defaultCenter] addObserver: self
@@ -121,6 +121,21 @@
 }
 - (void)gameloop{
      [_delegate update:self];
+    
+    if(!_firstDrawOccurred){
+        // set up timing data for display since this is the first time through this loop
+        _timeSinceLastDraw             = 0.0;
+        _timeSinceLastDrawPreviousTime = CACurrentMediaTime();
+        _firstDrawOccurred              = YES;
+    }else{
+        // figure out the time since we last we drew
+        CFTimeInterval currentTime = CACurrentMediaTime();
+        
+        _timeSinceLastDraw = currentTime - _timeSinceLastDrawPreviousTime;
+        
+        // keep track of the time interval between draws
+        _timeSinceLastDrawPreviousTime = currentTime;
+    }
     
     assert([self.view isKindOfClass:[CustomView class]]);
     

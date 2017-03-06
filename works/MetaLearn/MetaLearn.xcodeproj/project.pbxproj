@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7A508FD31E5FFF6200603672 /* Sharder.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7A508FD21E5FFF6200603672 /* Sharder.metal */; };
+		7A63880D1E63D18C003BFB4B /* AAPLTransforms.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A63880C1E63D18C003BFB4B /* AAPLTransforms.mm */; };
+		7A6388121E63DC0E003BFB4B /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6388111E63DC0E003BFB4B /* MetalKit.framework */; };
+		7A6388141E642C4A003BFB4B /* picture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A6388131E642C4A003BFB4B /* picture.jpg */; };
 		7A78E2081E5AC07900CC6E65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E2071E5AC07900CC6E65 /* main.m */; };
 		7A78E20B1E5AC07900CC6E65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E20A1E5AC07900CC6E65 /* AppDelegate.m */; };
 		7A78E20E1E5AC07900CC6E65 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7A78E20D1E5AC07900CC6E65 /* ViewController.mm */; };
@@ -41,6 +44,10 @@
 
 /* Begin PBXFileReference section */
 		7A508FD21E5FFF6200603672 /* Sharder.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Sharder.metal; sourceTree = "<group>"; };
+		7A63880B1E63D18C003BFB4B /* AAPLTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLTransforms.h; sourceTree = "<group>"; };
+		7A63880C1E63D18C003BFB4B /* AAPLTransforms.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AAPLTransforms.mm; sourceTree = "<group>"; };
+		7A6388111E63DC0E003BFB4B /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		7A6388131E642C4A003BFB4B /* picture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = picture.jpg; sourceTree = "<group>"; };
 		7A78E2031E5AC07900CC6E65 /* MetaLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A78E2071E5AC07900CC6E65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A78E2091E5AC07900CC6E65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6388121E63DC0E003BFB4B /* MetalKit.framework in Frameworks */,
 				7A78E2491E5AC26500CC6E65 /* QuartzCore.framework in Frameworks */,
 				7A78E2471E5AC25B00CC6E65 /* Metal.framework in Frameworks */,
 			);
@@ -157,10 +165,13 @@
 		7A78E2391E5AC08300CC6E65 /* Render */ = {
 			isa = PBXGroup;
 			children = (
+				7A6388131E642C4A003BFB4B /* picture.jpg */,
 				7A78E23F1E5AC0F400CC6E65 /* AAPLType.h */,
 				7A78E23C1E5AC0DD00CC6E65 /* Render.h */,
 				7A78E23D1E5AC0DD00CC6E65 /* Render.mm */,
 				7A508FD21E5FFF6200603672 /* Sharder.metal */,
+				7A63880B1E63D18C003BFB4B /* AAPLTransforms.h */,
+				7A63880C1E63D18C003BFB4B /* AAPLTransforms.mm */,
 			);
 			name = Render;
 			sourceTree = "<group>";
@@ -189,6 +200,7 @@
 		7A78E2451E5AC25A00CC6E65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A6388111E63DC0E003BFB4B /* MetalKit.framework */,
 				7A78E2481E5AC26500CC6E65 /* QuartzCore.framework */,
 				7A78E2461E5AC25B00CC6E65 /* Metal.framework */,
 			);
@@ -305,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A78E2161E5AC07900CC6E65 /* LaunchScreen.storyboard in Resources */,
+				7A6388141E642C4A003BFB4B /* picture.jpg in Resources */,
 				7A78E2131E5AC07900CC6E65 /* Assets.xcassets in Resources */,
 				7A78E2111E5AC07900CC6E65 /* Main.storyboard in Resources */,
 			);
@@ -333,6 +346,7 @@
 			files = (
 				7A508FD31E5FFF6200603672 /* Sharder.metal in Sources */,
 				7A78E2421E5AC12F00CC6E65 /* CustomView.mm in Sources */,
+				7A63880D1E63D18C003BFB4B /* AAPLTransforms.mm in Sources */,
 				7A78E20E1E5AC07900CC6E65 /* ViewController.mm in Sources */,
 				7A78E20B1E5AC07900CC6E65 /* AppDelegate.m in Sources */,
 				7A78E2081E5AC07900CC6E65 /* main.m in Sources */,

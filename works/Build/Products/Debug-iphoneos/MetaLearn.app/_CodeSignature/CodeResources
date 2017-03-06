@@ -38,11 +38,15 @@
 		</data>
 		<key>default.metallib</key>
 		<data>
-		XlEIsKIZW6R3ND5Elmdur22Q/y0=
+		pRJjgEyWzynJUxbRt9B5ac22J3A=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
 		6RauOF8V8Z5AfjDamAlAsfeTR6o=
+		</data>
+		<key>picture.jpg</key>
+		<data>
+		qUyn0FGwHE74Xj8nUqC9VWtvi4w=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -117,11 +121,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XlEIsKIZW6R3ND5Elmdur22Q/y0=
+			pRJjgEyWzynJUxbRt9B5ac22J3A=
 			</data>
 			<key>hash2</key>
 			<data>
-			E3l95/pDPzj5+dJgTOSZWlXGzSH96WgG/ks03d4gvEk=
+			R/8Cj+XAl/PQdKu8vcIKdvoxfcTP1729VUN8NXxA5Mw=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
@@ -133,6 +137,17 @@
 			<key>hash2</key>
 			<data>
 			xAzVWJTgRJc7vJECjdV9bCGCTxWCIkmc9HsmaBDcsB0=
+			</data>
+		</dict>
+		<key>picture.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qUyn0FGwHE74Xj8nUqC9VWtvi4w=
+			</data>
+			<key>hash2</key>
+			<data>
+			2HFt48aBXeP6wLI46rtCOBq0IFoMgIxIPaFITJYUjQ4=
 			</data>
 		</dict>
 	</dict>
