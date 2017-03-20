@@ -101,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A74F0CC1E7B877E003EF44D /* res */ = {
+			isa = PBXGroup;
+			children = (
+				7A78E2061E5AC07900CC6E65 /* Supporting Files */,
+				7A78E2121E5AC07900CC6E65 /* Assets.xcassets */,
+			);
+			name = res;
+			sourceTree = "<group>";
+		};
 		7A78E1FA1E5AC07900CC6E65 = {
 			isa = PBXGroup;
 			children = (
@@ -125,9 +134,10 @@
 		7A78E2051E5AC07900CC6E65 /* MetaLearn */ = {
 			isa = PBXGroup;
 			children = (
-				7A78E23A1E5AC09400CC6E65 /* Common */,
+				7A78E23B1E5AC0A100CC6E65 /* App */,
 				7A78E2391E5AC08300CC6E65 /* Render */,
-				7A78E2061E5AC07900CC6E65 /* Supporting Files */,
+				7A78E23A1E5AC09400CC6E65 /* Common */,
+				7A74F0CC1E7B877E003EF44D /* res */,
 			);
 			path = MetaLearn;
 			sourceTree = "<group>";
@@ -136,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				7A78E20F1E5AC07900CC6E65 /* Main.storyboard */,
-				7A78E2121E5AC07900CC6E65 /* Assets.xcassets */,
 				7A78E2141E5AC07900CC6E65 /* LaunchScreen.storyboard */,
 				7A78E2171E5AC07900CC6E65 /* Info.plist */,
 				7A78E2071E5AC07900CC6E65 /* main.m */,
@@ -179,7 +188,6 @@
 		7A78E23A1E5AC09400CC6E65 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				7A78E23B1E5AC0A100CC6E65 /* App */,
 			);
 			name = Common;
 			sourceTree = "<group>";

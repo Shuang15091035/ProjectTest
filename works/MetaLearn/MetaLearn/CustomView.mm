@@ -9,13 +9,13 @@
 #import "CustomView.h"
 
 @implementation CustomView{
-    @private
+@private
     __weak CAMetalLayer *_metalLayer;
     id<MTLTexture> _depthTex;
     id<MTLTexture> _stencilTex;
     id<MTLTexture> _msaaTex;
     
-     BOOL _layerSizeDidUpdate;
+    BOOL _layerSizeDidUpdate;
     
 }
 
@@ -106,7 +106,7 @@
 {
     // create lazily
     if (_renderPassDescriptor == nil)
-    _renderPassDescriptor = [MTLRenderPassDescriptor renderPassDescriptor];
+        _renderPassDescriptor = [MTLRenderPassDescriptor renderPassDescriptor];
     
     // create a color attachment every frame since we have to recreate the texture every frame
     MTLRenderPassColorAttachmentDescriptor *colorAttachment = _renderPassDescriptor.colorAttachments[0];
@@ -116,7 +116,7 @@
     colorAttachment.loadAction = MTLLoadActionClear;
     colorAttachment.clearColor = MTLClearColorMake(0.65f, 0.65f, 0.65f, 1.0f);
     
-     colorAttachment.storeAction = MTLStoreActionStore;
+    colorAttachment.storeAction = MTLStoreActionStore;
 }
 - (MTLRenderPassDescriptor *)renderPassDescriptor
 {
@@ -137,7 +137,7 @@
 - (id <CAMetalDrawable>)currentDrawable
 {
     if (_currentDrawable == nil)
-    _currentDrawable = [_metalLayer nextDrawable];
+        _currentDrawable = [_metalLayer nextDrawable];
     
     return _currentDrawable;
 }
@@ -158,4 +158,9 @@
 - (id<CustomViewDelegate>)delegate{
     return _delegate;
 }
+
+- (void)releaseTextures{
+    
+}
+
 @end

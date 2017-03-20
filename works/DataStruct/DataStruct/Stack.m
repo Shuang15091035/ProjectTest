@@ -260,3 +260,76 @@ Status Pop(SqStack **s, int *e){
 //    return OK;  
 //}
 
+
+/**
+ 实现顺序栈stack
+ */
+
+//#define StaticSize 100
+//#define StackSizeIncremen 20
+//
+//typedef struct stack{
+//    int staticSize;
+//    int *top;
+//    int *base;
+//}MyStack,*MyStackP;
+//
+//Status InitStac(MyStackP stackP){
+//    stackP->base = (int *)malloc(sizeof(int) * StaticSize);
+//    stackP->top = stackP->base;
+//    stackP->staticSize = StaticSize;
+//    return OK;
+//}
+//
+//Status GetStackTop(MyStack stack) {
+//    while (stack.top != stack.base) {
+//        printf("stack.top:%d\n", *--stack.top);
+//    }
+//    return OK;
+//}
+//
+//Status PopStack(MyStackP stack, int *e){
+//    if (stack->base == stack->top) {
+//        return ERROR;
+//    }
+//    *e = --*stack->top;
+//    return OK;
+//}
+//
+//Status PushStack(MyStackP stack, int elem){
+//    if (stack->top - stack->base >= stack->staticSize) {
+//        stack->base = (int*)realloc(stack->base, sizeof(int) * (stack->staticSize + StackSizeIncremen));
+//        if (!stack->base) {
+//            exit(-1);
+//        }
+//        stack->top = stack->base + stack->staticSize;
+//        stack->staticSize += StackSizeIncremen;
+//    }
+//    *(stack->top)++ = elem;
+//    return OK;
+//}
+//
+//Status DestoryStack(MyStackP stack){
+//    if (!stack) {
+//        exit(-1);
+//    }
+//    free(stack);
+//    return OK;
+//}
+
+//MyStack Stack;
+//InitStac(&Stack);
+//PushStack(&Stack, 10);
+//PushStack(&Stack, 15);
+//PushStack(&Stack, 20);
+//int e = 0;
+//GetStackTop(Stack);
+//PopStack(&Stack, &e);
+//printf("pope:%d", e);
+//PopStack(&Stack, &e);
+//printf("pope:%d", e);
+//PopStack(&Stack, &e);
+//printf("pope:%d", e);
+//PopStack(&Stack, &e);
+//printf("pope:%d", e);
+

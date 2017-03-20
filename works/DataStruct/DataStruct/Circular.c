@@ -96,26 +96,7 @@
 //    return 0;
 //}
 
-Status CreateList(List *head, int n){
-    
-    List point = 0X00;
-    *head = (List)malloc(sizeof(Node));
-    if((*head) == 0X00) return FALSe;
-    (*head)->next = *head;
-    (*head)->data = 1;
-    for (int i = 2; i < n; i++) {
-        point = (List)malloc(sizeof(Node));
-        if(point == 0X00) return FALSe;
-        point->data = i;
-        point->next = (*head)->next;
-        (*head)->next = point;
-    }
-    return OK;
-}
 
-Status StartPlay(List head, int n, int m){
-    
-    
-    return OK;
-}
+
+
 

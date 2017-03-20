@@ -9,14 +9,22 @@
 #ifndef AAPLType_h
 #define AAPLType_h
 
-#import <Foundation/Foundation.h>
+#import <simd/simd.h>
 
+#ifdef __cplusplus
 
-namespace AAPL {
-    union Offset{
-        NSUInterger v[2];
-    }
+namespace AAPL
+{
+    struct Uniforms
+    {
+        simd::float4x4 modelview_projection_matrix;
+        simd::float4x4 normal_matrix;
+        simd::float4   ambient_color;
+        simd::float4   diffuse_color;
+        int            multiplier;
+    } __attribute__ ((aligned (256)));
 }
 
+#endif
 
 #endif /* AAPLType_h */

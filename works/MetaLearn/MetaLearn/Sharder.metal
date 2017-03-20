@@ -7,59 +7,37 @@
 //
 
 #include <metal_stdlib>
-#include <metal_graphics>
-#include <metal_matrix>
-#include <metal_geometric>
-#include <metal_math>
-#include <metal_texture>
 #include <simd/simd.h>
+#include "AAPLType.h"
 
 using namespace metal;
 
-constant float3 light_position = float3(0.0, 1.0, -1.0);
-
-typedef struct
-{
+typedef struct {
     packed_float3 position;
-    packed_float3 normal;
-} vertex_t;
+    packed_float4 color;
+    packed_float2 uv;
+} Vertex_t;
 
 struct ColorInOut {
     float4 position [[position]];
-    half4 color;
+    float4 color;
+    float2 uv;
 };
 
-struct Uniforms
-{
-    simd::float4x4 modelview_projection_matrix;
-    simd::float4x4 normal_matrix;
-    simd::float4   ambient_color;
-    simd::float4   diffuse_color;
-    int            multiplier;
-} __attribute__ ((aligned (256)));
-
-// vertex shader function
-vertex ColorInOut passThroughVertex(device vertex_t* vertex_array [[ buffer(0) ]],
-                                  constant Uniforms& constants [[ buffer(1) ]],
-                                  unsigned int vid [[ vertex_id ]])
-{
+vertex ColorInOut passThroughVertex(device Vertex_t *vertex_arr[[buffer(0)]], constant AAPL::Uniforms &constUniform[[buffer(1)]], unsigned int vid [[vertex_id]]){
+    
     ColorInOut out;
-    
-    float4 in_position = float4(float3(vertex_array[vid].position), 1.0);
-    out.position = constants.modelview_projection_matrix * in_position;
-    
-    float3 normal = vertex_array[vid].normal;
-    float4 eye_normal = normalize(constants.normal_matrix * float4(normal, 0.0));
-    float n_dot_l = dot(eye_normal.rgb, normalize(light_position));
-    n_dot_l = fmax(0.0, n_dot_l);
-    
-    out.color = half4(constants.ambient_color + constants.diffuse_color * n_dot_l);
-    
+    float4 pos = float4(float3(vertex_arr[vid].position),1.0);
+    out.position = constUniform.modelview_projection_matrix * pos;
+    out.color = vertex_arr[vid].color;
+    out.uv = vertex_arr[vid].uv;
     return out;
 }
 
-// fragment shader function
-fragment half4 passThroughFragment(ColorInOut in [[stage_in]], texture2d<float> texas[[texture(0)]])
-{
-    return in.color;
-};
+fragment half4 passThroughFragment(ColorInOut in [[stage_in]], texture2d<float> texas [[ texture(0) ]]){
+//    half4 color = half4(in.color[0], in.color[1], in.color[2], in.color[3]);
+    constexpr sampler defaultSampler;
+    float4 rgba = texas.sample(defaultSampler, in.uv).rgba;
+//    return half4(in.color[0] * rgba.r, in.color[1] * rgba.g, in.color[2] * rgba.b, in.color[3] * rgba.a);
+    return half4(rgba.r, rgba.g, rgba.b, rgba.a);
+}

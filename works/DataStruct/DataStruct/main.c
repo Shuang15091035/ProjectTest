@@ -19,8 +19,10 @@
 #include "StaticLinkList.h"
 #include "MergeLinkList.h"
 #include "Stack.h"
+#include "Twll.h"
 
 int main(int argc, const char * argv[]) {
+    //构造循环队列可以使用取余运算符%实现
     
 //    dynamicLinkListUsage();
 //    staticLinkList();
@@ -30,10 +32,14 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
-#pragma mark - 数制转换(一种实现方法的原理)N = (N div d)*d + N mod d
-Status SqStackApply(){
-    
-    
+Status TwoWayLinkList(){
+    DLinkList LinkList;
+    InitDLinkList(&LinkList);
+    AddElem(LinkList, 10);
+    AddElem(LinkList, 20);
+    AddElem(LinkList, 30);
+    AddElem(LinkList, 40);
+    PrintDlinkList(LinkList);
     return OK;
 }
 

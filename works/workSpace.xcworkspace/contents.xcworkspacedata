@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:DesignPatterns/DesignPatterns.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MetaLearn/MetaLearn.xcodeproj">
    </FileRef>
    <FileRef
@@ -24,9 +27,6 @@
    </FileRef>
    <FileRef
       location = "group:QrCode/QrCode.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:TestA/TestA.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Camera/Camera.xcodeproj">

@@ -10,6 +10,7 @@
 		7A0A0D6C1D487C7F002961FF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A0D6B1D487C7F002961FF /* main.c */; };
 		7A1A4AD11D61962600D12DF4 /* Circular.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A1A4ACF1D61962600D12DF4 /* Circular.c */; };
 		7A71AD8B1D863FAD000E7CB4 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A71AD8A1D863FAD000E7CB4 /* Stack.m */; };
+		7A71EE571E6D6D6900460A00 /* Twll.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A71EE551E6D6D6900460A00 /* Twll.c */; };
 		7AFF033C1D487CEF00BE3334 /* DynamicLinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = 7AFF033A1D487CEF00BE3334 /* DynamicLinkList.c */; };
 		7AFF03411D48808200BE3334 /* MergeLinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = 7AFF033F1D48808200BE3334 /* MergeLinkList.c */; };
 		7AFF03451D4880C300BE3334 /* StaticLinkList.c in Sources */ = {isa = PBXBuildFile; fileRef = 7AFF03431D4880C300BE3334 /* StaticLinkList.c */; };
@@ -34,6 +35,8 @@
 		7A1A4AD01D61962600D12DF4 /* Circular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circular.h; sourceTree = "<group>"; };
 		7A71AD891D863FAD000E7CB4 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		7A71AD8A1D863FAD000E7CB4 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		7A71EE551E6D6D6900460A00 /* Twll.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Twll.c; sourceTree = "<group>"; };
+		7A71EE561E6D6D6900460A00 /* Twll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Twll.h; sourceTree = "<group>"; };
 		7AFF033A1D487CEF00BE3334 /* DynamicLinkList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DynamicLinkList.c; sourceTree = "<group>"; };
 		7AFF033B1D487CEF00BE3334 /* DynamicLinkList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicLinkList.h; sourceTree = "<group>"; };
 		7AFF033D1D487EB000BE3334 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 			children = (
 				7AFF033D1D487EB000BE3334 /* Common.h */,
 				7A0A0D6B1D487C7F002961FF /* main.c */,
+				7A71EE541E6D6D3100460A00 /* Twll */,
 				7A1A4ACB1D6193B800D12DF4 /* CircularLinkList */,
 				7AFF03391D487CBC00BE3334 /* DynamicLinkList */,
 				7AFF033E1D48805C00BE3334 /* MergeLinkList */,
@@ -100,6 +104,15 @@
 				7A71AD8A1D863FAD000E7CB4 /* Stack.m */,
 			);
 			name = SeqlistStack;
+			sourceTree = "<group>";
+		};
+		7A71EE541E6D6D3100460A00 /* Twll */ = {
+			isa = PBXGroup;
+			children = (
+				7A71EE551E6D6D6900460A00 /* Twll.c */,
+				7A71EE561E6D6D6900460A00 /* Twll.h */,
+			);
+			name = Twll;
 			sourceTree = "<group>";
 		};
 		7AFF03391D487CBC00BE3334 /* DynamicLinkList */ = {
@@ -191,6 +204,7 @@
 				7A0A0D6C1D487C7F002961FF /* main.c in Sources */,
 				7AFF033C1D487CEF00BE3334 /* DynamicLinkList.c in Sources */,
 				7AFF03451D4880C300BE3334 /* StaticLinkList.c in Sources */,
+				7A71EE571E6D6D6900460A00 /* Twll.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
