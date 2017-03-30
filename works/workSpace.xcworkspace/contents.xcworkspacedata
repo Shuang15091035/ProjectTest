@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ModuleArrangement/ModuleArrangement.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:OpenGLLearn/OpenGLLearn.xcodeproj">
    </FileRef>
    <FileRef
