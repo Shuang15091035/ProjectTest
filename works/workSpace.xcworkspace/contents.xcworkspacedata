@@ -2,13 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:OpenGLLearn/OpenGLLearn.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DesignPatterns/DesignPatterns.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MetaLearn/MetaLearn.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:VirtualFunction/VirtualFunction.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Home/Home.xcodeproj">
@@ -39,12 +39,6 @@
    </FileRef>
    <FileRef
       location = "group:MyPlayground.playground">
-   </FileRef>
-   <FileRef
-      location = "group:MyProject/MyProject.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:OpenGLEShader/OpenGLEShader.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:PlayerTest/PlayerTest.xcodeproj">

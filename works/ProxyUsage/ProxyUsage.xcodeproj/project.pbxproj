@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A1A6CD71DD16DF0002FE347 /* TestC++.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A1A6CD51DD16DF0002FE347 /* TestC++.cpp */; };
-		7A22C8891DC328E9002F0D00 /* Ap.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A22C8881DC328E9002F0D00 /* Ap.m */; };
-		7A22C88C1DC32905002F0D00 /* Bp.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A22C88B1DC32905002F0D00 /* Bp.m */; };
 		7A257BFA1D913EED0038C0A5 /* DALine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A257BF91D913EED0038C0A5 /* DALine.m */; };
 		7A443A191DB711B3000FAEB0 /* 211500.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A443A181DB711B3000FAEB0 /* 211500.jpg */; };
 		7A4FFE071D7674E000422CBE /* Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A4FFE061D7674E000422CBE /* Runtime.m */; };
@@ -63,12 +60,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7A1A6CD51DD16DF0002FE347 /* TestC++.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "TestC++.cpp"; sourceTree = "<group>"; };
-		7A1A6CD61DD16DF0002FE347 /* TestC++.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "TestC++.hpp"; sourceTree = "<group>"; };
-		7A22C8871DC328E9002F0D00 /* Ap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ap.h; sourceTree = "<group>"; };
-		7A22C8881DC328E9002F0D00 /* Ap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ap.m; sourceTree = "<group>"; };
-		7A22C88A1DC32905002F0D00 /* Bp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bp.h; sourceTree = "<group>"; };
-		7A22C88B1DC32905002F0D00 /* Bp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bp.m; sourceTree = "<group>"; };
 		7A257BF81D913EED0038C0A5 /* DALine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DALine.h; sourceTree = "<group>"; };
 		7A257BF91D913EED0038C0A5 /* DALine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DALine.m; sourceTree = "<group>"; };
 		7A443A181DB711B3000FAEB0 /* 211500.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 211500.jpg; sourceTree = "<group>"; };
@@ -190,16 +181,10 @@
 				7A5261F41D6D7FC400D98494 /* HttpProxy */,
 				7A5261BB1D6D6BAF00D98494 /* AppDelegate.h */,
 				7A5261BC1D6D6BAF00D98494 /* AppDelegate.m */,
-				7A1A6CD51DD16DF0002FE347 /* TestC++.cpp */,
-				7A1A6CD61DD16DF0002FE347 /* TestC++.hpp */,
 				7A5261BE1D6D6BAF00D98494 /* ViewController.h */,
 				7A5261BF1D6D6BAF00D98494 /* ViewController.mm */,
 				7A257BF81D913EED0038C0A5 /* DALine.h */,
 				7A257BF91D913EED0038C0A5 /* DALine.m */,
-				7A22C8871DC328E9002F0D00 /* Ap.h */,
-				7A22C8881DC328E9002F0D00 /* Ap.m */,
-				7A22C88A1DC32905002F0D00 /* Bp.h */,
-				7A22C88B1DC32905002F0D00 /* Bp.m */,
 				7A71AD8C1D865F80000E7CB4 /* CustomView.h */,
 				7A71AD8D1D865F80000E7CB4 /* CustomView.m */,
 				7A5261C11D6D6BAF00D98494 /* Main.storyboard */,
@@ -402,7 +387,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4FFE0C1D76816B00422CBE /* MyQuartzView.m in Sources */,
-				7A22C88C1DC32905002F0D00 /* Bp.m in Sources */,
 				7A8727531D742B99002B19BC /* MyClass.m in Sources */,
 				7A71AD8E1D865F80000E7CB4 /* CustomView.m in Sources */,
 				7A5261ED1D6D6BD800D98494 /* HttpProxy.m in Sources */,
@@ -411,12 +395,10 @@
 				7A5261C01D6D6BAF00D98494 /* ViewController.mm in Sources */,
 				7A5261F31D6D6C3500D98494 /* UserHttpHandlerIMP.m in Sources */,
 				7A5261BD1D6D6BAF00D98494 /* AppDelegate.m in Sources */,
-				7A1A6CD71DD16DF0002FE347 /* TestC++.cpp in Sources */,
 				7A7000921D7D14A60001B810 /* JSTutorial.m in Sources */,
 				7A5AE4511D756D80006EF9C1 /* SUTRuntimeMethodHelper.m in Sources */,
 				7A4FFE071D7674E000422CBE /* Runtime.m in Sources */,
 				7A5261BA1D6D6BAF00D98494 /* main.m in Sources */,
-				7A22C8891DC328E9002F0D00 /* Ap.m in Sources */,
 				7A257BFA1D913EED0038C0A5 /* DALine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

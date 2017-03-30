@@ -219,6 +219,7 @@
 				TargetAttributes = {
 					7AE956311D3CB72E006F0438 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = D3T9A9MJ6F;
 					};
 					7AE9564A1D3CB72E006F0438 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -427,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D3T9A9MJ6F;
 				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = QrCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -439,6 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D3T9A9MJ6F;
 				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = QrCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -74,41 +74,41 @@ static const float KTriangleVertexData[] = {
     kWidth, -kHeight, kDepth,   0.0,   1.0,   0.0,   1.0, 0.0, 0.0,
     -kWidth, -kHeight, -kDepth,   0.0,   0.0,   1.0,   1.0, 1.0, 1.0,
     
-//    kWidth, kHeight, kDepth,    1.0,   0.0,   0.0,   1.0,
-//    kWidth, -kHeight, kDepth,   0.0,   1.0,   0.0,   1.0,
-//    kWidth, -kHeight, -kDepth,  0.0,   0.0,   1.0,   1.0,
-//    kWidth, kHeight, -kDepth,   1.0,   0.0,   0.0,   1.0,
-//    kWidth, kHeight, kDepth,    0.0,   1.0,   0.0,   1.0,
-//    kWidth, -kHeight, -kDepth,  0.0,   0.0,   1.0,   1.0,
-//    
-//    -kWidth, kHeight, kDepth,    1.0,   0.0,   0.0,   1.0,
-//    kWidth, kHeight, kDepth,    0.0,   1.0,   0.0,   1.0,
-//    kWidth, kHeight, -kDepth,   0.0,   0.0,   1.0,   1.0,
-//    -kWidth, kHeight, -kDepth,   1.0,   0.0,   0.0,   1.0,
-//    -kWidth, kHeight, kDepth,    0.0,   1.0,   0.0,   1.0,
-//    kWidth, kHeight, -kDepth,   0.0,   0.0,   1.0,   1.0,
-//    
-//    -kWidth, -kHeight, kDepth,  1.0,   0.0,   0.0,   1.0,
-//    -kWidth, kHeight, kDepth,   0.0,   1.0,   0.0,   1.0,
-//    -kWidth, kHeight, -kDepth,  0.0,   0.0,   1.0,   1.0,
-//    -kWidth, -kHeight, -kDepth,  1.0,   0.0,   0.0,   1.0,
-//    -kWidth, -kHeight, kDepth,  0.0,   1.0,   0.0,   1.0,
-//    -kWidth, kHeight, -kDepth,  0.0,   0.0,   1.0,   1.0,
-//    
-//    kWidth, kHeight,  kDepth,  1.0,   0.0,   0.0,   1.0,
-//    -kWidth, kHeight,  kDepth,  0.0,   1.0,   0.0,   1.0,
-//    -kWidth, -kHeight, kDepth,   0.0,   0.0,   1.0,   1.0,
-//    -kWidth, -kHeight, kDepth,   1.0,   0.0,   0.0,   1.0,
-//    kWidth, -kHeight, kDepth,   0.0,   1.0,   0.0,   1.0,
-//    kWidth, kHeight,  kDepth,  0.0,   0.0,   1.0,   1.0,
-//    
-//    kWidth, -kHeight, -kDepth,  1.0,   0.0,   0.0,   1.0,
-//    -kWidth, -kHeight, -kDepth,   0.0,   1.0,   0.0,   1.0,
-//    -kWidth, kHeight, -kDepth,  0.0,   0.0,   1.0,   1.0,
-//    kWidth, kHeight, -kDepth,  1.0,   0.0,   0.0,   1.0,
-//    kWidth, -kHeight, -kDepth,  0.0,   1.0,   0.0,   1.0,
-//    -kWidth, kHeight, -kDepth,  0.0,   0.0,   1.0,   1.0
-//    
+    kWidth, kHeight, kDepth,    1.0,   0.0,   0.0,   1.0, 0.0, 0.0,
+    kWidth, -kHeight, kDepth,   0.0,   1.0,   0.0,   1.0, 1.0, 0.0,
+    kWidth, -kHeight, -kDepth,  0.0,   0.0,   1.0,   1.0, 1.0, 1.0,
+    kWidth, kHeight, -kDepth,   1.0,   0.0,   0.0,   1.0, 0.0, 1.0,
+    kWidth, kHeight, kDepth,    0.0,   1.0,   0.0,   1.0, 0.0, 0.0,
+    kWidth, -kHeight, -kDepth,  0.0,   0.0,   1.0,   1.0, 1.0, 1.0,
+
+    -kWidth, kHeight, kDepth,    1.0,   0.0,   0.0,   1.0, 0.0, 0.0,
+    kWidth, kHeight, kDepth,    0.0,   1.0,   0.0,   1.0, 1.0, 0.0,
+    kWidth, kHeight, -kDepth,   0.0,   0.0,   1.0,   1.0, 1.0, 1.0,
+    -kWidth, kHeight, -kDepth,   1.0,   0.0,   0.0,   1.0, 0.0, 1.0,
+    -kWidth, kHeight, kDepth,    0.0,   1.0,   0.0,   1.0, 0.0, 0.0,
+    kWidth, kHeight, -kDepth,   0.0,   0.0,   1.0,   1.0, 1.0, 1.0,
+
+    -kWidth, -kHeight, kDepth,  1.0,   0.0,   0.0,   1.0, 0.0, 0.0,
+    -kWidth, kHeight, kDepth,   0.0,   1.0,   0.0,   1.0, 1.0, 0.0,
+    -kWidth, kHeight, -kDepth,  0.0,   0.0,   1.0,   1.0, 1.0, 1.0,
+    -kWidth, -kHeight, -kDepth,  1.0,   0.0,   0.0,   1.0, 0.0, 1.0,
+    -kWidth, -kHeight, kDepth,  0.0,   1.0,   0.0,   1.0, 0.0, 0.0,
+    -kWidth, kHeight, -kDepth,  0.0,   0.0,   1.0,   1.0, 1.0, 1.0,
+    
+    kWidth, kHeight,  kDepth,  1.0,   0.0,   0.0,   1.0, 0.0, 0.0,
+    -kWidth, kHeight,  kDepth,  0.0,   1.0,   0.0,   1.0,  1.0, 0.0,
+    -kWidth, -kHeight, kDepth,   0.0,   0.0,   1.0,   1.0,  1.0, 1.0,
+    -kWidth, -kHeight, kDepth,   1.0,   0.0,   0.0,   1.0,  0.0, 1.0,
+    kWidth, -kHeight, kDepth,   0.0,   1.0,   0.0,   1.0, 0.0, 0.0,
+    kWidth, kHeight,  kDepth,  0.0,   0.0,   1.0,   1.0, 1.0, 1.0,
+    
+    kWidth, -kHeight, -kDepth,  1.0,   0.0,   0.0,   1.0, 0.0, 0.0,
+    -kWidth, -kHeight, -kDepth,   0.0,   1.0,   0.0,   1.0, 1.0, 0.0,
+    -kWidth, kHeight, -kDepth,  0.0,   0.0,   1.0,   1.0,  1.0, 1.0,
+    kWidth, kHeight, -kDepth,  1.0,   0.0,   0.0,   1.0,  0.0, 1.0,
+    kWidth, -kHeight, -kDepth,  0.0,   1.0,   0.0,   1.0, 0.0, 0.0,
+    -kWidth, kHeight, -kDepth,  0.0,   0.0,   1.0,   1.0, 1.0, 1.0,
+    
 };
 
 static const float kFOVY    = 65.0f;
@@ -212,7 +212,7 @@ static const float3 kUp     = {0.0f, 1.0f, 0.0f};
 
 - (void)updataVertexBuffer{
     Uniforms *unifrom =  (Uniforms *)[_dynamicConstantBuffer contents];
-    float4x4 baseModelMatrix = AAPL::Math::rotate(_rotation, 1.0f, 0.0f, 0.0f);
+    float4x4 baseModelMatrix = AAPL::Math::rotate(_rotation, 1.0f, 1.0f, 0.0f);
     float4x4 baseModelViewMatrix = _viewMatrix * baseModelMatrix;
     unifrom->modelview_projection_matrix = _projectionMatrix * baseModelViewMatrix;
 }
@@ -226,7 +226,7 @@ static const float3 kUp     = {0.0f, 1.0f, 0.0f};
         id<MTLRenderCommandEncoder> renderEncoder = [commandBuffer renderCommandEncoderWithDescriptor:view.renderPassDescriptor];
         [renderEncoder setRenderPipelineState:_pipelineState];
 //        [renderEncoder setDepthStencilState:_depthState];
-//        [renderEncoder setCullMode:MTLCullModeBack];
+        [renderEncoder setCullMode:MTLCullModeBack];
         [renderEncoder setVertexBuffer:_vertexBuffer offset:0 atIndex:0];
         [renderEncoder setVertexBuffer:_dynamicConstantBuffer offset:0 atIndex:1];
         [renderEncoder setFragmentTexture:_textureBuffer atIndex:0];
@@ -236,7 +236,18 @@ static const float3 kUp     = {0.0f, 1.0f, 0.0f};
         [commandBuffer presentDrawable:[view currentDrawable]];
     }
     [commandBuffer commit];
-    
+//    MTLSamplerDescriptor *samplerDes = [[MTLSamplerDescriptor alloc]init];
+//    samplerDes.minFilter = MTLSamplerMinMagFilterLinear;
+//    samplerDes.magFilter = MTLSamplerMinMagFilterLinear;
+////    samplerDes.mipFilter = MTLSamplerMipFilterLinear;
+//    samplerDes.rAddressMode = MTLSamplerAddressModeClampToEdge;
+//    samplerDes.sAddressMode = MTLSamplerAddressModeClampToEdge;
+//    samplerDes.tAddressMode = MTLSamplerAddressModeClampToEdge;
+//    samplerDes.compareFunction = MTLCompareFunctionAlways;
+//    samplerDes.maxAnisotropy = ;
+//    samplerDes.lodMinClamp;
+//    id<MTLSamplerState> samplerState = [_device newSamplerStateWithDescriptor:samplerDes];
+//    
 }
 
 - (void)reshape:(CustomView *)view{

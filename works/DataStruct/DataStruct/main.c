@@ -20,6 +20,7 @@
 #include "MergeLinkList.h"
 #include "Stack.h"
 #include "Twll.h"
+#include "sort.h"
 
 int main(int argc, const char * argv[]) {
     //构造循环队列可以使用取余运算符%实现
@@ -28,6 +29,10 @@ int main(int argc, const char * argv[]) {
 //    staticLinkList();
 //    CreateLinList(&head);
 //    SeqlistStackUsage();
+//    int arr[] = {6,2,3,9,7,6,8};
+    int arr[] = {10, 9, 6, 8};
+    int length = sizeof(arr)/sizeof(arr[0]);
+    straightInsertSort(arr, length);
     
     return 0;
 }

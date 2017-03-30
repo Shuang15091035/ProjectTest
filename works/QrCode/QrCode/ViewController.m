@@ -42,7 +42,7 @@ static const CGFloat kBorderW = 100;
     
     AVCaptureVideoPreviewLayer *vedioPreviewLayer = [[AVCaptureVideoPreviewLayer alloc]initWithSession:session];
     vedioPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    vedioPreviewLayer.frame = CGRectMake(20, 20, 20, 20);
+    vedioPreviewLayer.frame = CGRectMake(20, 20, 400, 400);
     [self.view.layer addSublayer:vedioPreviewLayer];
     
     metaDataOutPut.metadataObjectTypes=@[AVMetadataObjectTypeQRCode,AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code];

@@ -33,7 +33,6 @@
 //}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString * str = @"str";
     
 //    // Do any additional setup after loading the view, typically from a nib.
 //    _imageArr = [NSMutableArray array];

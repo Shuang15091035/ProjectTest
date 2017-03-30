@@ -50,4 +50,13 @@
     CGFloat green = (CGFloat)random()/(CGFloat)RAND_MAX;
     return [UIColor colorWithRed:red green:green blue:blue alpha:1.0f];
 }
+
+- (void)setPointImageView:(UIImageView *)pointImageView{
+    _mImageView = pointImageView;
+}
+
+- (UIImageView *)pointImageView{
+    return _mImageView;
+}
+
 @end

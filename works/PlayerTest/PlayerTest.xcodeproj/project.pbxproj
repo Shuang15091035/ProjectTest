@@ -277,6 +277,7 @@
 				TargetAttributes = {
 					7A68D90B1D1785B1007C2ADB = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = D3T9A9MJ6F;
 					};
 					7A68D9241D1785B2007C2ADB = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -491,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D3T9A9MJ6F;
 				INFOPLIST_FILE = PlayerTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -507,6 +509,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = D3T9A9MJ6F;
 				INFOPLIST_FILE = PlayerTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

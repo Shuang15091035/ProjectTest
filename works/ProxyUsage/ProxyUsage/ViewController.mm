@@ -12,9 +12,6 @@
 #import <CoreGraphics/CoreGraphics.h>
 #import "CustomView.h"
 #import <GLKit/GLKit.h>
-#import "Ap.h"
-#import "Bp.h"
-#import "TestC++.hpp"
 
 #define LIGHT_DIRECTION 0, 1, -0.5
 #define AMBIENT_LIGHT 0.5

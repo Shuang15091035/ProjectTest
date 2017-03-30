@@ -6,9 +6,34 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		7A78F1151E83C226005C0310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A78F10F1E83C226005C0310 /* SizeClassAndAutoLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7A8D95351CD84B4E00F22C4B;
+			remoteInfo = SizeClassAndAutoLayout;
+		};
+		7A78F1171E83C226005C0310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A78F10F1E83C226005C0310 /* SizeClassAndAutoLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7A8D954E1CD84B4E00F22C4B;
+			remoteInfo = SizeClassAndAutoLayoutTests;
+		};
+		7A78F1191E83C226005C0310 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A78F10F1E83C226005C0310 /* SizeClassAndAutoLayout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7A8D95591CD84B4E00F22C4B;
+			remoteInfo = SizeClassAndAutoLayoutUITests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		7A5A57B21C891FA20003ED50 /* ToolsBundle.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToolsBundle.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A5A57B51C891FA20003ED50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A78F10F1E83C226005C0310 /* SizeClassAndAutoLayout.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SizeClassAndAutoLayout.xcodeproj; path = ../SizeClassAndAutoLayout/SizeClassAndAutoLayout.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +50,7 @@
 		7A5A57A91C891FA20003ED50 = {
 			isa = PBXGroup;
 			children = (
+				7A78F10F1E83C226005C0310 /* SizeClassAndAutoLayout.xcodeproj */,
 				7A5A57B31C891FA20003ED50 /* Products */,
 				7A5A57B41C891FA20003ED50 /* ToolsBundle */,
 			);
@@ -44,6 +70,16 @@
 				7A5A57B51C891FA20003ED50 /* Info.plist */,
 			);
 			path = ToolsBundle;
+			sourceTree = "<group>";
+		};
+		7A78F1101E83C226005C0310 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A78F1161E83C226005C0310 /* SizeClassAndAutoLayout.app */,
+				7A78F1181E83C226005C0310 /* SizeClassAndAutoLayoutTests.xctest */,
+				7A78F11A1E83C226005C0310 /* SizeClassAndAutoLayoutUITests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,12 +126,42 @@
 			mainGroup = 7A5A57A91C891FA20003ED50;
 			productRefGroup = 7A5A57B31C891FA20003ED50 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7A78F1101E83C226005C0310 /* Products */;
+					ProjectRef = 7A78F10F1E83C226005C0310 /* SizeClassAndAutoLayout.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7A5A57B11C891FA20003ED50 /* ToolsBundle */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7A78F1161E83C226005C0310 /* SizeClassAndAutoLayout.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SizeClassAndAutoLayout.app;
+			remoteRef = 7A78F1151E83C226005C0310 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7A78F1181E83C226005C0310 /* SizeClassAndAutoLayoutTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SizeClassAndAutoLayoutTests.xctest;
+			remoteRef = 7A78F1171E83C226005C0310 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7A78F11A1E83C226005C0310 /* SizeClassAndAutoLayoutUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SizeClassAndAutoLayoutUITests.xctest;
+			remoteRef = 7A78F1191E83C226005C0310 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7A5A57B01C891FA20003ED50 /* Resources */ = {
@@ -244,6 +310,7 @@
 				7A5A57BA1C891FA20003ED50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

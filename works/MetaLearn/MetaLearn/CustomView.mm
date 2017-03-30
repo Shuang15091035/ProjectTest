@@ -114,7 +114,7 @@
     
     // make sure to clear every frame for best performance
     colorAttachment.loadAction = MTLLoadActionClear;
-    colorAttachment.clearColor = MTLClearColorMake(0.65f, 0.65f, 0.65f, 1.0f);
+    colorAttachment.clearColor = MTLClearColorMake(232.0/255.0, 107.0/255.0, 11.0/255.0, 0.8f);
     
     colorAttachment.storeAction = MTLStoreActionStore;
 }
